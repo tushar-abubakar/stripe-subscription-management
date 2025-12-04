@@ -1,0 +1,6306 @@
+# Copyright (C) 2025 Abubakar Wazih Tushar
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: YouTuneIn Subscription Management 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/youtunein-subscription-management\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-30T15:28:18+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: ytism\n"
+
+#. Plugin Name of the plugin
+#: includes/core/class-plugin.php:157
+msgid "YouTuneIn Subscription Management"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://youtunein.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Subscription plugin with admin settings, plan management, and frontend display with WP-ML translation support."
+msgstr ""
+
+#. Author of the plugin
+msgid "Abubakar Wazih Tushar"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:22
+msgid "Log"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:23
+#: includes/admin/class-settings.php:64
+#: includes/admin/class-settings.php:65
+msgid "Logs"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:38
+#: includes/admin/class-settings.php:786
+#: includes/admin/class-settings.php:1632
+#: includes/admin/class-transactions-list-table.php:46
+msgid "Date"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:39
+msgid "Severity"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:40
+#: includes/admin/class-payment-list-table.php:51
+#: includes/admin/class-settings.php:1629
+#: includes/admin/class-transactions-list-table.php:43
+msgid "Type"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:41
+msgid "Event"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:42
+msgid "Message"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:43
+#: includes/admin/class-settings.php:1508
+#: includes/admin/class-subscriptions-list-table-new.php:43
+#: includes/admin/class-transactions-list-table.php:42
+msgid "Gateway"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:44
+msgid "Retries"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:184
+msgid "All Severities"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:185
+#: assets/js/public.js:861
+msgid "Info"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:186
+#: includes/public/class-auth.php:415
+#: assets/js/public.js:857
+#: assets/js/public.js:1091
+msgid "Success"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:187
+#: assets/js/public.js:865
+msgid "Warning"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:188
+#: includes/public/class-auth.php:415
+#: assets/js/public.js:853
+#: assets/js/public.js:870
+#: assets/js/public.js:1091
+msgid "Error"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:189
+msgid "Critical"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:192
+msgid "All Types"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:193
+#: includes/admin/class-subscription-list-table.php:21
+#: includes/admin/class-subscriptions-list-table-new.php:23
+msgid "Subscription"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:194
+#: includes/admin/class-transactions-list-table.php:22
+msgid "Transaction"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:195
+#: includes/admin/class-orders-list-table.php:42
+#: includes/admin/class-subscription-list-table.php:34
+#: includes/admin/class-subscriptions-list-table-new.php:42
+#: includes/admin/class-transactions-list-table.php:41
+#: views/family-plan.php:252
+#: views/individual-plan.php:287
+#: views/verification-email.php:27
+msgid "User"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:196
+msgid "System"
+msgstr ""
+
+#: includes/admin/class-logs-list-table.php:198
+#: includes/admin/class-subscription-list-table.php:265
+#: includes/admin/class-subscriptions-list-table-new.php:192
+#: includes/admin/class-transactions-list-table.php:216
+msgid "Filter"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:41
+#: includes/admin/class-payment-list-table.php:47
+#: includes/admin/class-settings.php:1628
+#: includes/admin/class-subscription-list-table.php:33
+#: includes/admin/class-subscriptions-list-table-new.php:41
+#: includes/admin/class-transactions-list-table.php:40
+msgid "ID"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:43
+#: includes/admin/class-payment-list-table.php:48
+msgid "Subscription ID"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:44
+#: includes/admin/class-payment-list-table.php:50
+#: includes/admin/class-settings.php:722
+#: includes/admin/class-settings.php:787
+#: includes/admin/class-settings.php:1630
+#: includes/admin/class-subscription-list-table.php:37
+#: includes/admin/class-subscriptions-list-table-new.php:241
+#: includes/admin/class-transactions-list-table.php:44
+#: includes/public/class-front-display.php:175
+#: includes/public/class-services.php:1981
+msgid "Amount"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:45
+#: includes/admin/class-payment-list-table.php:49
+#: includes/admin/class-settings.php:705
+#: includes/admin/class-settings.php:788
+#: includes/admin/class-settings.php:1491
+#: includes/admin/class-settings.php:1631
+#: includes/admin/class-subscription-list-table.php:35
+#: includes/admin/class-subscriptions-list-table-new.php:45
+#: includes/admin/class-transactions-list-table.php:45
+#: includes/public/class-front-display.php:179
+#: includes/public/class-services.php:1976
+msgid "Status"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:46
+msgid "Period End"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:47
+msgid "Metadata"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:48
+#: includes/admin/class-settings.php:738
+#: includes/admin/class-settings.php:1573
+#: includes/admin/class-subscription-list-table.php:40
+#: includes/admin/class-subscriptions-list-table-new.php:47
+msgid "Created"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:70
+#: includes/admin/class-orders-list-table.php:102
+#: includes/admin/class-payment-list-table.php:137
+#: includes/admin/class-payment-list-table.php:151
+msgid "Delete"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:94
+#: includes/admin/class-transactions-list-table.php:74
+msgid "View Details"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:101
+msgid "Are you sure you want to delete this order?"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:127
+#: includes/admin/class-settings.php:774
+msgid "User not found"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:151
+msgid "Payment"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:192
+msgid "in"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:194
+#: includes/admin/class-orders-list-table.php:258
+msgid "ago"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:206
+msgid "No metadata"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:236
+#: includes/admin/class-orders-list-table.php:242
+#: assets/js/admin.js:281
+#: assets/js/admin.js:285
+msgid "View Metadata"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:241
+#: assets/js/admin.js:289
+msgid "Hide Metadata"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:267
+msgid "No metadata available"
+msgstr ""
+
+#. translators: %s: search term entered by the user
+#: includes/admin/class-orders-list-table.php:319
+msgid "No orders found matching \"%s\"."
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:321
+msgid "No subscription orders found."
+msgstr ""
+
+#. translators: %s: Number of items.
+#: includes/admin/class-orders-list-table.php:401
+msgid "%s item"
+msgid_plural "%s items"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-orders-list-table.php:433
+msgid "First page"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:444
+msgid "Previous page"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:451
+#: includes/admin/class-orders-list-table.php:455
+msgid "Current Page"
+msgstr ""
+
+#. translators: 1: Current page, 2: Total pages.
+#: includes/admin/class-orders-list-table.php:463
+msgctxt "paging"
+msgid "%1$s of %2$s"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:474
+msgid "Next page"
+msgstr ""
+
+#: includes/admin/class-orders-list-table.php:485
+msgid "Last page"
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:36
+msgid "No payments found."
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:52
+#: includes/admin/class-settings.php:789
+#: includes/admin/class-subscriptions-list-table-new.php:227
+msgid "Transaction ID"
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:53
+msgid "Processed At"
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:54
+msgid "Created At"
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:132
+msgid "View Subscription"
+msgstr ""
+
+#. translators: %d: number of payments deleted
+#: includes/admin/class-payment-list-table.php:173
+msgid "%d payment deleted."
+msgid_plural "%d payments deleted."
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-payment-list-table.php:175
+msgid "Error deleting payments."
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:178
+msgid "No payments selected for deletion."
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:186
+msgid "Invalid payment ID."
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:194
+msgid "1 payment deleted."
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:196
+msgid "Error deleting payment."
+msgstr ""
+
+#: includes/admin/class-payment-list-table.php:228
+msgid "All"
+msgstr ""
+
+#: includes/admin/class-settings.php:44
+#: includes/admin/class-settings.php:45
+msgid "Subscriptions (new)"
+msgstr ""
+
+#: includes/admin/class-settings.php:54
+#: includes/admin/class-settings.php:55
+#: includes/admin/class-settings.php:1431
+#: includes/admin/class-transactions-list-table.php:23
+msgid "Transactions"
+msgstr ""
+
+#: includes/admin/class-settings.php:77
+#: includes/admin/class-settings.php:78
+#: includes/admin/class-settings.php:632
+#: includes/admin/class-settings.php:1416
+#: includes/admin/class-subscription-list-table.php:22
+#: includes/admin/class-subscriptions-list-table-new.php:24
+msgid "Subscriptions"
+msgstr ""
+
+#: includes/admin/class-settings.php:86
+#: includes/admin/class-settings.php:87
+#: includes/admin/class-settings.php:647
+#: includes/admin/class-subscription-list-table.php:196
+msgid "Payments"
+msgstr ""
+
+#: includes/admin/class-settings.php:342
+msgid "Subscription Plans"
+msgstr ""
+
+#: includes/admin/class-settings.php:349
+msgid "Plans"
+msgstr ""
+
+#: includes/admin/class-settings.php:360
+msgid "Page Settings"
+msgstr ""
+
+#: includes/admin/class-settings.php:367
+msgid "My Account Page"
+msgstr ""
+
+#: includes/admin/class-settings.php:375
+msgid "Checkout Page"
+msgstr ""
+
+#: includes/admin/class-settings.php:383
+msgid "Order Summary Page"
+msgstr ""
+
+#: includes/admin/class-settings.php:391
+msgid "Thank You Page"
+msgstr ""
+
+#: includes/admin/class-settings.php:403
+msgid "Stripe Settings"
+msgstr ""
+
+#: includes/admin/class-settings.php:410
+msgid "Mode"
+msgstr ""
+
+#: includes/admin/class-settings.php:418
+msgid "Publishable Key"
+msgstr ""
+
+#: includes/admin/class-settings.php:426
+msgid "Secret Key"
+msgstr ""
+
+#: includes/admin/class-settings.php:434
+msgid "Webhook Secret"
+msgstr ""
+
+#: includes/admin/class-settings.php:442
+msgid "API Test"
+msgstr ""
+
+#: includes/admin/class-settings.php:465
+msgid "Page ID %d is used multiple times. Each plan must have a unique page."
+msgstr ""
+
+#: includes/admin/class-settings.php:475
+msgid "Product ID %s is used multiple times. Each plan must have a unique product."
+msgstr ""
+
+#: includes/admin/class-settings.php:497
+msgid "My Account page conflicts with a plan page. Each page must be unique."
+msgstr ""
+
+#: includes/admin/class-settings.php:506
+msgid "Checkout page conflicts with another page. Each page must be unique."
+msgstr ""
+
+#: includes/admin/class-settings.php:515
+msgid "Order Summary page conflicts with another page. Each page must be unique."
+msgstr ""
+
+#: includes/admin/class-settings.php:524
+msgid "Thank You page conflicts with another page. Each page must be unique."
+msgstr ""
+
+#: includes/admin/class-settings.php:554
+msgid "Publishable key format is invalid. It should start with \"%s\" for %s mode."
+msgstr ""
+
+#: includes/admin/class-settings.php:562
+msgid "Secret key format is invalid. It should start with \"%s\" for %s mode."
+msgstr ""
+
+#: includes/admin/class-settings.php:568
+msgid "Webhook secret format is invalid. It should start with \"whsec_\"."
+msgstr ""
+
+#: includes/admin/class-settings.php:581
+msgid "Settings saved successfully."
+msgstr ""
+
+#: includes/admin/class-settings.php:592
+msgid "Subscriptions per page"
+msgstr ""
+
+#: includes/admin/class-settings.php:609
+msgid "YouTuneIn Subscription Settings"
+msgstr ""
+
+#: includes/admin/class-settings.php:633
+msgid "Export CSV"
+msgstr ""
+
+#: includes/admin/class-settings.php:669
+msgid "Invalid nonce"
+msgstr ""
+
+#: includes/admin/class-settings.php:687
+#: includes/admin/class-settings.php:1468
+#: includes/database/class-subscription.php:74
+msgid "Subscription not found"
+msgstr ""
+
+#: includes/admin/class-settings.php:695
+msgid "Subscription Details"
+msgstr ""
+
+#: includes/admin/class-settings.php:696
+#: includes/admin/class-settings.php:1481
+msgid "← Back to List"
+msgstr ""
+
+#: includes/admin/class-settings.php:702
+#: includes/admin/class-settings.php:1488
+msgid "Subscription Information"
+msgstr ""
+
+#: includes/admin/class-settings.php:709
+#: includes/admin/class-subscription-list-table.php:36
+msgid "Stripe ID"
+msgstr ""
+
+#: includes/admin/class-settings.php:726
+msgid "Billing Period"
+msgstr ""
+
+#: includes/admin/class-settings.php:730
+#: includes/admin/class-settings.php:1543
+#: includes/admin/class-subscription-list-table.php:39
+msgid "Current Period"
+msgstr ""
+
+#: includes/admin/class-settings.php:733
+msgid "to"
+msgstr ""
+
+#: includes/admin/class-settings.php:743
+msgid "Canceled At"
+msgstr ""
+
+#: includes/admin/class-settings.php:752
+msgid "Customer Information"
+msgstr ""
+
+#: includes/admin/class-settings.php:756
+msgid "Name"
+msgstr ""
+
+#: includes/admin/class-settings.php:760
+#: includes/public/class-auth.php:686
+#: includes/public/class-auth.php:796
+#: includes/public/class-front-display.php:115
+#: includes/public/class-services.php:1855
+msgid "Email"
+msgstr ""
+
+#: includes/admin/class-settings.php:764
+msgid "User ID"
+msgstr ""
+
+#: includes/admin/class-settings.php:781
+msgid "Recent Payments"
+msgstr ""
+
+#: includes/admin/class-settings.php:810
+msgid "No payments found"
+msgstr ""
+
+#: includes/admin/class-settings.php:816
+msgid "Event Timeline"
+msgstr ""
+
+#: includes/admin/class-settings.php:835
+msgid "No events found"
+msgstr ""
+
+#: includes/admin/class-settings.php:870
+#: includes/admin/class-subscription-list-table.php:304
+msgid "day"
+msgid_plural "days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-settings.php:871
+#: includes/admin/class-subscription-list-table.php:305
+msgid "week"
+msgid_plural "weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-settings.php:872
+#: includes/admin/class-subscription-list-table.php:306
+msgid "month"
+msgid_plural "months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-settings.php:873
+#: includes/admin/class-subscription-list-table.php:307
+msgid "quarter"
+msgid_plural "quarters"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/admin/class-settings.php:874
+#: includes/admin/class-subscription-list-table.php:308
+msgid "year"
+msgid_plural "years"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: 1: interval number, 2: billing period (e.g. months)
+#: includes/admin/class-settings.php:881
+#: includes/admin/class-settings.php:1531
+#: includes/admin/class-subscription-list-table.php:314
+msgid "Every %d %s"
+msgstr ""
+
+#. translators: %s: billing period (e.g. month, week, year)
+#: includes/admin/class-settings.php:885
+#: includes/admin/class-subscription-list-table.php:317
+msgid "Every %s"
+msgstr ""
+
+#: includes/admin/class-settings.php:897
+msgid "Individual Plan"
+msgstr ""
+
+#: includes/admin/class-settings.php:898
+msgid "Family Plan"
+msgstr ""
+
+#: includes/admin/class-settings.php:899
+msgid "Corporate Plan"
+msgstr ""
+
+#: includes/admin/class-settings.php:917
+msgid "Select Page"
+msgstr ""
+
+#: includes/admin/class-settings.php:918
+#: includes/admin/class-settings.php:919
+#: includes/admin/class-settings.php:976
+#: includes/admin/class-settings.php:977
+#: includes/admin/class-settings.php:996
+#: includes/admin/class-settings.php:997
+#: includes/admin/class-settings.php:1016
+#: includes/admin/class-settings.php:1017
+#: includes/admin/class-settings.php:1036
+#: includes/admin/class-settings.php:1037
+#: assets/js/admin.js:17
+msgid "Select a page"
+msgstr ""
+
+#: includes/admin/class-settings.php:942
+msgid "Select Product"
+msgstr ""
+
+#: includes/admin/class-settings.php:945
+#: includes/admin/class-settings.php:947
+msgid "Select a subscription product"
+msgstr ""
+
+#: includes/admin/class-settings.php:989
+msgid "Select the page to use for user account management."
+msgstr ""
+
+#: includes/admin/class-settings.php:1009
+msgid "Select the page to use for checkout."
+msgstr ""
+
+#: includes/admin/class-settings.php:1029
+msgid "Select the page to use for order summaries."
+msgstr ""
+
+#: includes/admin/class-settings.php:1049
+msgid "Select the page to use as the thank you page after purchase."
+msgstr ""
+
+#: includes/admin/class-settings.php:1118
+msgid "Test"
+msgstr ""
+
+#: includes/admin/class-settings.php:1119
+msgid "Live"
+msgstr ""
+
+#: includes/admin/class-settings.php:1121
+msgid "Select Stripe environment."
+msgstr ""
+
+#: includes/admin/class-settings.php:1132
+msgid "Your Stripe publishable key."
+msgstr ""
+
+#: includes/admin/class-settings.php:1149
+msgid "Your Stripe secret key."
+msgstr ""
+
+#: includes/admin/class-settings.php:1170
+msgid "Webhook Configuration Instructions"
+msgstr ""
+
+#: includes/admin/class-settings.php:1172
+msgid "Webhook URL:"
+msgstr ""
+
+#: includes/admin/class-settings.php:1175
+msgid "Required Events to Listen:"
+msgstr ""
+
+#: includes/admin/class-settings.php:1185
+msgid "Setup Steps:"
+msgstr ""
+
+#: includes/admin/class-settings.php:1187
+msgid "Go to your Stripe Dashboard → Developers → Webhooks"
+msgstr ""
+
+#: includes/admin/class-settings.php:1188
+msgid "Click \"Add endpoint\""
+msgstr ""
+
+#: includes/admin/class-settings.php:1189
+msgid "Add the webhook URL above"
+msgstr ""
+
+#: includes/admin/class-settings.php:1190
+msgid "Select the events listed above"
+msgstr ""
+
+#: includes/admin/class-settings.php:1191
+msgid "Copy the signing secret and paste it in the field above"
+msgstr ""
+
+#: includes/admin/class-settings.php:1195
+msgid "Stripe webhook signing secret for security verification."
+msgstr ""
+
+#: includes/admin/class-settings.php:1202
+msgid "Test your Stripe API configuration to ensure everything is working correctly."
+msgstr ""
+
+#: includes/admin/class-settings.php:1204
+#: assets/js/admin.js:227
+msgid "Test Stripe API Connection"
+msgstr ""
+
+#: includes/admin/class-settings.php:1208
+msgid "Click the button above to test your API configuration."
+msgstr ""
+
+#: includes/admin/class-settings.php:1218
+msgid "Security check failed."
+msgstr ""
+
+#: includes/admin/class-settings.php:1223
+msgid "Insufficient permissions."
+msgstr ""
+
+#: includes/admin/class-settings.php:1236
+msgid "Publishable key is empty."
+msgstr ""
+
+#: includes/admin/class-settings.php:1241
+msgid "Publishable key format is correct."
+msgstr ""
+
+#. translators: 1: expected key prefix (e.g. "pk_live_"), 2: Stripe mode (e.g. live or test)
+#: includes/admin/class-settings.php:1244
+msgid "Publishable key should start with \"%s\" for %s mode."
+msgstr ""
+
+#: includes/admin/class-settings.php:1250
+msgid "Secret key is empty."
+msgstr ""
+
+#: includes/admin/class-settings.php:1255
+msgid "Secret key format is correct."
+msgstr ""
+
+#. translators: %s: Stripe account ID
+#: includes/admin/class-settings.php:1264
+msgid "API connection successful. Account ID: %s"
+msgstr ""
+
+#. translators: %s: Stripe account mode (e.g. live or test)
+#: includes/admin/class-settings.php:1273
+msgid "Account mode matches selected mode (%s)."
+msgstr ""
+
+#: includes/admin/class-settings.php:1275
+msgid "Account is in %s mode but you selected %s mode."
+msgstr ""
+
+#: includes/admin/class-settings.php:1282
+msgid "Product API access confirmed."
+msgstr ""
+
+#: includes/admin/class-settings.php:1284
+msgid "Product API access limited: %s"
+msgstr ""
+
+#: includes/admin/class-settings.php:1288
+msgid "API connection failed: Invalid account response."
+msgstr ""
+
+#: includes/admin/class-settings.php:1292
+msgid "API connection failed: %s"
+msgstr ""
+
+#: includes/admin/class-settings.php:1296
+msgid "Secret key should start with \"%s\" for %s mode."
+msgstr ""
+
+#: includes/admin/class-settings.php:1303
+msgid "Webhook secret is empty. This is optional but recommended for security."
+msgstr ""
+
+#: includes/admin/class-settings.php:1306
+msgid "Webhook secret format is correct."
+msgstr ""
+
+#: includes/admin/class-settings.php:1310
+msgid "Webhook secret seems too short. Please verify it's correct."
+msgstr ""
+
+#: includes/admin/class-settings.php:1312
+msgid "Webhook secret length looks valid."
+msgstr ""
+
+#: includes/admin/class-settings.php:1315
+msgid "Webhook secret should start with \"whsec_\"."
+msgstr ""
+
+#: includes/admin/class-settings.php:1320
+msgid "API Test Results:"
+msgstr ""
+
+#: includes/admin/class-settings.php:1375
+#: includes/core/class-loader.php:303
+#: includes/core/class-plugin.php:129
+msgid "Settings"
+msgstr ""
+
+#: includes/admin/class-settings.php:1379
+msgid "A page you were using for subscription settings has been unpublished. The setting has been cleared. Please update your %s."
+msgstr ""
+
+#: includes/admin/class-settings.php:1446
+msgid "Event Logs"
+msgstr ""
+
+#: includes/admin/class-settings.php:1458
+msgid "Invalid subscription ID"
+msgstr ""
+
+#: includes/admin/class-settings.php:1480
+msgid "Subscription #%d"
+msgstr ""
+
+#: includes/admin/class-settings.php:1495
+msgid "Customer"
+msgstr ""
+
+#: includes/admin/class-settings.php:1503
+#: includes/admin/class-subscriptions-list-table-new.php:109
+#: includes/admin/class-transactions-list-table.php:88
+msgid "Unknown"
+msgstr ""
+
+#: includes/admin/class-settings.php:1516
+msgid "Customer ID"
+msgstr ""
+
+#: includes/admin/class-settings.php:1522
+#: includes/admin/class-subscriptions-list-table-new.php:44
+msgid "Plan"
+msgstr ""
+
+#: includes/admin/class-settings.php:1527
+#: includes/public/class-services.php:1991
+msgid "Billing Cycle"
+msgstr ""
+
+#: includes/admin/class-settings.php:1539
+msgid "Quantity"
+msgstr ""
+
+#: includes/admin/class-settings.php:1554
+#: includes/admin/class-subscriptions-list-table-new.php:46
+msgid "Next Billing"
+msgstr ""
+
+#: includes/admin/class-settings.php:1560
+msgid "Trial Period"
+msgstr ""
+
+#: includes/admin/class-settings.php:1564
+msgid "%s to %s"
+msgstr ""
+
+#: includes/admin/class-settings.php:1581
+#: includes/admin/class-subscriptions-list-table-new.php:294
+msgid "Statistics"
+msgstr ""
+
+#: includes/admin/class-settings.php:1584
+#: includes/admin/class-subscriptions-list-table-new.php:297
+msgid "Total Transactions"
+msgstr ""
+
+#: includes/admin/class-settings.php:1588
+#: includes/admin/class-subscriptions-list-table-new.php:301
+msgid "Successful"
+msgstr ""
+
+#: includes/admin/class-settings.php:1592
+#: includes/admin/class-subscriptions-list-table-new.php:305
+#: includes/admin/class-transactions-list-table.php:213
+#: includes/database/class-subscription-handler.php:368
+msgid "Failed"
+msgstr ""
+
+#: includes/admin/class-settings.php:1596
+#: includes/admin/class-subscriptions-list-table-new.php:309
+msgid "Total Revenue"
+msgstr ""
+
+#: includes/admin/class-settings.php:1605
+msgid "Timeline"
+msgstr ""
+
+#: includes/admin/class-settings.php:1624
+msgid "All Transactions"
+msgstr ""
+
+#: includes/admin/class-settings.php:1638
+msgid "No transactions found."
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:38
+msgid "Billing"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:41
+msgid "Actions"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:56
+msgid "Cancel Subscriptions"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:57
+msgid "Export"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:94
+msgid "Unknown User"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:118
+msgid "Cancels at period end"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:124
+msgid "%d failed payments"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:189
+msgid "View"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:207
+msgid "Are you sure you want to cancel this subscription?"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:208
+#: includes/admin/class-subscriptions-list-table-new.php:62
+#: views/checkout.php:74
+#: views/enterprise-plan.php:291
+#: views/family-plan.php:320
+#: views/individual-plan.php:355
+msgid "Cancel"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:255
+#: includes/admin/class-subscriptions-list-table-new.php:186
+#: includes/admin/class-transactions-list-table.php:210
+msgid "All Statuses"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:256
+#: includes/admin/class-subscriptions-list-table-new.php:187
+#: includes/public/class-services.php:1927
+msgid "Active"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:257
+#: includes/admin/class-subscriptions-list-table-new.php:188
+#: includes/public/class-services.php:1926
+msgid "Trialing"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:258
+#: includes/admin/class-subscriptions-list-table-new.php:190
+#: includes/public/class-services.php:1929
+msgid "Past Due"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:259
+#: includes/admin/class-subscriptions-list-table-new.php:189
+#: includes/database/class-subscription-handler.php:370
+#: includes/public/class-services.php:1928
+msgid "Canceled"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:260
+#: includes/public/class-services.php:1930
+msgid "Incomplete"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:263
+msgid "Search by user or subscription ID"
+msgstr ""
+
+#: includes/admin/class-subscription-list-table.php:268
+msgid "Clear"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:95
+msgid "View Timeline"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:224
+msgid "Transaction Details"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:232
+msgid "Intent ID"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:237
+#: includes/public/class-services.php:2023
+msgid "Payment Method"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:246
+msgid "Retry Count"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:255
+msgid "Error Information"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:259
+msgid "Error Code"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:265
+msgid "Error Message"
+msgstr ""
+
+#: includes/admin/class-subscriptions-list-table-new.php:276
+msgid "Gateway Response"
+msgstr ""
+
+#: includes/admin/class-transactions-list-table.php:211
+#: includes/database/class-subscription-handler.php:367
+msgid "Succeeded"
+msgstr ""
+
+#: includes/admin/class-transactions-list-table.php:212
+#: includes/database/class-subscription-handler.php:365
+msgid "Pending"
+msgstr ""
+
+#: includes/admin/class-transactions-list-table.php:214
+#: includes/database/class-subscription-handler.php:371
+msgid "Refunded"
+msgstr ""
+
+#: includes/core/class-aliasuser.php:198
+msgid "Alias data must be an array."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:201
+msgid "Alias data must include email."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:208
+msgid "Organization data must be an array."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:211
+#: includes/core/class-aliasuser.php:224
+#: includes/core/class-aliasuser.php:256
+msgid "Alias user does not exist."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:555
+msgid "Provided email is not valid."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:562
+#: includes/public/class-auth.php:1133
+#: includes/public/class-auth.php:1158
+#: includes/public/class-auth.php:2154
+#: includes/public/class-auth.php:2182
+msgid "User with this email already exists."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:580
+msgid "User with this organization name already exists."
+msgstr ""
+
+#: includes/core/class-aliasuser.php:646
+msgid "Failed to add new alias user."
+msgstr ""
+
+#: includes/core/class-api.php:108
+msgid "The user does not exist."
+msgstr ""
+
+#: includes/core/class-api.php:114
+#: includes/public/class-auth.php:1597
+#: includes/public/class-auth.php:1736
+#: includes/public/class-auth.php:1747
+msgid "Invalid username/email or password."
+msgstr ""
+
+#: includes/core/class-api.php:130
+msgid "Unexpected error occurred, please try again later."
+msgstr ""
+
+#: includes/core/class-plugin.php:156
+msgid "Plugin Activation Failed"
+msgstr ""
+
+#. translators: %1$s: minimum PHP version required, %2$s: detected PHP version.
+#: includes/core/class-plugin.php:187
+msgid "YouTuneIn Subscription Management requires PHP %1$s or higher. Your server is running PHP %2$s."
+msgstr ""
+
+#. translators: %1$s: minimum WP version required, %2$s: detected WP version.
+#: includes/core/class-plugin.php:198
+msgid "YouTuneIn Subscription Management requires WordPress %1$s or higher. Your site runs %2$s."
+msgstr ""
+
+#: includes/core/class-plugin.php:224
+msgid "Could not detect database version."
+msgstr ""
+
+#. translators: %1$s: minimum MariaDB version required, %2$s: detected MariaDB version string.
+#: includes/core/class-plugin.php:242
+msgid "YouTuneIn Subscription Management requires MariaDB %1$s or higher (for JSON support). Detected: %2$s"
+msgstr ""
+
+#. translators: %1$s: minimum MySQL version required, %2$s: detected MySQL version string.
+#: includes/core/class-plugin.php:263
+msgid "YouTuneIn Subscription Management requires MySQL %1$s or higher (for JSON support). Detected: %2$s"
+msgstr ""
+
+#: includes/core/class-price.php:22
+msgid "Price object is missing or has empty \"%s\" property."
+msgstr ""
+
+#: includes/core/class-price.php:188
+msgid "per %d units"
+msgstr ""
+
+#: includes/core/class-price.php:190
+#: includes/core/class-price.php:195
+#: includes/core/class-price.php:212
+msgid "per unit"
+msgstr ""
+
+#: includes/core/class-price.php:193
+msgid "per %s"
+msgstr ""
+
+#: includes/core/class-price.php:210
+msgid "Starts at"
+msgstr ""
+
+#: includes/core/class-price.php:228
+msgid "(Price details vary)"
+msgstr ""
+
+#: includes/core/class-product.php:34
+msgid "Invalid product type \"%s\". Allowed types: %s"
+msgstr ""
+
+#: includes/core/class-product.php:51
+msgid "The product data returned from Stripe is invalid."
+msgstr ""
+
+#: includes/core/class-product.php:62
+msgid "Error fetching product data: %s"
+msgstr ""
+
+#: includes/core/class-stripe-product-manager.php:172
+msgid "Stripe_Product_Manager fetch error: "
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:220
+msgid "Subscription created with trial: start=%s, end=%s (duration=%d days), subscription_id=%s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:227
+msgid "Subscription created: status=%s, plan_id=%s, period_start=%s, period_end=%s, subscription_id=%s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:370
+msgid "Subscription updated for subscription_id=%s): %s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:450
+msgid "Cancellation requested"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:451
+msgid "Payment disputed"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:452
+msgid "Payment failed"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:453
+msgid "Other reason"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:455
+msgid "Canceled on Stripe"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:464
+msgid "Payment method is not completed"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:472
+msgid "Subscription canceled. Reason: %s."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:476
+msgid "Subscription status updated from %s to %s. Reason: %s."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:535
+msgid "Subscription trial will end on %s."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:536
+msgid "Unknown date"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:599
+#: includes/core/class-webhook-handler.php:600
+#: includes/public/class-services.php:404
+msgid "Unknown error occurred during setup."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:664
+msgid "Trail payment setup failed, Reason: %s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:665
+#: includes/core/class-webhook-handler.php:1455
+#: includes/public/class-auth.php:137
+msgid "Unknown error"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:703
+msgid "Subscription canceled. Reason: Multiple times payment setup failed attempt."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:706
+msgid "Subscription status updated from %s to %s. Reason: Multiple times payment setup failed attempt."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:805
+msgid "Setup was canceled by the user or system."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:806
+msgid "The setup intent was canceled before completion."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:865
+msgid "Trial payment setup was canceled."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:889
+msgid "Subscription canceled. Reason: Payment setup was canceled."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:892
+msgid "Subscription status updated from %s to %s. Reason: Payment setup was canceled."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1021
+msgid "Trial payment setup succeeded."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1129
+msgid "Payment intent succeeded for amount %s via %s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1140
+msgid "Payment succeeded."
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1332
+msgid "Invoice finalized for payment of %s (Subscription: %s)"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1461
+msgid "Payment method required"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1477
+msgid "Invoice payment failed for %s (Subscription: %s). Reason: %s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1616
+msgid "Invoice payment succeeded for %s (Subscription: %s)"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1685
+msgid "Renewal payment failed: %s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1874
+msgid "Orphaned %s payment detected for %s"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1901
+msgid "Subscription canceled due to multiple payment failures"
+msgstr ""
+
+#: includes/core/class-webhook-handler.php:1908
+msgid "Subscription past due - %s"
+msgstr ""
+
+#: includes/database/class-event.php:164
+msgid "Similar event already logged"
+msgstr ""
+
+#: includes/database/class-event.php:229
+msgid "Subscription created by user #%d via %s for %s"
+msgstr ""
+
+#: includes/database/class-event.php:245
+#: includes/database/class-subscription.php:118
+msgid "Subscription status changed from %s to %s"
+msgstr ""
+
+#: includes/database/class-event.php:274
+msgid "Payment of %s initiated via %s"
+msgstr ""
+
+#: includes/database/class-event.php:291
+msgid "Payment of %s succeeded. Transaction: %s"
+msgstr ""
+
+#: includes/database/class-event.php:305
+msgid "Payment of %s failed: %s"
+msgstr ""
+
+#: includes/database/class-event.php:311
+msgid "Retry #%d"
+msgstr ""
+
+#: includes/database/class-event.php:338
+msgid "Payment retry attempt #%d"
+msgstr ""
+
+#: includes/database/class-payment.php:71
+msgid "Payment not found"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:257
+msgid "Subscription Created"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:259
+msgid "Subscription created with %s gateway"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:270
+msgid "Trial Period Started"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:272
+msgid "Trial period started, ends on %s"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:284
+msgid "Subscription Activated"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:285
+msgid "Subscription became active"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:295
+msgid "Subscription Canceled"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:296
+msgid "Subscription was canceled"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:311
+msgid "%s - %s %s"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:348
+msgid "Initial Payment"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:349
+msgid "Recurring Payment"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:350
+msgid "Trial Payment"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:351
+msgid "Upgrade"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:352
+msgid "Downgrade"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:353
+msgid "Refund"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:354
+msgid "Chargeback"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:366
+msgid "Processing"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:369
+msgid "Requires Action"
+msgstr ""
+
+#: includes/database/class-subscription-handler.php:372
+msgid "Disputed"
+msgstr ""
+
+#: includes/database/class-subscription.php:304
+msgid "Subscription expired on %s but status was not updated"
+msgstr ""
+
+#: includes/helpers/class-functions.php:234
+msgid "United States Dollar (USD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:235
+msgid "Australian Dollar (AUD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:236
+msgid "Canadian Dollar (CAD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:237
+msgid "New Zealand Dollar (NZD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:238
+msgid "Singapore Dollar (SGD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:239
+msgid "Hong Kong Dollar (HKD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:240
+msgid "Mexican Peso (MXN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:241
+msgid "New Taiwan Dollar (TWD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:242
+msgid "Fijian Dollar (FJD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:243
+msgid "Belize Dollar (BZD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:244
+msgid "Jamaican Dollar (JMD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:245
+msgid "Algerian Dinar (DZD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:246
+msgid "Egyptian Pound (EGP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:247
+msgid "Kuwaiti Dinar (KWD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:248
+msgid "Bahraini Dinar (BHD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:249
+msgid "Saudi Riyal (SAR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:250
+msgid "Qatari Riyal (QAR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:251
+msgid "Omani Rial (OMR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:252
+msgid "Iranian Rial (IRR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:253
+msgid "United Arab Emirates Dirham (AED)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:254
+msgid "Nigerian Naira (NGN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:255
+msgid "South African Rand (ZAR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:256
+msgid "Euro (EUR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:257
+msgid "British Pound (GBP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:258
+msgid "Indian Rupee (INR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:259
+msgid "Japanese Yen (JPY)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:260
+msgid "Chinese Yuan (CNY)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:261
+msgid "Russian Ruble (RUB)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:262
+msgid "Brazilian Real (BRL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:263
+msgid "Swedish Krona (SEK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:264
+msgid "Norwegian Krone (NOK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:265
+msgid "Danish Krone (DKK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:266
+msgid "Polish Złoty (PLN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:267
+msgid "Czech Koruna (CZK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:268
+msgid "Hungarian Forint (HUF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:269
+msgid "Romanian Leu (RON)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:270
+msgid "Ukrainian Hryvnia (UAH)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:271
+msgid "Georgian Lari (GEL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:272
+msgid "Turkish Lira (TRY)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:273
+msgid "Thai Baht (THB)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:274
+msgid "Malaysian Ringgit (MYR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:275
+msgid "Indonesian Rupiah (IDR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:276
+msgid "Vietnamese Dong (VND)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:277
+msgid "South Korean Won (KRW)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:278
+msgid "Philippine Peso (PHP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:279
+msgid "Bangladeshi Taka (BDT)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:280
+msgid "Sri Lankan Rupee (LKR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:281
+msgid "Myanmar Kyat (MMK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:282
+msgid "Cambodian Riel (KHR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:283
+msgid "Mongolian Tögrög (MNT)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:284
+msgid "Mozambican Metical (MZN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:285
+msgid "Kenyan Shilling (KES)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:286
+msgid "Tanzanian Shilling (TZS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:287
+msgid "Ugandan Shilling (UGX)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:288
+msgid "Ghanaian Cedi (GHS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:289
+msgid "Malawian Kwacha (MWK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:290
+msgid "Zambian Kwacha (ZMW)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:291
+msgid "Argentine Peso (ARS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:292
+msgid "Chilean Peso (CLP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:293
+msgid "Colombian Peso (COP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:294
+msgid "Peruvian Sol (PEN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:295
+msgid "Dominican Peso (DOP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:296
+msgid "Guatemalan Quetzal (GTQ)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:297
+msgid "Paraguayan Guaraní (PYG)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:298
+msgid "Uruguayan Peso (UYU)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:299
+msgid "Bolivian Boliviano (BOB)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:300
+msgid "Panamanian Balboa (PAB)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:301
+msgid "Trinidad and Tobago Dollar (TTD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:302
+msgid "Central African CFA Franc (XAF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:303
+msgid "West African CFA Franc (XOF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:304
+msgid "CFP Franc (XPF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:305
+msgid "Malagasy Ariary (MGA)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:306
+msgid "Moroccan Dirham (MAD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:307
+msgid "Lebanese Pound (LBP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:308
+msgid "Seychellois Rupee (SCR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:309
+msgid "Solomon Islands Dollar (SBD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:310
+msgid "Vanuatu Vatu (VUV)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:311
+msgid "Samoan Tala (WST)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:312
+msgid "Afghan Afghani (AFN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:313
+msgid "Albanian Lek (ALL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:314
+msgid "Armenian Dram (AMD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:315
+msgid "Netherlands Antillean Guilder (ANG)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:316
+msgid "Angolan Kwanza (AOA)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:317
+msgid "Aruban Florin (AWG)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:318
+msgid "Azerbaijani Manat (AZN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:319
+msgid "Bosnia and Herzegovina Convertible Mark (BAM)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:320
+msgid "Barbadian Dollar (BBD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:321
+msgid "Bulgarian Lev (BGN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:322
+msgid "Burundian Franc (BIF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:323
+msgid "Bermudian Dollar (BMD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:324
+msgid "Brunei Dollar (BND)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:325
+msgid "Bahamian Dollar (BSD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:326
+msgid "Bitcoin (BTC)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:327
+msgid "Bhutanese Ngultrum (BTN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:328
+msgid "Botswana Pula (BWP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:329
+msgid "Belarusian Ruble (BYR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:330
+msgid "Belarusian Ruble (BYN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:331
+msgid "Congolese Franc (CDF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:332
+msgid "Swiss Franc (CHF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:333
+msgid "Costa Rican Colón (CRC)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:334
+msgid "Cuban Convertible Peso (CUC)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:335
+msgid "Cuban Peso (CUP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:336
+msgid "Cape Verdean Escudo (CVE)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:337
+msgid "Djiboutian Franc (DJF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:338
+msgid "Eritrean Nakfa (ERN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:339
+msgid "Ethiopian Birr (ETB)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:340
+msgid "Falkland Islands Pound (FKP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:341
+msgid "Guernsey Pound (GGP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:342
+msgid "Gibraltar Pound (GIP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:343
+msgid "Gambian Dalasi (GMD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:344
+msgid "Guinean Franc (GNF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:345
+msgid "Guyanese Dollar (GYD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:346
+msgid "Honduran Lempira (HNL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:347
+msgid "Croatian Kuna (HRK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:348
+msgid "Haitian Gourde (HTG)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:349
+msgid "Israeli New Shekel (ILS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:350
+msgid "Isle of Man Pound (IMP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:351
+msgid "Iraqi Dinar (IQD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:352
+msgid "Iranian Toman (IRT)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:353
+msgid "Icelandic Króna (ISK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:354
+msgid "Jersey Pound (JEP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:355
+msgid "Jordanian Dinar (JOD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:356
+msgid "Kyrgyzstani Som (KGS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:357
+msgid "Comorian Franc (KMF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:358
+msgid "North Korean Won (KPW)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:359
+msgid "Cayman Islands Dollar (KYD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:360
+msgid "Kazakhstani Tenge (KZT)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:361
+msgid "Lao Kip (LAK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:362
+msgid "Liberian Dollar (LRD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:363
+msgid "Lesotho Loti (LSL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:364
+msgid "Libyan Dinar (LYD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:365
+msgid "Moldovan Leu (MDL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:366
+msgid "Macedonian Denar (MKD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:367
+msgid "Macanese Pataca (MOP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:368
+msgid "Mauritanian Ouguiya (MRU)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:369
+msgid "Mauritian Rupee (MUR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:370
+msgid "Maldivian Rufiyaa (MVR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:371
+msgid "Namibian Dollar (NAD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:372
+msgid "Nicaraguan Córdoba (NIO)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:373
+msgid "Nepalese Rupee (NPR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:374
+msgid "Papua New Guinean Kina (PGK)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:375
+msgid "Pakistani Rupee (PKR)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:376
+msgid "Transnistrian Ruble (PRB)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:377
+msgid "Serbian Dinar (RSD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:378
+msgid "Rwandan Franc (RWF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:379
+msgid "Sudanese Pound (SDG)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:380
+msgid "Saint Helena Pound (SHP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:381
+msgid "Sierra Leonean Leone (SLL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:382
+msgid "Somali Shilling (SOS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:383
+msgid "Surinamese Dollar (SRD)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:384
+msgid "South Sudanese Pound (SSP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:385
+msgid "São Tomé and Príncipe Dobra (STN)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:386
+msgid "Syrian Pound (SYP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:387
+msgid "Swazi Lilangeni (SZL)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:388
+msgid "Tajikistani Somoni (TJS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:389
+msgid "Turkmenistan Manat (TMT)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:390
+msgid "Tunisian Dinar (TND)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:391
+msgid "Tongan Pa'anga (TOP)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:392
+msgid "Uzbekistani Som (UZS)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:393
+msgid "Venezuelan Bolívar Fuerte (VEF)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:394
+msgid "Venezuelan Bolívar Soberano (VES)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:395
+msgid "Yemeni Rial (YER)"
+msgstr ""
+
+#: includes/helpers/class-functions.php:396
+msgid "East Caribbean Dollar (XCD)"
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:24
+#: includes/helpers/class-stripe-error-codes.php:925
+#: includes/helpers/class-stripe-error-codes.php:1117
+msgid "An error occurred while processing your payment. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:25
+msgid "Payment processing error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:68
+#: includes/helpers/class-stripe-error-codes.php:252
+msgid "Error Type: %s"
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:71
+msgid "Payment Method: %s"
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:74
+#: includes/helpers/class-stripe-error-codes.php:255
+msgid "Error Code: %s"
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:77
+#: includes/helpers/class-stripe-error-codes.php:258
+msgid "Decline Code: %s"
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:118
+msgid "Your %s payment could not be processed. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:119
+msgid "%s payment failed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:162
+msgid "Your %s payment was declined. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:163
+msgid "%s payment declined by provider."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:166
+msgid "Your %s payment timed out. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:167
+msgid "%s payment provider timeout."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:170
+msgid "You declined the %s payment. Please try again if you wish to complete the purchase."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:171
+msgid "Customer declined %s payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:174
+msgid "%s is temporarily unavailable. Please try a different payment method or try again later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:175
+msgid "%s payment method not available."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:198
+msgid "Your %s payment was declined. Please try a different payment method or contact %s support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:199
+msgid "%s generic decline."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:202
+msgid "Your %s account has insufficient funds. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:203
+msgid "%s insufficient funds."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:206
+msgid "This transaction is not allowed with %s. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:207
+msgid "%s transaction not allowed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:210
+msgid "Your %s payment could not be processed right now. Please try again later or use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:211
+msgid "%s temporary decline."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:214
+msgid "Your %s payment was declined. Please contact %s support for more information."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:215
+msgid "%s declined without specific reason."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:218
+msgid "An error occurred while processing your %s payment. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:219
+msgid "%s processing error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:281
+msgid "Your bank account has been closed. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:282
+msgid "Customer bank account has been closed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:285
+msgid "There is an issue with the account configuration. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:286
+msgid "Business address country does not match account country."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:289
+msgid "There is a payment configuration issue. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:290
+msgid "Invalid Stripe-Account header. Check account ID."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:293
+msgid "Account configuration issue. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:294
+msgid "Country change requires additional steps. Contact Stripe support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:297
+msgid "The bank account number is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:298
+msgid "Invalid bank account number (missing digits)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:301
+msgid "The amount is too large. Please use a lower amount."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:302
+msgid "Amount exceeds maximum allowed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:305
+msgid "The amount is too small. Please use a higher amount."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:306
+msgid "Amount is below minimum allowed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:309
+#: includes/helpers/class-stripe-error-codes.php:321
+#: includes/helpers/class-stripe-error-codes.php:565
+#: includes/helpers/class-stripe-error-codes.php:677
+#: includes/helpers/class-stripe-error-codes.php:705
+#: includes/helpers/class-stripe-error-codes.php:737
+#: includes/helpers/class-stripe-error-codes.php:917
+msgid "Payment configuration error. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:310
+msgid "API key has expired. Update integration with current keys."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:313
+msgid "This payment requires authentication. Please complete the verification."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:314
+msgid "Payment requires authentication (3D Secure)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:317
+msgid "Insufficient funds for this transaction. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:318
+msgid "Account balance insufficient for transfer/payout."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:322
+msgid "Invalid parameter in balance method object."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:325
+msgid "This bank account does not support the selected currency. Please use a different account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:326
+msgid "Bank account does not support currency."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:329
+msgid "Your bank account cannot be used. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:330
+msgid "Bank account declined - not verified or not supported."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:333
+msgid "This bank account already exists. Please use a different account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:334
+msgid "Bank account already exists on Customer object."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:337
+msgid "Bank account verification failed. Please check the amounts and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:338
+msgid "Microdeposit amounts incorrect or too many verification attempts."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:341
+#: includes/helpers/class-stripe-error-codes.php:601
+msgid "This bank account cannot be used. Please use a different account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:342
+msgid "Bank account cannot be used."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:345
+msgid "Bank account is not verified. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:346
+msgid "Platform attempting to share unverified bank account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:349
+#: includes/helpers/class-stripe-error-codes.php:865
+msgid "The payment authorization has expired. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:350
+msgid "Charge authorization expired. Cannot capture."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:353
+msgid "This payment cannot be processed. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:354
+msgid "Charge not authorized for capture."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:357
+msgid "This card has been declined too many times. Please try again after 24 hours or use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:358
+msgid "Card declined too many times. Retry after 24 hours."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:361
+msgid "This payment has already been processed. Please contact support if needed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:362
+msgid "Charge already captured."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:365
+msgid "This payment has already been refunded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:366
+msgid "Charge already refunded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:369
+msgid "This payment is under dispute. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:370
+msgid "Charge disputed/charged back."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:373
+msgid "Processing limit exceeded. Please try again later or contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:374
+msgid "Exceeds rolling-window processing limit for source type."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:377
+msgid "Transaction limit exceeded. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:378
+msgid "Exceeds processing limit for payment type."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:381
+msgid "Invalid payment information. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:382
+msgid "Invalid parameter for Charge operation."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:385
+msgid "This country is not supported. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:386
+msgid "Custom account country not supported."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:389
+msgid "The country code is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:390
+msgid "Invalid country code."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:393
+msgid "The coupon has expired. Please use a different coupon."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:394
+msgid "Coupon expired. Use valid coupon."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:397
+msgid "Maximum subscriptions reached. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:398
+msgid "Customer reached max subscriptions."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:401
+msgid "Maximum payment methods reached. Please remove some before adding new ones."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:402
+msgid "Customer reached max PaymentMethods. Detach some first."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:405
+msgid "Your address is missing or invalid. Please provide a complete address with country and postal code."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:406
+msgid "Customer address invalid for tax. Need ISO country code and postal_code."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:409
+msgid "The shipping address is invalid. Please verify all address fields."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:410
+msgid "Shipping address cannot determine tax rates. Check zip/postal, state/province."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:413
+msgid "This payment method requires additional setup. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:414
+msgid "PaymentMethod missing active mandate. Must confirm on-session first."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:417
+msgid "The email address is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:418
+msgid "Email address improperly formatted."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:421
+msgid "This request is already being processed. Please wait."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:422
+msgid "Idempotency key in use. Duplicate requests detected."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:425
+msgid "Financial account is inactive. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:426
+msgid "Cannot refresh data on inactive Financial Connections account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:429
+msgid "Transaction data unavailable. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:430
+msgid "Account needs at least one successful transaction refresh."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:433
+msgid "Instant payouts are not available. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:434
+msgid "Instant Payouts not available for this request."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:437
+msgid "Daily instant payout limit reached. Please try again tomorrow."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:438
+msgid "Daily Instant Payouts limit exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:441
+msgid "Instant payouts are not enabled. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:442
+msgid "Connected account not eligible for Instant Payouts."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:445
+msgid "Daily payout limit reached. Please try again tomorrow."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:446
+msgid "Daily payout limit exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:449
+msgid "Your account has insufficient funds. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:450
+msgid "Customer account has insufficient funds."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:453
+msgid "Invalid characters in the information provided. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:454
+msgid "Field contains unsupported characters."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:457
+msgid "This card type is not supported. Please use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:458
+msgid "Card type not supported for payouts. Need non-prepaid debit card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:461
+msgid "No items to invoice. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:462
+msgid "No pending invoice items for customer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:465
+msgid "This invoice cannot be modified. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:466
+msgid "Cannot update on_behalf_of after invoice assigned number."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:469
+msgid "No payment methods available. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:470
+msgid "No payment method types available. Check invoice settings or activate methods."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:473
+msgid "No subscription items to invoice. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:474
+msgid "No pending invoice items for subscription."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:477
+msgid "This invoice cannot be edited. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:478
+msgid "Invoice no longer editable. Create invoice items for next invoice."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:481
+#: includes/helpers/class-stripe-error-codes.php:673
+msgid "This payment requires additional action. Please complete the verification."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:482
+msgid "Payment requires user action. Use PaymentIntent to complete."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:485
+msgid "No upcoming invoice available. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:486
+msgid "No upcoming invoice for customer. Need active subscription or pending items."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:489
+msgid "The bank account could not be found. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:490
+msgid "Bank account not located."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:493
+msgid "This payment was not authorized by your bank. Please contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:494
+msgid "Customer notified bank that payment was unauthorized."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:497
+msgid "Your account cannot be used for this payment. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:498
+msgid "Customer account restricted for this payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:501
+msgid "Item is out of stock. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:502
+msgid "Line items out of stock."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:505
+#: includes/helpers/class-stripe-error-codes.php:521
+msgid "Required information is missing. Please check your details."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:506
+msgid "Required values not provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:509
+msgid "Invalid number format. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:510
+msgid "Parameter requires integer but different type provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:513
+msgid "Invalid information provided. Please check for empty spaces."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:514
+msgid "Values contain only whitespace."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:517
+msgid "Required information is empty. Please provide complete details."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:518
+msgid "Required string values are empty."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:522
+msgid "Required values missing."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:525
+msgid "Invalid information provided. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:526
+msgid "Unexpected parameters provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:529
+msgid "Conflicting information provided. Please check your details."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:530
+msgid "Mutually exclusive parameters provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:533
+msgid "Payment session not ready. Please try again later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:534
+msgid "ACSS debit session not ready. Retry later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:537
+msgid "Billing address is missing. Please provide your complete address."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:538
+msgid "PaymentMethod missing billing address details."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:541
+msgid "This payment method type is not supported. Please use a different method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:542
+msgid "Payment method type not supported."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:545
+msgid "Payment was not approved. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:546
+msgid "Customer did not approve payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:549
+msgid "Too many verification attempts. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:550
+msgid "Microdeposit verification attempts exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:553
+msgid "This payment cannot be processed at this time. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:554
+msgid "Intent in invalid state for operation."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:557
+msgid "Payment verification method missing. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:558
+msgid "Intent missing verification method in PaymentMethodOptions."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:561
+msgid "Invalid payment method information. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:562
+msgid "Invalid parameter in payment method object."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:566
+msgid "Parameter not allowed in testmode."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:569
+msgid "Payment processor timed out. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:570
+msgid "Payment method timeout. Check last_payment_error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:573
+msgid "Your payment was declined. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:574
+msgid "Payment declined by issuer/customer. Check last_payment_error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:577
+msgid "Verification amounts do not match. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:578
+msgid "Microdeposit amounts do not match."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:581
+msgid "Verification code does not match. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:582
+msgid "Verification code does not match."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:585
+msgid "Invalid verification amounts. Please provide exactly two amounts."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:586
+msgid "Must provide exactly two microdeposit amounts."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:589
+msgid "Verification deposits failed. Please check your bank account details."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:590
+msgid "Microdeposits failed. Check account/institution/transit numbers and currency."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:593
+msgid "Verification period expired. Please start verification again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:594
+msgid "Microdeposit verification timeout exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:597
+msgid "This bank account is already verified."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:598
+msgid "Bank account already verified."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:602
+msgid "Bank account blocked due to failed verification."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:605
+msgid "This payment method is not activated. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:606
+msgid "Payment method not activated in Dashboard."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:609
+msgid "Currency mismatch. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:610
+msgid "Currency does not match payment method currency."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:613
+msgid "This payment method cannot be used right now. Please try a different method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:614
+msgid "Payment method in incompatible state."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:617
+msgid "This payment method is temporarily unavailable. Please try a different method or try again later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:618
+msgid "Payment processor temporarily unavailable."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:621
+msgid "This payment cannot be processed right now. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:622
+msgid "PaymentIntent in incompatible state."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:625
+msgid "This payment method is not compatible. Please use a different method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:626
+msgid "PaymentIntent expects different payment method properties."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:629
+msgid "Invalid payment information. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:630
+msgid "Invalid parameter for PaymentIntent operation."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:633
+#: includes/helpers/class-stripe-error-codes.php:637
+msgid "Payment authorization is invalid. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:634
+msgid "Mandate invalid for payment intent."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:638
+msgid "Mandate invalid for setup intent."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:641
+msgid "Payment authorization format is invalid. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:642
+msgid "Invalid mandate reference prefix format."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:645
+msgid "Confirmation number was rejected. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:646
+msgid "Konbini confirmation_number rejected by processing partner."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:649
+#: includes/helpers/class-stripe-error-codes.php:681
+msgid "Authentication failed. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:650
+msgid "Payment method authentication failed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:653
+#: includes/helpers/class-stripe-error-codes.php:1085
+msgid "Your payment could not be processed. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:654
+msgid "Latest payment attempt failed. Check last_payment_error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:657
+msgid "Payment attempt expired. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:658
+msgid "Latest payment attempt expired. Check last_payment_error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:661
+msgid "Setup attempt expired. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:662
+msgid "Latest setup attempt expired. Check last_setup_error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:665
+msgid "The payment amount has changed. Please review and confirm."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:666
+msgid "Amount changed. Show updated amount to customer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:669
+msgid "Tax calculation requires more location information. Please provide your complete address."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:670
+msgid "Insufficient location info for automatic tax calculation."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:674
+msgid "Payment requires customer action but error_on_requires_action was set."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:678
+msgid "Only Stripe Connect platforms can work with other accounts."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:682
+msgid "Payment method authentication failed for SetupIntent."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:685
+msgid "Setup cannot be completed right now. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:686
+msgid "SetupIntent in incompatible state."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:689
+msgid "Invalid setup information. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:690
+msgid "Invalid parameter for SetupIntent operation."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:693
+msgid "Setup failed. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:694
+msgid "Latest setup attempt failed. Check last_setup_error."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:697
+msgid "This action is not valid. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:698
+msgid "Requested status transition invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:701
+msgid "Payouts are disabled. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:702
+msgid "Payouts disabled. Check account status for verification requirements."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:706
+msgid "Platform API key expired. Update integration or reconnect account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:709
+#: includes/helpers/class-stripe-error-codes.php:885
+msgid "The postal code is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:710
+msgid "Invalid postal code provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:713
+msgid "Payment stopped by your bank. Please contact your bank to complete this payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:714
+msgid "Customer stopped payment with bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:717
+msgid "This item already exists. Please use a different identifier."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:718
+msgid "Resource with user-specified ID already exists."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:721
+msgid "The requested information could not be found. Please try again or contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:722
+msgid "Resource does not exist or wrong ID provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:725
+msgid "The bank routing number is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:726
+msgid "Invalid bank routing number."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:729
+msgid "Tax calculation is unavailable. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:730
+msgid "Stripe Tax not activated on account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:733
+msgid "This clearing code is not supported. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:734
+msgid "Clearing code not supported."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:738
+msgid "Publishable key used instead of secret key."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:741
+msgid "This state is not supported. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:742
+msgid "US state not supported (associated states/territories)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:745
+msgid "The tax ID is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:746
+msgid "Tax ID invalid (missing digits)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:749
+msgid "Tax ID is not required for this payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:750
+msgid "Tax identifier not required for this payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:753
+msgid "Terminal not available in your country. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:754
+msgid "Terminal not available in this country."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:757
+msgid "Card reader is offline. Please ensure it is powered on and connected."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:758
+msgid "Reader offline. Check power and internet connection."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:761
+msgid "Card reader timed out. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:762
+msgid "Timeout sending command to reader."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:765
+msgid "Card reader is busy. Please wait and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:766
+msgid "Reader busy processing another request."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:769
+msgid "Card reader has a hardware fault. Please contact support for replacement."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:770
+msgid "Unrecoverable hardware fault detected. Contact Stripe support for replacement."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:773
+msgid "Card reader cannot be activated at this location. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:774
+msgid "Reader cannot be activated in current Location. Register to new Location."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:777
+msgid "Card reader cannot accept payments at this location. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:778
+msgid "Reader cannot take payments in current Location. Register to new Location."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:781
+msgid "Your connection is not secure. Please update your browser or contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:782
+msgid "TLS version unsupported. Must use TLS 1.2 or above."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:785
+msgid "This payment information has already been used. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:786
+msgid "Token already used. Create new token."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:789
+msgid "This payment is being processed. Please wait a moment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:790
+msgid "Token in use. Duplicate request detected."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:793
+msgid "Transfer cannot be completed. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:794
+msgid "Transfer cannot be created."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:797
+msgid "Transfer configuration error. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:798
+msgid "Do not pass payments parameter when balance type is issuing."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:801
+msgid "The URL provided is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:802
+msgid "Invalid URL provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:805
+msgid "This operation is not allowed. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:806
+msgid "Transfers/payouts on behalf of Standard account not allowed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:809
+msgid "This resource is temporarily locked. Please try again in a moment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:810
+msgid "Object locked by another request. Retry or reduce concurrent requests."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:813
+msgid "Phone number is required. Please provide a phone number."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:814
+msgid "Phone number required for EU Issuing Cardholders."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:817
+msgid "This refund has already been processed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:818
+msgid "Return intent already processed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:821
+msgid "Cannot refund a disputed payment. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:822
+msgid "Cannot refund disputed payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:825
+msgid "Onboarding limit reached. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:826
+msgid "Progressive onboarding limit exceeded for platform."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:829
+msgid "This service is unavailable. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:830
+msgid "Vault and Forward API not accessible."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:833
+msgid "Invalid configuration. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:834
+msgid "Invalid parameter in Vault and Forward API."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:837
+msgid "Connection timed out. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:838
+msgid "Destination endpoint timed out."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:841
+msgid "Connection error occurred. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:842
+msgid "No response from destination endpoint."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:845
+msgid "Service temporarily unavailable. Please try again later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:846
+msgid "Destination endpoint offline/unresponsive. Retry later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:849
+msgid "Service error occurred. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:850
+msgid "Destination endpoint offline/unresponsive. State may be indeterminate."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:853
+#: includes/helpers/class-stripe-error-codes.php:857
+msgid "This payment method is no longer supported. Please use a different method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:854
+msgid "Old Alipay method not supported. Upgrade to Sources."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:858
+msgid "Old Bitcoin method not supported. Upgrade to Sources."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:861
+#: includes/helpers/class-stripe-error-codes.php:1021
+msgid "Your card was declined. Please try a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:862
+msgid "Card declined. Check decline_code for reason."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:866
+msgid "Charge authorization expired. Must capture within set timeframe (7 days default)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:869
+#: includes/helpers/class-stripe-error-codes.php:1013
+msgid "Your card has expired. Please use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:870
+msgid "Card has expired."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:873
+msgid "The card address is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:874
+msgid "Card address is incorrect."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:877
+msgid "The security code is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:878
+msgid "Card security code incorrect."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:881
+msgid "The card number is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:882
+msgid "Card number incorrect."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:886
+msgid "Card postal code incorrect."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:889
+msgid "The location is invalid for tax calculation. Please check your address."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:890
+msgid "Invalid location for tax calculation."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:893
+msgid "The payment amount is invalid. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:894
+msgid "Amount invalid or exceeds minimum/maximum limits."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:897
+msgid "The security code is invalid. Please check your card and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:898
+msgid "Card security code invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:901
+msgid "The expiration month is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:902
+msgid "Card expiration month incorrect."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:905
+msgid "The expiration year is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:906
+msgid "Card expiration year incorrect."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:909
+msgid "The card number is invalid. Please check the card details."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:910
+msgid "Card number is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:913
+msgid "This payment method cannot be used. Please try a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:914
+msgid "Source in incorrect state (pending/failed/consumed)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:918
+msgid "Test/Live mode mismatch."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:921
+msgid "Payment information is incomplete. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:922
+msgid "Source not saved to customer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:926
+msgid "Error processing card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:929
+msgid "This product is no longer available. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:930
+msgid "Product SKU no longer available."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:933
+msgid "Too many requests. Please wait a moment and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:934
+msgid "API rate limit exceeded. Implement exponential backoff."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:937
+msgid "SEPA payments are not supported. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:938
+msgid "Account does not support SEPA payments."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:941
+msgid "Shipping calculation failed. Please verify your address information."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:942
+msgid "Shipping calculation failed. Info incorrect or could not be verified."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:945
+msgid "This item is no longer available. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:946
+msgid "SKU inactive. Use different SKU or reactivate."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:949
+msgid "Tax calculation failed. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:950
+msgid "Tax calculation for order failed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:953
+msgid "Payment processing is temporarily unavailable. Please contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:954
+msgid "Account not activated. Test mode only."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:963
+msgid "Your payment could not be processed. Please try a different payment method or contact support."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:964
+msgid "Payment failed with unhandled error code."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:977
+msgid "Your card requires additional authentication. Please complete the verification and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:978
+msgid "Transaction requires 3D Secure or similar authentication."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:981
+msgid "Your payment could not be authorized. Please try again or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:982
+msgid "Issuer requires authorization approval."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:985
+#: includes/helpers/class-stripe-error-codes.php:1001
+#: includes/helpers/class-stripe-error-codes.php:1093
+#: includes/helpers/class-stripe-error-codes.php:1129
+#: includes/helpers/class-stripe-error-codes.php:1133
+#: includes/helpers/class-stripe-error-codes.php:1149
+msgid "Your card was declined. Please contact your bank for more information."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:986
+msgid "Customer must contact card issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:989
+msgid "This card does not support this type of purchase. Please use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:990
+msgid "Card type not supported for this transaction."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:993
+msgid "You have exceeded your card limit. Please use a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:994
+msgid "Card velocity or transaction limit exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:997
+msgid "Your card does not support this currency. Please use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:998
+msgid "Card does not support the transaction currency."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1002
+msgid "Issuer declined without specific reason."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1005
+msgid "Your card was declined. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1006
+msgid "Permanent decline - do not retry."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1009
+msgid "This transaction appears to be a duplicate. Please check your recent payments."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1010
+msgid "Identical transaction submitted recently."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1014
+msgid "Card expiration date has passed."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1017
+msgid "Your payment could not be processed. Please try a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1018
+msgid "Payment blocked due to suspected fraud (Stripe Radar)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1022
+msgid "Generic decline or blocked by Stripe Radar/Adaptive Acceptance."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1025
+msgid "The card number you entered is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1026
+msgid "Invalid card number entered."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1029
+msgid "The security code (CVC) you entered is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1030
+msgid "Incorrect CVC provided."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1033
+msgid "The PIN you entered is incorrect. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1034
+msgid "Incorrect PIN entered on card reader."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1037
+msgid "The postal code you entered is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1038
+msgid "Incorrect ZIP/postal code."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1041
+msgid "The billing address you entered is incorrect. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1042
+msgid "Billing address does not match."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1045
+msgid "Your card has insufficient funds. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1046
+msgid "Insufficient funds in card account."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1049
+msgid "Your card or account is invalid. Please contact your bank or use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1050
+msgid "Card or linked account is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1053
+msgid "The payment amount is invalid. Please contact support or try a different amount."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1054
+msgid "Payment amount invalid or exceeds limits."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1057
+msgid "The security code (CVC) you entered is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1058
+msgid "CVC format is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1061
+msgid "The expiration month you entered is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1062
+msgid "Card expiration month is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1065
+msgid "The expiration year you entered is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1066
+msgid "Card expiration year is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1069
+msgid "The card number you entered is invalid. Please check and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1070
+msgid "Card number format is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1073
+msgid "The PIN you entered is invalid. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1074
+msgid "PIN format is invalid."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1077
+msgid "Your bank could not be reached. Please try again or use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1078
+msgid "Card issuer unavailable - temporary issue."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1081
+#: includes/helpers/class-stripe-error-codes.php:1145
+msgid "Your payment could not be processed. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1082
+msgid "Card reported as lost."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1086
+msgid "Payment blocked by merchant block list."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1089
+msgid "Your card or account information needs updating. Please contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1090
+msgid "New account information available from issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1094
+msgid "No action taken by issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1097
+msgid "This transaction is not permitted. Please contact your bank or use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1098
+msgid "Transaction not permitted by issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1101
+msgid "Your card requires a PIN. Please insert your card and enter your PIN."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1102
+msgid "Offline PIN required for this transaction."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1105
+msgid "Your card requires a PIN. Please enter your PIN to complete the payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1106
+msgid "Online or offline PIN required."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1109
+msgid "Your card cannot be used. Please use a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1110
+msgid "Card flagged for pickup (possibly lost/stolen)."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1113
+msgid "You have exceeded the number of PIN attempts. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1114
+msgid "Maximum PIN attempts exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1118
+msgid "Payment processing error - retry recommended."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1121
+msgid "Your payment could not be processed. Please try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1122
+msgid "Transaction needs to be re-entered."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1125
+msgid "Your card is restricted. Please use a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1126
+msgid "Card has restrictions preventing this transaction."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1130
+msgid "All authorizations revoked by issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1134
+msgid "Authorization revoked by issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1137
+msgid "Your payment could not be processed due to security reasons. Please contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1138
+msgid "Security violation detected by issuer."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1141
+msgid "This service is not allowed. Please use a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1142
+msgid "Service not allowed for this card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1146
+msgid "Card reported as stolen."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1150
+msgid "Stop payment order placed on card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1153
+msgid "Test card was used. Please use a valid card for payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1154
+msgid "Stripe test card number used in live mode."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1157
+msgid "This transaction is not allowed. Please contact your bank or use a different card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1158
+msgid "Transaction type not allowed for this card."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1161
+msgid "Your payment could not be processed. Please try again later or use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1162
+msgid "Temporary issue - customer should retry later."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1165
+msgid "You have exceeded your card limit. Please use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1166
+msgid "Withdrawal or transaction count limit exceeded."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1169
+msgid "Your payment provider has declined the payment."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1170
+msgid "Generic decline from partner processor."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1173
+msgid "We can't charge the customer's account. Please try again or use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1174
+msgid "Customer account is invalid at partner processor."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1177
+msgid "You have exceeded your payment limit. Please use a different payment method or contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1178
+msgid "Payment amount exceeds partner processor limit."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1181
+msgid "Your payment method is invalid due to an invalid billing agreement."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1182
+msgid "Billing agreement is invalid at partner processor."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1185
+msgid "Your payment could not be processed due to compliance reasons. Please contact your bank."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1186
+msgid "The payment was blocked due to a compliance violation at the payment provider."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1189
+msgid "The payment was disputed. Please contact support for assistance."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1190
+msgid "The payment was disputed at the payment provider."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1193
+msgid "Your payment could not be processed due to invalid authorization. Please try again or use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1194
+msgid "The authorization is invalid at the payment provider."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1197
+msgid "Your payment could not be processed due to invalid payment information. Please check your details and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1198
+msgid "The payment information is invalid at the payment provider."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1201
+msgid "We couldn't find the payment information. Please try again or use a different payment method."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1202
+msgid "The payment was not found at the partner processor."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1205
+msgid "Your payment information has expired. Please update your details and try again."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1206
+msgid "The payment information has expired at the payment provider."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1209
+msgid "Your payment provider labelled this customer as high risk."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1210
+msgid "The payment provider labelled this customer as high risk."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1213
+msgid "The business account you're trying to use for processing a payment or issuing a refund is deactivated and incapable of sending or receiving funds."
+msgstr ""
+
+#: includes/helpers/class-stripe-error-codes.php:1214
+msgid "The business account is invalid at the payment provider."
+msgstr ""
+
+#: includes/public/class-auth.php:197
+#: includes/public/class-auth.php:272
+msgid "Invalid request"
+msgstr ""
+
+#: includes/public/class-auth.php:210
+#: includes/public/class-auth.php:244
+msgid "Registration successful! Please check your email for OTP(One-Time-Password)."
+msgstr ""
+
+#: includes/public/class-auth.php:219
+msgid "OTP(One-Time-Password) resent successfully. Please check your email."
+msgstr ""
+
+#: includes/public/class-auth.php:219
+msgid "OTP(One-Time-Password) verified successfully. Please log in."
+msgstr ""
+
+#: includes/public/class-auth.php:230
+msgid "Login successful! Redirecting..."
+msgstr ""
+
+#: includes/public/class-auth.php:252
+msgid "Unknown action"
+msgstr ""
+
+#: includes/public/class-auth.php:297
+msgid "Failed to load form"
+msgstr ""
+
+#: includes/public/class-auth.php:316
+msgid "Alias Authentication"
+msgstr ""
+
+#: includes/public/class-auth.php:343
+#: includes/public/class-front-display.php:285
+msgid "Register"
+msgstr ""
+
+#: includes/public/class-auth.php:350
+#: views/enterprise-plan.php:351
+#: views/family-plan.php:380
+#: views/individual-plan.php:415
+#: assets/js/public.js:1996
+msgid "Already have an account?"
+msgstr ""
+
+#: includes/public/class-auth.php:350
+#: views/enterprise-plan.php:352
+#: views/family-plan.php:381
+#: views/individual-plan.php:416
+#: assets/js/public.js:1998
+msgid "Login here"
+msgstr ""
+
+#: includes/public/class-auth.php:357
+msgid "Forget Password"
+msgstr ""
+
+#: includes/public/class-auth.php:366
+#: includes/public/class-auth.php:763
+#: assets/js/public.js:1987
+msgid "Reset Password"
+msgstr ""
+
+#: includes/public/class-auth.php:386
+#: includes/public/class-auth.php:830
+msgid "Login"
+msgstr ""
+
+#: includes/public/class-auth.php:393
+msgid "Forgot your Password?"
+msgstr ""
+
+#: includes/public/class-auth.php:393
+msgid "Recover here"
+msgstr ""
+
+#: includes/public/class-auth.php:461
+msgid "First Name:"
+msgstr ""
+
+#: includes/public/class-auth.php:466
+msgid "First name"
+msgstr ""
+
+#: includes/public/class-auth.php:470
+msgid "Last Name:"
+msgstr ""
+
+#: includes/public/class-auth.php:475
+msgid "Last name"
+msgstr ""
+
+#: includes/public/class-auth.php:479
+#: includes/public/class-auth.php:682
+#: includes/public/class-auth.php:793
+msgid "Email:"
+msgstr ""
+
+#: includes/public/class-auth.php:484
+msgid "Email address"
+msgstr ""
+
+#: includes/public/class-auth.php:488
+#: includes/public/class-auth.php:1960
+msgid "Create a password:"
+msgstr ""
+
+#: includes/public/class-auth.php:495
+#: includes/public/class-auth.php:1967
+msgid "Create a password"
+msgstr ""
+
+#: includes/public/class-auth.php:497
+#: includes/public/class-auth.php:515
+#: includes/public/class-auth.php:735
+#: includes/public/class-auth.php:751
+#: includes/public/class-auth.php:812
+#: includes/public/class-auth.php:1969
+#: includes/public/class-auth.php:1985
+msgid "Toggle Password"
+msgstr ""
+
+#: includes/public/class-auth.php:505
+#: includes/public/class-auth.php:1975
+msgid "Confirm the password:"
+msgstr ""
+
+#: includes/public/class-auth.php:513
+#: includes/public/class-auth.php:749
+#: includes/public/class-auth.php:1983
+msgid "Re-enter the password"
+msgstr ""
+
+#. translators: 1: opening anchor tag for Terms of Use, 2: closing anchor tag for Terms of Use, 3: opening anchor tag for Privacy Policy and Subscription Terms, 4: closing anchor tag for Privacy Policy and Subscription Terms.
+#: includes/public/class-auth.php:535
+#: includes/public/class-auth.php:2005
+msgid "By clicking Subscribe, you confirm and affirm that you have read, understood and agreed to our %1$sTerms of Use%2$s, %3$sPrivacy Policy and Subscription Terms%4$s."
+msgstr ""
+
+#: includes/public/class-auth.php:550
+#: includes/public/class-auth.php:2020
+msgid "Subscribe"
+msgstr ""
+
+#: includes/public/class-auth.php:645
+msgid "One-Time Password (OTP):"
+msgstr ""
+
+#: includes/public/class-auth.php:650
+msgid "Enter the OTP(One-Time-Password)"
+msgstr ""
+
+#: includes/public/class-auth.php:659
+msgid "Verify OTP(One-Time-Password)"
+msgstr ""
+
+#: includes/public/class-auth.php:663
+msgid "Resend OTP(One-Time-Password)"
+msgstr ""
+
+#: includes/public/class-auth.php:694
+msgid "Send Reset Link"
+msgstr ""
+
+#: includes/public/class-auth.php:726
+msgid "New Password:"
+msgstr ""
+
+#: includes/public/class-auth.php:733
+msgid "New Password"
+msgstr ""
+
+#: includes/public/class-auth.php:741
+msgid "Confirm Password:"
+msgstr ""
+
+#: includes/public/class-auth.php:804
+msgid "Password:"
+msgstr ""
+
+#: includes/public/class-auth.php:810
+msgid "Enter password"
+msgstr ""
+
+#: includes/public/class-auth.php:823
+msgid "Remember me"
+msgstr ""
+
+#: includes/public/class-auth.php:848
+msgid "You are logged in as %s"
+msgstr ""
+
+#: includes/public/class-auth.php:855
+#: views/enterprise-plan.php:216
+#: views/enterprise-plan.php:233
+#: views/family-plan.php:245
+#: views/family-plan.php:262
+#: views/individual-plan.php:280
+#: views/individual-plan.php:297
+msgid "Logout"
+msgstr ""
+
+#: includes/public/class-auth.php:869
+#: includes/public/class-auth.php:1359
+#: includes/public/class-auth.php:1460
+#: includes/public/class-auth.php:1805
+msgid "Invalid action. The user does not exist."
+msgstr ""
+
+#: includes/public/class-auth.php:877
+msgid "The user is not an Alias user."
+msgstr ""
+
+#: includes/public/class-auth.php:881
+msgid "No email found for this user."
+msgstr ""
+
+#: includes/public/class-auth.php:896
+msgid "You have reached the maximum number of emails for today."
+msgstr ""
+
+#: includes/public/class-auth.php:909
+msgid "Please wait %s before requesting another OTP(One-Time-Password)/Email."
+msgstr ""
+
+#: includes/public/class-auth.php:910
+msgid "minute"
+msgid_plural "minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-auth.php:935
+msgid "Reset Your YouTuneIn Password"
+msgstr ""
+
+#: includes/public/class-auth.php:935
+msgid "Verify Your YouTuneIn Account"
+msgstr ""
+
+#: includes/public/class-auth.php:953
+msgid "Failed to send email. Please try again later."
+msgstr ""
+
+#: includes/public/class-auth.php:958
+msgid "Password reset email sent successfully."
+msgstr ""
+
+#: includes/public/class-auth.php:958
+msgid "Verification email sent successfully."
+msgstr ""
+
+#: includes/public/class-auth.php:969
+msgid "The action could not be completed because the user was not found."
+msgstr ""
+
+#: includes/public/class-auth.php:974
+#: includes/public/class-auth.php:991
+msgid "The verification token or OTP(One-Time-Password) you entered is invalid."
+msgstr ""
+
+#: includes/public/class-auth.php:979
+msgid "This verification link or OTP(One-Time-Password) is no longer valid. Please request a new one."
+msgstr ""
+
+#: includes/public/class-auth.php:1001
+msgid "Verification successful! You can now log in to your account."
+msgstr ""
+
+#: includes/public/class-auth.php:1062
+#: includes/public/class-auth.php:1214
+#: includes/public/class-auth.php:1316
+#: includes/public/class-auth.php:1400
+#: includes/public/class-auth.php:1532
+#: includes/public/class-auth.php:1837
+#: includes/public/class-auth.php:2032
+#: includes/public/class-front-functions.php:831
+msgid "Security check failed. Please refresh the page and try again."
+msgstr ""
+
+#: includes/public/class-auth.php:1095
+#: includes/public/class-auth.php:2099
+#: assets/js/public.js:1418
+#: assets/js/public.js:1554
+msgid "First name is required."
+msgstr ""
+
+#: includes/public/class-auth.php:1097
+#: includes/public/class-auth.php:2101
+msgid "Please enter a valid first name."
+msgstr ""
+
+#: includes/public/class-auth.php:1100
+#: includes/public/class-auth.php:2104
+#: assets/js/public.js:1419
+#: assets/js/public.js:1555
+msgid "Last name is required."
+msgstr ""
+
+#: includes/public/class-auth.php:1102
+#: includes/public/class-auth.php:2106
+msgid "Please enter a valid last name."
+msgstr ""
+
+#: includes/public/class-auth.php:1105
+msgid "Valid email is required."
+msgstr ""
+
+#: includes/public/class-auth.php:1108
+#: assets/js/public.js:1426
+#: assets/js/public.js:1566
+msgid "Password must be at least 6 characters."
+msgstr ""
+
+#: includes/public/class-auth.php:1111
+#: includes/public/class-auth.php:1340
+#: assets/js/public.js:1430
+#: assets/js/public.js:1570
+msgid "Passwords do not match."
+msgstr ""
+
+#: includes/public/class-auth.php:1114
+msgid "You must agree to the terms and conditions."
+msgstr ""
+
+#: includes/public/class-auth.php:1121
+#: includes/public/class-auth.php:1238
+#: includes/public/class-auth.php:1347
+#: includes/public/class-auth.php:1448
+#: includes/public/class-auth.php:1583
+#: includes/public/class-auth.php:2142
+msgid "Please fix the errors."
+msgstr ""
+
+#: includes/public/class-auth.php:1148
+#: includes/public/class-auth.php:2203
+msgid "Server error, please try again later."
+msgstr ""
+
+#: includes/public/class-auth.php:1198
+#: includes/public/class-auth.php:2271
+msgid "Registration successful. Please verify your email to login"
+msgstr ""
+
+#: includes/public/class-auth.php:1231
+#: includes/public/class-auth.php:1573
+msgid "Username or email is required."
+msgstr ""
+
+#: includes/public/class-auth.php:1249
+msgid "No matching account was found. Please check your username or email."
+msgstr ""
+
+#: includes/public/class-auth.php:1299
+msgid "We've sent you a password reset link or OTP(One-Time-Password) to your email. Please check and follow the instructions to continue."
+msgstr ""
+
+#: includes/public/class-auth.php:1337
+msgid "Valid new password is required (min 6 characters)."
+msgstr ""
+
+#. translators: %1$s and %2$s wrap the login link.
+#: includes/public/class-auth.php:1379
+msgid "Password has been reset successfully. Click here to %1$slog in%2$s."
+msgstr ""
+
+#: includes/public/class-auth.php:1408
+msgid "Email already verified — please proceed to login."
+msgstr ""
+
+#: includes/public/class-auth.php:1425
+msgid "We've sent you a password reset link or OTP(One-Time-Password) to your email."
+msgstr ""
+
+#: includes/public/class-auth.php:1441
+msgid "Valid OTP(One-Time-Password) is required."
+msgstr ""
+
+#. translators: %1$s and %2$s wrap the login link.
+#: includes/public/class-auth.php:1515
+msgid "OTP (One-Time-Password) verification successful! %1$sClick here%2$s to log in."
+msgstr ""
+
+#: includes/public/class-auth.php:1576
+#: assets/js/public.js:1425
+#: assets/js/public.js:1565
+#: assets/js/public.js:1874
+msgid "Password is required."
+msgstr ""
+
+#: includes/public/class-auth.php:1617
+#: includes/public/class-auth.php:1634
+#: includes/public/class-auth.php:1654
+#: includes/public/class-auth.php:1718
+msgid "Login failed. Please try again."
+msgstr ""
+
+#. translators: %1$s and %2$s wrap the verification link.
+#: includes/public/class-auth.php:1672
+#: includes/public/class-auth.php:1759
+msgid "Email address is not verified. %1$sClick here%2$s to request a new verification link."
+msgstr ""
+
+#: includes/public/class-auth.php:1705
+#: includes/public/class-auth.php:1792
+msgid "Login successful."
+msgstr ""
+
+#: includes/public/class-auth.php:1815
+msgid "Invalid response, please try again later."
+msgstr ""
+
+#: includes/public/class-auth.php:1824
+msgid "Invalid login details."
+msgstr ""
+
+#: includes/public/class-auth.php:1848
+msgid "Logout successful."
+msgstr ""
+
+#: includes/public/class-auth.php:1883
+#: includes/public/class-auth.php:1892
+msgid "Organization Name:"
+msgstr ""
+
+#: includes/public/class-auth.php:1888
+msgid "Organization name"
+msgstr ""
+
+#: includes/public/class-auth.php:1895
+#: includes/public/class-auth.php:1897
+msgid "Select organization type"
+msgstr ""
+
+#: includes/public/class-auth.php:1898
+msgid "Company"
+msgstr ""
+
+#: includes/public/class-auth.php:1899
+msgid "QR Code Plan"
+msgstr ""
+
+#: includes/public/class-auth.php:1901
+msgid "QR Code Plan – For hotels; Company Plan – For corporate organizations."
+msgstr ""
+
+#: includes/public/class-auth.php:1904
+msgid "Department:"
+msgstr ""
+
+#: includes/public/class-auth.php:1905
+msgid "Select department"
+msgstr ""
+
+#: includes/public/class-auth.php:1912
+msgid "Your selected departments will be reflected once your organization has been created."
+msgstr ""
+
+#: includes/public/class-auth.php:1915
+msgid "Coutry:"
+msgstr ""
+
+#: includes/public/class-auth.php:1916
+#: includes/public/class-auth.php:1917
+msgid "Select country"
+msgstr ""
+
+#: includes/public/class-auth.php:1924
+msgid "Contact person first name:"
+msgstr ""
+
+#: includes/public/class-auth.php:1929
+msgid "Contact person first name"
+msgstr ""
+
+#: includes/public/class-auth.php:1933
+msgid "Contact person last name:"
+msgstr ""
+
+#: includes/public/class-auth.php:1938
+msgid "Contact person last name"
+msgstr ""
+
+#: includes/public/class-auth.php:1942
+msgid "Phone number:"
+msgstr ""
+
+#: includes/public/class-auth.php:1947
+msgid "Phone number"
+msgstr ""
+
+#: includes/public/class-auth.php:1951
+msgid "Contact Person Email:"
+msgstr ""
+
+#: includes/public/class-auth.php:1956
+msgid "Contact person email address"
+msgstr ""
+
+#: includes/public/class-auth.php:2080
+#: assets/js/public.js:1540
+msgid "Organization name is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2083
+msgid "Valid organization type is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2086
+msgid "At least one department is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2090
+msgid "Valid department is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2096
+msgid "Valid country is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2109
+#: assets/js/public.js:1561
+msgid "Phone number is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2119
+msgid "Invalid phone number."
+msgstr ""
+
+#: includes/public/class-auth.php:2122
+msgid "Invalid phone number format."
+msgstr ""
+
+#: includes/public/class-auth.php:2126
+msgid "Valid email address is required."
+msgstr ""
+
+#: includes/public/class-auth.php:2129
+msgid "Valid password is required (min 6 characters)."
+msgstr ""
+
+#: includes/public/class-auth.php:2132
+msgid "Password confirmation does not match."
+msgstr ""
+
+#: includes/public/class-auth.php:2135
+#: assets/js/public.js:1432
+#: assets/js/public.js:1572
+msgid "You must agree to the terms."
+msgstr ""
+
+#: includes/public/class-auth.php:2165
+#: includes/public/class-auth.php:2192
+msgid "Organization name already in use, please choose another."
+msgstr ""
+
+#: includes/public/class-front-display.php:105
+msgid "My Profile"
+msgstr ""
+
+#: includes/public/class-front-display.php:106
+msgid "View your personal details and account information"
+msgstr ""
+
+#: includes/public/class-front-display.php:111
+msgid "Full Name"
+msgstr ""
+
+#: includes/public/class-front-display.php:119
+msgid "Phone"
+msgstr ""
+
+#: includes/public/class-front-display.php:176
+msgid "Platform"
+msgstr ""
+
+#: includes/public/class-front-display.php:177
+msgid "Start Date"
+msgstr ""
+
+#: includes/public/class-front-display.php:178
+msgid "End Date"
+msgstr ""
+
+#: includes/public/class-front-display.php:180
+msgid "Plan Type"
+msgstr ""
+
+#: includes/public/class-front-display.php:264
+msgid "Registered Successfully"
+msgstr ""
+
+#: includes/public/class-front-display.php:287
+msgid "with Family Code"
+msgstr ""
+
+#: includes/public/class-front-display.php:288
+msgid "here"
+msgstr ""
+
+#: includes/public/class-front-display.php:291
+msgid "Family Code *"
+msgstr ""
+
+#: includes/public/class-front-display.php:292
+msgid "Name *"
+msgstr ""
+
+#: includes/public/class-front-display.php:293
+msgid "Last Name *"
+msgstr ""
+
+#: includes/public/class-front-display.php:294
+msgid "Email *"
+msgstr ""
+
+#: includes/public/class-front-display.php:295
+msgid "Password *"
+msgstr ""
+
+#: includes/public/class-front-display.php:310
+msgid "Submit"
+msgstr ""
+
+#: includes/public/class-front-display.php:324
+#: views/my-account/dashboard.php:432
+#: views/thank-you/family.php:228
+#: views/thank-you/individual.php:229
+msgid "Welcome to"
+msgstr ""
+
+#: includes/public/class-front-display.php:324
+#: views/enterprise-plan.php:257
+#: views/family-plan.php:286
+#: views/individual-plan.php:321
+#: views/my-account/dashboard.php:432
+#: views/thank-you/family.php:228
+#: views/thank-you/individual.php:229
+msgid "YouTuneIn"
+msgstr ""
+
+#: includes/public/class-front-display.php:335
+#: views/my-account/dashboard.php:443
+#: views/thank-you/family.php:239
+#: views/thank-you/individual.php:240
+msgid "Scan the"
+msgstr ""
+
+#: includes/public/class-front-display.php:335
+#: views/my-account/dashboard.php:443
+#: views/thank-you/family.php:239
+#: views/thank-you/individual.php:240
+msgid "QR code"
+msgstr ""
+
+#: includes/public/class-front-display.php:335
+#: views/my-account/dashboard.php:443
+#: views/thank-you/family.php:239
+#: views/thank-you/individual.php:240
+msgid "to install YouTuneIn from the app store"
+msgstr ""
+
+#: includes/public/class-front-display.php:339
+#: views/my-account/dashboard.php:447
+#: views/thank-you/family.php:243
+#: views/thank-you/individual.php:244
+msgid "Log in with the account you just created"
+msgstr ""
+
+#: includes/public/class-front-display.php:343
+#: views/my-account/dashboard.php:451
+#: views/thank-you/family.php:247
+#: views/thank-you/individual.php:248
+msgid "Explore hundreds of meditations and reduce stress in just"
+msgstr ""
+
+#: includes/public/class-front-display.php:343
+#: views/my-account/dashboard.php:451
+#: views/thank-you/family.php:247
+#: views/thank-you/individual.php:248
+msgid "10 days"
+msgstr ""
+
+#: includes/public/class-front-display.php:347
+#: views/my-account/dashboard.php:455
+#: views/thank-you/family.php:251
+#: views/thank-you/individual.php:252
+msgid "You can also continue on the Webapp. Please use the link below to log in"
+msgstr ""
+
+#: includes/public/class-front-display.php:350
+#: views/my-account/dashboard.php:458
+#: views/thank-you/family.php:254
+#: views/thank-you/individual.php:255
+msgid "or"
+msgstr ""
+
+#: includes/public/class-front-display.php:351
+#: views/my-account/dashboard.php:459
+#: views/thank-you/family.php:255
+#: views/thank-you/individual.php:256
+msgid "Continue to the web app"
+msgstr ""
+
+#: includes/public/class-front-functions.php:72
+#: includes/public/class-front-functions.php:159
+#: includes/public/class-services.php:927
+msgid "Individual plan allows only 1 user."
+msgstr ""
+
+#: includes/public/class-front-functions.php:73
+#: includes/public/class-front-functions.php:160
+#: includes/public/class-services.php:928
+msgid "Family plan allows between 2 to 5 users."
+msgstr ""
+
+#: includes/public/class-front-functions.php:74
+msgid "Enterprise plan requires at least 2 users."
+msgstr ""
+
+#: includes/public/class-front-functions.php:77
+#: includes/public/class-front-functions.php:166
+#: includes/public/class-services.php:936
+msgid "Invalid plan type or quantity."
+msgstr ""
+
+#: includes/public/class-front-functions.php:83
+#: includes/public/class-front-functions.php:758
+msgid "Invalid parameters provided."
+msgstr ""
+
+#: includes/public/class-front-functions.php:90
+#: includes/public/class-front-functions.php:192
+#: includes/public/class-services.php:960
+msgid "Error retrieving product details."
+msgstr ""
+
+#: includes/public/class-front-functions.php:97
+#: includes/public/class-front-functions.php:201
+#: includes/public/class-services.php:969
+msgid "Error retrieving price details."
+msgstr ""
+
+#: includes/public/class-front-functions.php:104
+msgid "Error calculating price: %s"
+msgstr ""
+
+#: includes/public/class-front-functions.php:125
+#: includes/public/class-services.php:900
+msgid "You must be logged in to subscribe."
+msgstr ""
+
+#: includes/public/class-front-functions.php:138
+#: includes/public/class-services.php:909
+msgid "Missing or invalid subscription parameters. Please select a valid plan, quantity, and currency before proceeding."
+msgstr ""
+
+#: includes/public/class-front-functions.php:146
+#: includes/public/class-services.php:917
+msgid "Payment system not configured. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:161
+#: includes/public/class-services.php:929
+msgid "Enterprise plan allows between 20 to 50 users."
+msgstr ""
+
+#: includes/public/class-front-functions.php:182
+#: includes/public/class-services.php:951
+msgid "User data not found. Please ensure your profile is complete."
+msgstr ""
+
+#: includes/public/class-front-functions.php:216
+#: includes/public/class-services.php:984
+msgid "You already have an active subscription. Please cancel it before subscribing to the Enterprise plan."
+msgstr ""
+
+#: includes/public/class-front-functions.php:223
+#: includes/public/class-services.php:991
+msgid "User data not found or invalid for Enterprise plan."
+msgstr ""
+
+#: includes/public/class-front-functions.php:236
+#: includes/public/class-services.php:1004
+msgid "You already have an active subscription. Please cancel it before subscribing to the Family plan."
+msgstr ""
+
+#: includes/public/class-front-functions.php:243
+#: includes/public/class-services.php:1011
+msgid "User data not found or invalid for Family plan."
+msgstr ""
+
+#: includes/public/class-front-functions.php:259
+#: includes/public/class-services.php:1028
+msgid "You already have an active subscription. Please cancel it before subscribing to the Individual plan."
+msgstr ""
+
+#: includes/public/class-front-functions.php:266
+#: includes/public/class-services.php:1035
+msgid "User data not found or invalid for Individual plan."
+msgstr ""
+
+#: includes/public/class-front-functions.php:275
+#: includes/public/class-services.php:1044
+msgid "Valid email not found for user. Please update your profile with a valid email address."
+msgstr ""
+
+#: includes/public/class-front-functions.php:328
+#: includes/public/class-services.php:1093
+msgid "Failed to create customer. Please try again."
+msgstr ""
+
+#: includes/public/class-front-functions.php:337
+#: includes/public/class-services.php:1102
+msgid "Customer not found or could not be created. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:386
+#: includes/public/class-services.php:1142
+msgid "Subscription has no items. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:394
+#: includes/public/class-services.php:1150
+msgid "Multiple subscription items are not supported."
+msgstr ""
+
+#: includes/public/class-front-functions.php:403
+#: includes/public/class-services.php:1159
+msgid "Failed to retrieve invoice for subscription. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:416
+#: includes/public/class-front-functions.php:425
+#: includes/public/class-services.php:1172
+#: includes/public/class-services.php:1181
+msgid "Failed to initiate payment. Please try again."
+msgstr ""
+
+#: includes/public/class-front-functions.php:455
+#: includes/public/class-services.php:1211
+msgid "Failed to retrieve subscription period. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:519
+#: includes/public/class-services.php:1262
+msgid "Failed to create subscription order. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:594
+#: includes/public/class-front-functions.php:623
+#: includes/public/class-front-functions.php:665
+#: includes/public/class-services.php:1333
+#: includes/public/class-services.php:1358
+#: includes/public/class-services.php:1405
+msgid "Failed to create payment record. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:632
+msgid "Your subscription order is created with a 7-day free trial. To activate your subscription, please set up your payment method. You will not be charged until the trial ends, after which %s will be automatically charged."
+msgstr ""
+
+#: includes/public/class-front-functions.php:633
+msgid "Your subscription order is created and is awaiting payment. Please complete your payment to activate your subscription and enjoy full access."
+msgstr ""
+
+#: includes/public/class-front-functions.php:679
+#: includes/public/class-services.php:1417
+msgid "Failed to create order record. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:688
+#: includes/public/class-services.php:1425
+msgid "Payment service error: "
+msgstr ""
+
+#: includes/public/class-front-functions.php:696
+#: includes/public/class-services.php:1432
+msgid "An unexpected error occurred. Please try again."
+msgstr ""
+
+#: includes/public/class-front-functions.php:703
+#: includes/public/class-services.php:1439
+msgid "An unexpected error occurred. Please try again later."
+msgstr ""
+
+#: includes/public/class-front-functions.php:715
+msgid "Authentication required."
+msgstr ""
+
+#: includes/public/class-front-functions.php:719
+msgid "Payment system not configured."
+msgstr ""
+
+#: includes/public/class-front-functions.php:724
+msgid "Invalid invoice ID."
+msgstr ""
+
+#: includes/public/class-front-functions.php:733
+msgid "PDF not available for this invoice."
+msgstr ""
+
+#: includes/public/class-front-functions.php:737
+msgid "Failed to retrieve invoice. Please try again."
+msgstr ""
+
+#: includes/public/class-front-functions.php:742
+msgid "Failed to download invoice. Please contact support."
+msgstr ""
+
+#: includes/public/class-front-functions.php:750
+msgid "You must be logged in to perform this action."
+msgstr ""
+
+#: includes/public/class-front-functions.php:769
+msgid "No incomplete subscription found for the provided order."
+msgstr ""
+
+#: includes/public/class-front-functions.php:775
+msgid "No pending or failed payment found for the provided order."
+msgstr ""
+
+#: includes/public/class-front-functions.php:792
+msgid "Error cancelling the payment. Please try again."
+msgstr ""
+
+#: includes/public/class-front-functions.php:796
+msgid "Payment cancelled successfully."
+msgstr ""
+
+#: includes/public/class-front-functions.php:803
+#: includes/public/class-front-functions.php:812
+#: includes/public/class-services.php:872
+#: includes/public/class-services.php:881
+msgid "Invalid client secret provided."
+msgstr ""
+
+#: includes/public/class-front-functions.php:816
+#: includes/public/class-services.php:885
+msgid "Failed to retrieve setup intent."
+msgstr ""
+
+#: includes/public/class-front-functions.php:819
+#: includes/public/class-services.php:888
+msgid "An unexpected error occurred while retrieving setup intent."
+msgstr ""
+
+#: includes/public/class-front-functions.php:825
+msgid "You must be logged in to submit your answers."
+msgstr ""
+
+#: includes/public/class-front-functions.php:861
+msgid "Proceeding to the next step."
+msgstr ""
+
+#: includes/public/class-front-functions.php:867
+msgid "Your answers have been submitted successfully."
+msgstr ""
+
+#: includes/public/class-front-functions.php:868
+msgid "No action taken."
+msgstr ""
+
+#: includes/public/class-services.php:405
+msgid "Unknown system error."
+msgstr ""
+
+#: includes/public/class-services.php:422
+msgid "Your payment method setup is being processed."
+msgstr ""
+
+#: includes/public/class-services.php:423
+msgid "Setup Intent status: "
+msgstr ""
+
+#: includes/public/class-services.php:453
+msgid "Your payment method setup is pending confirmation."
+msgstr ""
+
+#: includes/public/class-services.php:454
+msgid "Setup Intent requires confirmation."
+msgstr ""
+
+#: includes/public/class-services.php:463
+msgid "Your payment method setup requires additional verification. Please follow your bank's instructions."
+msgstr ""
+
+#: includes/public/class-services.php:464
+msgid "Setup Intent requires additional action."
+msgstr ""
+
+#: includes/public/class-services.php:473
+msgid "Hold tight, your order is being processed. You'll be notified once complete."
+msgstr ""
+
+#: includes/public/class-services.php:474
+msgid "Setup Intent is processing."
+msgstr ""
+
+#: includes/public/class-services.php:483
+msgid " Reason: %s"
+msgstr ""
+
+#: includes/public/class-services.php:486
+msgid "Your payment setup was canceled."
+msgstr ""
+
+#: includes/public/class-services.php:487
+msgid "Setup Intent was canceled."
+msgstr ""
+
+#: includes/public/class-services.php:496
+msgid "Your payment method has been set up successfully."
+msgstr ""
+
+#: includes/public/class-services.php:497
+msgid "Setup Intent succeeded."
+msgstr ""
+
+#: includes/public/class-services.php:507
+msgid "Unexpected status received."
+msgstr ""
+
+#: includes/public/class-services.php:508
+msgid "Unknown SetupIntent status."
+msgstr ""
+
+#: includes/public/class-services.php:636
+msgid "Your payment is being processed."
+msgstr ""
+
+#: includes/public/class-services.php:637
+msgid "Payment intent status: "
+msgstr ""
+
+#: includes/public/class-services.php:641
+msgid "Your payment method setup failed. Please try again or use a different method."
+msgstr ""
+
+#: includes/public/class-services.php:642
+msgid "Payment Intent requires a valid payment method."
+msgstr ""
+
+#: includes/public/class-services.php:657
+msgid "Your payment is pending confirmation."
+msgstr ""
+
+#: includes/public/class-services.php:658
+msgid "Requires confirmation from Stripe."
+msgstr ""
+
+#: includes/public/class-services.php:665
+msgid "Additional authentication required. Please complete verification with your bank."
+msgstr ""
+
+#: includes/public/class-services.php:666
+msgid "Requires customer action (3DS)."
+msgstr ""
+
+#: includes/public/class-services.php:673
+msgid "Hold tight, your order is being processed."
+msgstr ""
+
+#: includes/public/class-services.php:674
+msgid "Payment intent is processing."
+msgstr ""
+
+#: includes/public/class-services.php:681
+msgid "Your payment is awaiting capture."
+msgstr ""
+
+#: includes/public/class-services.php:682
+msgid "Payment intent requires capture."
+msgstr ""
+
+#: includes/public/class-services.php:692
+msgid "Your payment was canceled%s."
+msgstr ""
+
+#: includes/public/class-services.php:693
+msgid "Payment intent canceled."
+msgstr ""
+
+#: includes/public/class-services.php:700
+msgid "Your payment was successful. Thank you!"
+msgstr ""
+
+#: includes/public/class-services.php:701
+msgid "Payment intent succeeded."
+msgstr ""
+
+#: includes/public/class-services.php:708
+msgid "Unknown payment status. Please contact support."
+msgstr ""
+
+#: includes/public/class-services.php:709
+msgid "Unexpected payment intent status: "
+msgstr ""
+
+#. translators: %1$d: number of free trial days
+#: includes/public/class-services.php:1366
+msgid "Your subscription includes a %1$d-day free trial. Please set up your payment method to activate your subscription. No charges will occur until the trial ends, after which the subscription fee will be billed automatically."
+msgstr ""
+
+#: includes/public/class-services.php:1372
+msgid "Your subscription order has been created and is awaiting payment. Please complete your payment to activate your subscription and enjoy full access."
+msgstr ""
+
+#. translators: 1: Plan Name
+#: includes/public/class-services.php:1520
+msgid "%s Plan"
+msgstr ""
+
+#: includes/public/class-services.php:1527
+msgid "7 days FREE"
+msgstr ""
+
+#. translators: %s: Subtotal (localized)
+#: includes/public/class-services.php:1550
+msgid "%s billing annually"
+msgstr ""
+
+#: includes/public/class-services.php:1560
+msgid "Badge"
+msgstr ""
+
+#: includes/public/class-services.php:1573
+#: assets/js/public.js:820
+msgid "Start Free Trial"
+msgstr ""
+
+#: includes/public/class-services.php:1575
+#: assets/js/public.js:2157
+msgid "Continue to Subscribe"
+msgstr ""
+
+#: includes/public/class-services.php:1723
+msgid "Card"
+msgstr ""
+
+#: includes/public/class-services.php:1728
+msgid "Card Details"
+msgstr ""
+
+#. translators: %1$s: card brand (Visa, Mastercard, etc), %2$s: funding type (Credit, Debit), %3$s: last 4 digits
+#: includes/public/class-services.php:1732
+msgid "%1$s %2$s ending in %3$s"
+msgstr ""
+
+#: includes/public/class-services.php:1747
+msgid "Bank Account"
+msgstr ""
+
+#: includes/public/class-services.php:1751
+msgid "Bank Details"
+msgstr ""
+
+#. translators: %1$s: bank name, %2$s: last 4 digits
+#: includes/public/class-services.php:1755
+msgid "%1$s ending in %2$s"
+msgstr ""
+
+#: includes/public/class-services.php:1767
+msgid "SEPA Details"
+msgstr ""
+
+#. translators: %1$s: country code, %2$s: last 4 digits
+#: includes/public/class-services.php:1771
+msgid "%1$s account ending in %2$s"
+msgstr ""
+
+#: includes/public/class-services.php:1783
+msgid "PayPal Email"
+msgstr ""
+
+#: includes/public/class-services.php:1795
+#: includes/public/class-services.php:1807
+#: includes/public/class-services.php:1819
+msgid "Bank"
+msgstr ""
+
+#: includes/public/class-services.php:1831
+msgid "Country"
+msgstr ""
+
+#: includes/public/class-services.php:1843
+msgid "Cashtag"
+msgstr ""
+
+#: includes/public/class-services.php:1865
+msgid "Payment Type"
+msgstr ""
+
+#: includes/public/class-services.php:1866
+msgid "Pay Later"
+msgstr ""
+
+#: includes/public/class-services.php:1931
+msgid "Paused"
+msgstr ""
+
+#: includes/public/class-services.php:1941
+msgid "Day"
+msgid_plural "Days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-services.php:1942
+msgid "Week"
+msgid_plural "Weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-services.php:1943
+msgid "Month"
+msgid_plural "Months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-services.php:1944
+msgid "Year"
+msgid_plural "Years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-services.php:1952
+msgid "Payment Details"
+msgstr ""
+
+#: includes/public/class-services.php:1956
+msgid "Order ID"
+msgstr ""
+
+#: includes/public/class-services.php:1965
+msgid "Seat"
+msgid_plural "Seats"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-services.php:1967
+msgid "Member"
+msgid_plural "Members"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/public/class-services.php:1992
+msgid "Every %1$s %2$s"
+msgstr ""
+
+#: includes/public/class-services.php:1995
+msgid "Next Billing Date"
+msgstr ""
+
+#: includes/public/class-services.php:2001
+msgid "Trial Ends"
+msgstr ""
+
+#: includes/public/class-services.php:2008
+msgid "Order Date"
+msgstr ""
+
+#: includes/public/class-services.php:2014
+msgid "Canceled Date"
+msgstr ""
+
+#: includes/public/class-services.php:2037
+#: views/enterprise-plan.php:234
+#: views/family-plan.php:263
+#: views/individual-plan.php:298
+msgid "My Account"
+msgstr ""
+
+#: includes/public/class-services.php:2041
+msgid "Add Super Manager"
+msgstr ""
+
+#: includes/public/class-services.php:2048
+msgid "Continue to webapp"
+msgstr ""
+
+#: includes/public/class-services.php:2077
+#: includes/public/class-services.php:2139
+msgid "Order Failed!"
+msgstr ""
+
+#: includes/public/class-services.php:2078
+#: includes/public/class-services.php:2140
+msgid "Your order could not be completed due to a payment issue. Please try again or contact support for assistance."
+msgstr ""
+
+#: includes/public/class-services.php:2082
+msgid "Order Not Found!"
+msgstr ""
+
+#: includes/public/class-services.php:2083
+msgid "We couldn't find your order. Please check the order ID and try again, or contact support for assistance."
+msgstr ""
+
+#: includes/public/class-services.php:2090
+msgid "Transaction Not Found!"
+msgstr ""
+
+#: includes/public/class-services.php:2091
+msgid "We couldn't find the transaction associated with your order. Please check the transaction ID and try again, or contact support for assistance."
+msgstr ""
+
+#: includes/public/class-services.php:2099
+msgid "Access Denied!"
+msgstr ""
+
+#: includes/public/class-services.php:2100
+msgid "You do not have permission to view this order. Please log in with the correct account or contact support for assistance."
+msgstr ""
+
+#: includes/public/class-services.php:2109
+msgid "Order Successful!"
+msgstr ""
+
+#: includes/public/class-services.php:2110
+msgid "Thank you! Your subscription is now active and you have full access."
+msgstr ""
+
+#: includes/public/class-services.php:2114
+msgid "Trial Started!"
+msgstr ""
+
+#: includes/public/class-services.php:2115
+msgid "Your subscription trial has started. You have access during the trial period."
+msgstr ""
+
+#: includes/public/class-services.php:2119
+msgid "Order Incomplete"
+msgstr ""
+
+#: includes/public/class-services.php:2120
+msgid "Your order is incomplete. Please complete your payment to activate your subscription."
+msgstr ""
+
+#: includes/public/class-services.php:2124
+msgid "Order Canceled"
+msgstr ""
+
+#: includes/public/class-services.php:2125
+msgid "Your subscription has been canceled. If this was a mistake, you can try again."
+msgstr ""
+
+#: includes/public/class-services.php:2129
+msgid "Order Expired"
+msgstr ""
+
+#: includes/public/class-services.php:2130
+msgid "Your subscription has expired. Please renew to regain access."
+msgstr ""
+
+#: includes/public/class-services.php:2134
+msgid "Order Pending"
+msgstr ""
+
+#: includes/public/class-services.php:2135
+msgid "Your order is pending. Please wait while we process your payment."
+msgstr ""
+
+#: includes/public/class-services.php:2167
+msgid "Please log in to access your account."
+msgstr ""
+
+#: includes/public/class-services.php:2175
+#: includes/public/class-services.php:2213
+#: includes/public/class-services.php:2248
+#: includes/public/class-services.php:2302
+#: includes/public/class-services.php:2343
+msgid "You are not authorized to view this content."
+msgstr ""
+
+#: index.php:33
+msgid "YouTuneIn Subscription Management requires PHP 8.0 or higher."
+msgstr ""
+
+#: views/checkout.php:39
+#: views/enterprise-plan.php:258
+#: views/family-plan.php:287
+#: views/individual-plan.php:322
+msgid "Download"
+msgstr ""
+
+#: views/checkout.php:51
+#: views/enterprise-plan.php:268
+#: views/family-plan.php:297
+#: views/individual-plan.php:332
+msgid "Due"
+msgstr ""
+
+#: views/checkout.php:56
+#: views/enterprise-plan.php:273
+#: views/family-plan.php:302
+#: views/individual-plan.php:337
+msgid "From"
+msgstr ""
+
+#: views/checkout.php:60
+#: views/enterprise-plan.php:277
+#: views/family-plan.php:306
+#: views/individual-plan.php:341
+msgid "Memo"
+msgstr ""
+
+#: views/checkout.php:61
+#: views/enterprise-plan.php:278
+#: views/family-plan.php:307
+#: views/individual-plan.php:342
+msgid "Please review this closely, I think I may have overcharged you."
+msgstr ""
+
+#: views/checkout.php:67
+#: views/enterprise-plan.php:284
+#: views/family-plan.php:313
+#: views/individual-plan.php:348
+msgid "Select a payment method"
+msgstr ""
+
+#: views/checkout.php:81
+msgid "There was an error processing your subscription. Please try again or contact support."
+msgstr ""
+
+#: views/enterprise-plan.php:34
+#: views/family-plan.php:35
+#: views/individual-plan.php:34
+msgid "See how cost-effective mental health support can be"
+msgstr ""
+
+#: views/enterprise-plan.php:122
+#: views/family-plan.php:123
+msgid "Number of People"
+msgstr ""
+
+#: views/enterprise-plan.php:143
+msgid "The subscription will be automatically renewed at the end of each term unless the Client submits a cancellation notice at least 30 (thirty) days before the renewal date.Purchased seats are non-refundable."
+msgstr ""
+
+#. translators: Section title for enterprise plan features list
+#: views/enterprise-plan.php:154
+msgid "What's Included in Your Corporate Wellness Hub:"
+msgstr ""
+
+#. translators: Enterprise feature — seat management
+#: views/enterprise-plan.php:159
+msgid "Smart seat management — add, remove or scale anytime"
+msgstr ""
+
+#. translators: Enterprise feature — routine builder
+#: views/enterprise-plan.php:160
+msgid "Personalized routine builder with smart reminders"
+msgstr ""
+
+#. translators: Enterprise feature — upload custom content
+#: views/enterprise-plan.php:161
+msgid "Upload custom wellness content for your team"
+msgstr ""
+
+#. translators: Enterprise feature — access to live events
+#: views/enterprise-plan.php:162
+msgid "Access to free live events and expert sessions"
+msgstr ""
+
+#. translators: Enterprise feature — in-app community
+#: views/enterprise-plan.php:163
+msgid "In-app community for engagement and sharing"
+msgstr ""
+
+#. translators: Enterprise feature — usage analytics
+#: views/enterprise-plan.php:164
+msgid "Usage analytics to track impact and participation"
+msgstr ""
+
+#. translators: Enterprise feature — partner offers
+#: views/enterprise-plan.php:165
+msgid "Special perks and mental wellness partner offers"
+msgstr ""
+
+#. translators: Enterprise feature — onboarding
+#: views/enterprise-plan.php:166
+msgid "Strategic Onboarding and more"
+msgstr ""
+
+#. translators: %1$s–%8$s wrap bold phrases in the sentence.
+#: views/enterprise-plan.php:174
+msgid "%1$sFrom morning to night%2$s, your employees have unlimited, equitable %3$saccess to resources%4$s that %5$sprotect their mental health%6$s and %7$senhance productivity%8$s."
+msgstr ""
+
+#: views/enterprise-plan.php:188
+msgid "Terms of Use"
+msgstr ""
+
+#: views/enterprise-plan.php:191
+msgid "Privacy Policy"
+msgstr ""
+
+#: views/enterprise-plan.php:194
+msgid "Subscription Terms"
+msgstr ""
+
+#: views/enterprise-plan.php:208
+#: views/enterprise-plan.php:223
+#: views/family-plan.php:237
+#: views/family-plan.php:252
+#: views/individual-plan.php:272
+#: views/individual-plan.php:287
+msgid "Welcome Back, %s"
+msgstr ""
+
+#: views/enterprise-plan.php:211
+#: views/enterprise-plan.php:226
+#: views/family-plan.php:240
+#: views/family-plan.php:255
+#: views/individual-plan.php:275
+#: views/individual-plan.php:290
+msgid "Access Denied"
+msgstr ""
+
+#: views/enterprise-plan.php:213
+msgid "Your account is not authorized to subscribe enterprise plan. Please contact support."
+msgstr ""
+
+#: views/enterprise-plan.php:229
+#: views/family-plan.php:258
+#: views/individual-plan.php:293
+msgid "You already have an active subscription for your organization. If you need to make changes, please visit your account dashboard or contact support for assistance."
+msgstr ""
+
+#: views/enterprise-plan.php:244
+#: views/family-plan.php:273
+#: views/individual-plan.php:308
+msgid "Access Granted"
+msgstr ""
+
+#: views/enterprise-plan.php:248
+#: views/family-plan.php:277
+#: views/individual-plan.php:312
+#: assets/js/public.js:605
+msgid "Continue to Payment"
+msgstr ""
+
+#: views/family-plan.php:150
+#: views/individual-plan.php:167
+msgid "What is included:"
+msgstr ""
+
+#: views/family-plan.php:153
+#: views/family-plan.php:157
+#: views/family-plan.php:161
+#: views/family-plan.php:165
+#: views/individual-plan.php:174
+msgid "Disk clock"
+msgstr ""
+
+#: views/family-plan.php:154
+#: views/individual-plan.php:177
+msgid "Choose between 7 Binaural Beats frequencies & length 5 to 60 minutes."
+msgstr ""
+
+#: views/family-plan.php:158
+msgid "Access to + 1.200 meditations, Guided Meditations, Affirmations, Mantras, Radio, Kids Session & more."
+msgstr ""
+
+#: views/family-plan.php:162
+msgid "Schedule reminders, Journaling and keep tracking of your progress in MyTuneIn."
+msgstr ""
+
+#: views/family-plan.php:166
+msgid "Access exclusive contents in Wisdom, Podcast & WeTuneIn Community."
+msgstr ""
+
+#: views/family-plan.php:175
+#: views/individual-plan.php:210
+msgid "Asleep 2x Faster"
+msgstr ""
+
+#. translators: %1$s and %2$s wrap the bold phrase.
+#: views/family-plan.php:182
+#: views/individual-plan.php:217
+msgid "Fall %1$sAsleep 2x Faster%2$s & Wake Up Energized"
+msgstr ""
+
+#: views/family-plan.php:193
+#: views/individual-plan.php:228
+msgid "Memory & Mental Clarity"
+msgstr ""
+
+#. translators: %1$s and %2$s wrap the bold phrase.
+#: views/family-plan.php:200
+#: views/individual-plan.php:235
+msgid "Boost %1$sMemory & Mental Clarity%2$s"
+msgstr ""
+
+#: views/family-plan.php:211
+#: views/individual-plan.php:246
+msgid "Instant Calm & Stress"
+msgstr ""
+
+#. translators: %1$s and %2$s wrap the bold phrase.
+#: views/family-plan.php:218
+#: views/individual-plan.php:253
+msgid "%1$sInstant Calm & Stress%2$s Relief"
+msgstr ""
+
+#: views/family-plan.php:242
+msgid "Your account is not authorized to subscribe family plan. Please contact support."
+msgstr ""
+
+#. translators: 1: line break, 2: opening strong tag, 3: closing strong tag, 4: formatted price.
+#: views/individual-plan.php:83
+msgid "Unlock All Features for %1$s%2$s%4$s%3$s Today!"
+msgstr ""
+
+#: views/individual-plan.php:155
+msgid "For 7 Days"
+msgstr ""
+
+#: views/individual-plan.php:182
+msgid "Meditation icon"
+msgstr ""
+
+#: views/individual-plan.php:185
+msgid "Access to +1,200 meditations, Guided Meditations, Affirmations, Mantras, Radio, Kids Session & more."
+msgstr ""
+
+#: views/individual-plan.php:190
+msgid "Reminder bell"
+msgstr ""
+
+#: views/individual-plan.php:193
+msgid "Schedule reminders, journaling, and track your progress in MyTuneIn."
+msgstr ""
+
+#: views/individual-plan.php:198
+msgid "Microphone icon"
+msgstr ""
+
+#: views/individual-plan.php:201
+msgid "Access exclusive content in Wisdom, Podcast, and WeTuneIn Community."
+msgstr ""
+
+#: views/individual-plan.php:277
+msgid "Your account is not authorized to subscribe individual plan. Please contact support."
+msgstr ""
+
+#: views/my-account/dashboard.php:409
+#: views/my-account/profile.php:326
+#: views/my-account/transactions.php:275
+msgid "YouTuneIn Dashboard"
+msgstr ""
+
+#: views/my-account/dashboard.php:411
+#: views/my-account/profile.php:328
+#: views/my-account/transactions.php:277
+msgid "Dashboard"
+msgstr ""
+
+#: views/my-account/dashboard.php:415
+#: views/my-account/profile.php:332
+#: views/my-account/transactions.php:281
+msgid "Past Transaction"
+msgstr ""
+
+#: views/my-account/dashboard.php:419
+#: views/my-account/profile.php:336
+#: views/my-account/transactions.php:284
+msgid "Profile"
+msgstr ""
+
+#: views/thank-you/enterprise.php:371
+msgid "Welcome to YouTuneIn for Business!"
+msgstr ""
+
+#: views/thank-you/enterprise.php:372
+msgid ""
+" You’ve just taken a powerful step – not only for yourself, but for your entire team.\n"
+"        By choosing to bring YouTuneIn into your organization, you’ve opened the door to a new way of working, living, and feeling.\n"
+"        We’re honored to welcome you into this journey of conscious productivity, expanded well-being, and vibrational alignment."
+msgstr ""
+
+#: views/thank-you/enterprise.php:375
+msgid "Please read instructions carefully, and follow the next steps:"
+msgstr ""
+
+#: views/thank-you/enterprise.php:384
+msgid "Access your email"
+msgstr ""
+
+#: views/thank-you/enterprise.php:384
+msgid "Read instructions and access your Password"
+msgstr ""
+
+#: views/thank-you/enterprise.php:390
+msgid "Access your"
+msgstr ""
+
+#: views/thank-you/enterprise.php:390
+msgid "Corporate Dashboard"
+msgstr ""
+
+#: views/thank-you/enterprise.php:390
+msgid "and start populating and editing your Wellness Platform as you wish"
+msgstr ""
+
+#: views/thank-you/enterprise.php:397
+msgid "Watch our"
+msgstr ""
+
+#: views/thank-you/enterprise.php:397
+msgid "Tutorial Video"
+msgstr ""
+
+#: views/thank-you/enterprise.php:404
+msgid "Download the App"
+msgstr ""
+
+#: views/thank-you/enterprise.php:404
+msgid "and TUNE IN"
+msgstr ""
+
+#: views/thank-you/enterprise.php:438
+msgid "IMPORTANT"
+msgstr ""
+
+#: views/thank-you/enterprise.php:439
+msgid "Register your Super Manager here – This is important. Why?"
+msgstr ""
+
+#: views/thank-you/enterprise.php:443
+msgid "In your dashboard, you can add as many Managers and Users as you need. They won’t have financial permissions or access. However, a"
+msgstr ""
+
+#: views/thank-you/enterprise.php:443
+msgid "Super Managers"
+msgstr ""
+
+#: views/thank-you/enterprise.php:443
+msgid "can not be added in your Dashboard, so please"
+msgstr ""
+
+#: views/thank-you/enterprise.php:443
+msgid "set them up now."
+msgstr ""
+
+#: views/thank-you/enterprise.php:446
+msgid "A"
+msgstr ""
+
+#: views/thank-you/enterprise.php:446
+msgid "super manager"
+msgstr ""
+
+#: views/thank-you/enterprise.php:446
+msgid "has access to everything, giving total access and"
+msgstr ""
+
+#: views/thank-you/enterprise.php:446
+msgid "Financial Permission"
+msgstr ""
+
+#: views/thank-you/enterprise.php:446
+msgid "which includes:"
+msgstr ""
+
+#: views/thank-you/enterprise.php:449
+msgid "Upgrade or downgrade seats instantly based on your needs."
+msgstr ""
+
+#: views/thank-you/enterprise.php:450
+msgid "Purchase sessions from our Speakers for your team."
+msgstr ""
+
+#: views/thank-you/enterprise.php:454
+msgid "Once the"
+msgstr ""
+
+#: views/thank-you/enterprise.php:454
+msgid "supermanager"
+msgstr ""
+
+#: views/thank-you/enterprise.php:454
+msgid "is added, they’ll receive their"
+msgstr ""
+
+#: views/thank-you/enterprise.php:454
+msgid "login credentials by email."
+msgstr ""
+
+#: views/thank-you/enterprise.php:463
+msgid "Super Manager Registration"
+msgstr ""
+
+#: views/thank-you/questions.php:6
+msgid "Select all that applies"
+msgstr ""
+
+#: views/thank-you/questions.php:13
+msgid "How did you hear about the app?"
+msgstr ""
+
+#: views/thank-you/questions.php:19
+msgid "Family and friend"
+msgstr ""
+
+#: views/thank-you/questions.php:25
+msgid "Health Professional"
+msgstr ""
+
+#: views/thank-you/questions.php:31
+msgid "Instagram or Facebook"
+msgstr ""
+
+#: views/thank-you/questions.php:37
+msgid "Tiktok"
+msgstr ""
+
+#: views/thank-you/questions.php:43
+msgid "App store or Play store"
+msgstr ""
+
+#: views/thank-you/questions.php:49
+msgid "Youtube Ads"
+msgstr ""
+
+#: views/thank-you/questions.php:55
+msgid "Podcast or radio Ads"
+msgstr ""
+
+#: views/thank-you/questions.php:61
+msgid "Others"
+msgstr ""
+
+#: views/thank-you/questions.php:70
+msgid "What are your goals with the App?"
+msgstr ""
+
+#: views/thank-you/questions.php:76
+msgid "Achieve happiness and inner peace"
+msgstr ""
+
+#: views/thank-you/questions.php:82
+msgid "Understand and balance emotions"
+msgstr ""
+
+#: views/thank-you/questions.php:88
+msgid "Reduce stress and anxiety"
+msgstr ""
+
+#: views/thank-you/questions.php:94
+msgid "Sleep better"
+msgstr ""
+
+#: views/thank-you/questions.php:100
+msgid "Improve performance and productivity"
+msgstr ""
+
+#: views/thank-you/questions.php:106
+msgid "Improve self-esteem and confidence"
+msgstr ""
+
+#: views/thank-you/questions.php:112
+msgid "Develop gratitude"
+msgstr ""
+
+#: views/thank-you/questions.php:118
+msgid "Develop a spiritual connection"
+msgstr ""
+
+#: views/thank-you/questions.php:128
+msgid "Are you a meditator?"
+msgstr ""
+
+#: views/thank-you/questions.php:134
+msgid "I meditate every day"
+msgstr ""
+
+#: views/thank-you/questions.php:140
+msgid "I have never meditate before"
+msgstr ""
+
+#: views/thank-you/questions.php:146
+msgid "I meditate sometimes"
+msgstr ""
+
+#: views/thank-you/questions.php:152
+msgid "I tried but never succeeded"
+msgstr ""
+
+#: views/thank-you/questions.php:161
+msgid "Have you used Binaural Beats before?"
+msgstr ""
+
+#: views/thank-you/questions.php:167
+msgid "Yes, I use it every day"
+msgstr ""
+
+#: views/thank-you/questions.php:173
+msgid "No, never used"
+msgstr ""
+
+#: views/thank-you/questions.php:179
+msgid "I do use it sometimes"
+msgstr ""
+
+#: views/thank-you/questions.php:189
+msgid "Skip"
+msgstr ""
+
+#: views/thank-you/questions.php:192
+#: views/thank-you/questions.php:216
+msgid "Continue"
+msgstr ""
+
+#: views/thank-you/questions.php:211
+msgid "Your browser does not support the video tag."
+msgstr ""
+
+#: views/verification-email.php:26
+msgid "Your Account Verification"
+msgstr ""
+
+#: views/verification-email.php:33
+msgid "Reset Your Password"
+msgstr ""
+
+#: views/verification-email.php:33
+msgid "Verify Your Account"
+msgstr ""
+
+#: views/verification-email.php:35
+msgid "You requested to reset your account password. Use the OTP below or click the button to reset your password."
+msgstr ""
+
+#: views/verification-email.php:36
+msgid "Use the OTP below or click the button to verify your account."
+msgstr ""
+
+#: views/verification-email.php:49
+msgid "Hello %s,"
+msgstr ""
+
+#: views/verification-email.php:64
+msgid "This link/OTP will expire in 15 minutes."
+msgstr ""
+
+#: views/verification-email.php:65
+msgid "If you did not initiate this request, please ignore this email."
+msgstr ""
+
+#: assets/js/admin.js:28
+msgid "Search for a subscription product…"
+msgstr ""
+
+#: assets/js/admin.js:145
+msgid "Hide secret key"
+msgstr ""
+
+#: assets/js/admin.js:149
+msgid "Show secret key"
+msgstr ""
+
+#: assets/js/admin.js:162
+msgid "Hide webhook secret"
+msgstr ""
+
+#: assets/js/admin.js:166
+msgid "Show webhook secret"
+msgstr ""
+
+#: assets/js/admin.js:185
+msgid "Configuration error: YTISM_ADMIN not found."
+msgstr ""
+
+#: assets/js/admin.js:189
+msgid "Testing..."
+msgstr ""
+
+#: assets/js/admin.js:210
+msgid "Invalid response from server."
+msgstr ""
+
+#: assets/js/admin.js:215
+msgid "An error occurred while testing the API."
+msgstr ""
+
+#: assets/js/admin.js:265
+msgid "Are you sure you want to delete the selected orders? This action cannot be undone."
+msgstr ""
+
+#: assets/js/admin.js:318
+msgid "Copy"
+msgstr ""
+
+#: assets/js/admin.js:329
+#: assets/js/admin.js:345
+msgid "Copied!"
+msgstr ""
+
+#: assets/js/public.js:290
+msgid "Failed to fetch price details. Please try again."
+msgstr ""
+
+#: assets/js/public.js:295
+#: assets/js/public.js:1154
+#: assets/js/public.js:1501
+#: assets/js/public.js:1641
+#: assets/js/public.js:1756
+#: assets/js/public.js:1829
+#: assets/js/public.js:1958
+#: assets/js/public.js:2045
+#: assets/js/public.js:2107
+#: assets/js/public.js:2223
+msgid "Request timed out. Please try again."
+msgstr ""
+
+#: assets/js/public.js:296
+#: assets/js/public.js:1502
+#: assets/js/public.js:1642
+#: assets/js/public.js:1757
+#: assets/js/public.js:1830
+#: assets/js/public.js:1959
+#: assets/js/public.js:2046
+#: assets/js/public.js:2108
+#: assets/js/public.js:2224
+msgid "Network error. An error occurred while fetching price details."
+msgstr ""
+
+#: assets/js/public.js:401
+msgid "No available pricing options for the selected currency."
+msgstr ""
+
+#: assets/js/public.js:595
+msgid "Price selection is invalid. Please select a valid option."
+msgstr ""
+
+#: assets/js/public.js:625
+msgid "Loading..."
+msgstr ""
+
+#: assets/js/public.js:637
+#: assets/js/public.js:666
+msgid "Incomplete payment data received. Please try again."
+msgstr ""
+
+#: assets/js/public.js:644
+msgid "Failed to create subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:648
+msgid "Network error. An error occurred while creating the subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:698
+msgid "Payment form not found. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:705
+msgid "Payment form is invalid. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:712
+msgid "Stripe.js is not initialized. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:822
+msgid "Pay %s"
+msgstr ""
+
+#: assets/js/public.js:822
+msgid "Pay Now"
+msgstr ""
+
+#: assets/js/public.js:912
+msgid "Payment system not properly initialized. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:917
+#: assets/js/public.js:1026
+msgid "Missing payment information. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:924
+#: assets/js/public.js:970
+msgid "Too many failed attempts (%d). Redirecting to order summary..."
+msgstr ""
+
+#: assets/js/public.js:931
+msgid "Failed to submit payment details. Please check your information and try again."
+msgstr ""
+
+#: assets/js/public.js:938
+#: assets/js/public.js:2191
+msgid "Processing..."
+msgstr ""
+
+#: assets/js/public.js:955
+#: assets/js/public.js:979
+msgid "Payment confirmation failed. Please try again."
+msgstr ""
+
+#: assets/js/public.js:997
+msgid "Invalid invoice ID or invoice section not found."
+msgstr ""
+
+#: assets/js/public.js:1006
+msgid "Popup blocked. Please allow popups for this site and try again."
+msgstr ""
+
+#: assets/js/public.js:1009
+msgid "Download failed. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1021
+msgid "Cancel section not found. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:1031
+#: assets/js/public.js:1182
+msgid "Canceling..."
+msgstr ""
+
+#: assets/js/public.js:1050
+msgid "Subscription canceled successfully."
+msgstr ""
+
+#: assets/js/public.js:1068
+msgid "Failed to cancel subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1072
+msgid "Network error. An error occurred while canceling the subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1149
+msgid "An error occurred while submitting your answers. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1155
+msgid "A network error occurred. Please check your connection and try again."
+msgstr ""
+
+#: assets/js/public.js:1191
+msgid "Cancel Payment"
+msgstr ""
+
+#: assets/js/public.js:1209
+msgid "Enter a secure password (mix of letters, numbers)"
+msgstr ""
+
+#: assets/js/public.js:1217
+msgid "Please enter a valid phone number"
+msgstr ""
+
+#: assets/js/public.js:1225
+msgid "This field is required."
+msgstr ""
+
+#: assets/js/public.js:1249
+msgid "Very Weak"
+msgstr ""
+
+#: assets/js/public.js:1250
+msgid "Weak"
+msgstr ""
+
+#: assets/js/public.js:1251
+msgid "Medium"
+msgstr ""
+
+#: assets/js/public.js:1253
+msgid "Strong"
+msgstr ""
+
+#: assets/js/public.js:1367
+msgid "Select an option"
+msgstr ""
+
+#: assets/js/public.js:1421
+#: assets/js/public.js:1557
+#: assets/js/public.js:1871
+msgid "Email is required."
+msgstr ""
+
+#: assets/js/public.js:1422
+#: assets/js/public.js:1558
+#: assets/js/public.js:1872
+msgid "Enter a valid email address."
+msgstr ""
+
+#: assets/js/public.js:1429
+#: assets/js/public.js:1569
+msgid "Please confirm your password."
+msgstr ""
+
+#: assets/js/public.js:1478
+msgid "Registration completed, check your email for further instruction."
+msgstr ""
+
+#: assets/js/public.js:1496
+#: assets/js/public.js:1636
+msgid "Registration failed."
+msgstr ""
+
+#: assets/js/public.js:1542
+msgid "Organization type is required."
+msgstr ""
+
+#: assets/js/public.js:1543
+msgid "Select a valid Organization type."
+msgstr ""
+
+#: assets/js/public.js:1546
+#: assets/js/public.js:1547
+msgid "Department is required."
+msgstr ""
+
+#: assets/js/public.js:1548
+msgid "Select a valid Department."
+msgstr ""
+
+#: assets/js/public.js:1551
+msgid "Country is required."
+msgstr ""
+
+#: assets/js/public.js:1552
+msgid "Select a valid Country."
+msgstr ""
+
+#: assets/js/public.js:1562
+msgid "Enter a valid phone number."
+msgstr ""
+
+#: assets/js/public.js:1618
+msgid "Registration completed, check you email for further process."
+msgstr ""
+
+#: assets/js/public.js:1675
+#: assets/js/public.js:1846
+msgid "OTP is required."
+msgstr ""
+
+#: assets/js/public.js:1676
+#: assets/js/public.js:1847
+msgid "Enter a valid OTP."
+msgstr ""
+
+#: assets/js/public.js:1677
+#: assets/js/public.js:1678
+#: assets/js/public.js:1848
+#: assets/js/public.js:1849
+msgid "OTP must be 6 digits."
+msgstr ""
+
+#: assets/js/public.js:1736
+msgid "OTP verified successfully. Redirecting..."
+msgstr ""
+
+#: assets/js/public.js:1751
+msgid "OTP verification failed."
+msgstr ""
+
+#: assets/js/public.js:1809
+msgid "OTP (One-Time-Password) resent successfully. Please check your email."
+msgstr ""
+
+#: assets/js/public.js:1818
+msgid "Failed to resend OTP (One-Time-Password)."
+msgstr ""
+
+#: assets/js/public.js:1939
+msgid "Login succeed. Redirecting..."
+msgstr ""
+
+#: assets/js/public.js:1953
+msgid "Login failed."
+msgstr ""
+
+#: assets/js/public.js:1979
+msgid "Don't have an account?"
+msgstr ""
+
+#: assets/js/public.js:1981
+msgid "Register here"
+msgstr ""
+
+#: assets/js/public.js:1985
+msgid "Forgotten password?"
+msgstr ""
+
+#: assets/js/public.js:2037
+#: assets/js/public.js:2040
+msgid "Failed to load registration form."
+msgstr ""
+
+#: assets/js/public.js:2099
+#: assets/js/public.js:2102
+msgid "Failed to load login form."
+msgstr ""
+
+#: assets/js/public.js:2157
+msgid "Start Your Free Trial"
+msgstr ""
+
+#: assets/js/public.js:2209
+msgid "Name:"
+msgstr ""
+
+#: assets/js/public.js:2210
+msgid "Great! You still have"
+msgstr ""
+
+#: assets/js/public.js:2210
+msgid "coupons to redeem."
+msgstr ""

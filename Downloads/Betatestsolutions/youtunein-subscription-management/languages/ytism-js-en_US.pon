@@ -1,0 +1,693 @@
+# Copyright (C) 2025 Abubakar Wazih Tushar
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: YouTuneIn Subscription Management 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/youtunein-subscription-management\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-18T12:08:01+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: ytism\n"
+
+#. Plugin Name of the plugin
+msgid "YouTuneIn Subscription Management"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://youtunein.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Subscription plugin with admin settings, plan management, and frontend display with WP-ML translation support."
+msgstr ""
+
+#. Author of the plugin
+msgid "Abubakar Wazih Tushar"
+msgstr ""
+
+#: assets/js/admin.js:17
+msgid "Select a page"
+msgstr ""
+
+#: assets/js/admin.js:28
+msgid "Search for a subscription product…"
+msgstr ""
+
+#: assets/js/admin.js:145
+msgid "Hide secret key"
+msgstr ""
+
+#: assets/js/admin.js:149
+msgid "Show secret key"
+msgstr ""
+
+#: assets/js/admin.js:162
+msgid "Hide webhook secret"
+msgstr ""
+
+#: assets/js/admin.js:166
+msgid "Show webhook secret"
+msgstr ""
+
+#: assets/js/admin.js:185
+msgid "Configuration error: YTISM_ADMIN not found."
+msgstr ""
+
+#: assets/js/admin.js:189
+msgid "Testing..."
+msgstr ""
+
+#: assets/js/admin.js:210
+msgid "Invalid response from server."
+msgstr ""
+
+#: assets/js/admin.js:215
+msgid "An error occurred while testing the API."
+msgstr ""
+
+#: assets/js/admin.js:227
+msgid "Test Stripe API Connection"
+msgstr ""
+
+#: assets/js/admin.js:265
+msgid "Are you sure you want to delete the selected orders? This action cannot be undone."
+msgstr ""
+
+#: assets/js/admin.js:281
+#: assets/js/admin.js:285
+msgid "View Metadata"
+msgstr ""
+
+#: assets/js/admin.js:289
+msgid "Hide Metadata"
+msgstr ""
+
+#: assets/js/admin.js:318
+msgid "Copy"
+msgstr ""
+
+#: assets/js/admin.js:329
+#: assets/js/admin.js:345
+msgid "Copied!"
+msgstr ""
+
+#: assets/js/public.js:293
+msgid "Failed to fetch price details. Please try again."
+msgstr ""
+
+#: assets/js/public.js:298
+#: assets/js/public.js:1258
+#: assets/js/public.js:1598
+#: assets/js/public.js:1698
+#: assets/js/public.js:1758
+#: assets/js/public.js:1898
+#: assets/js/public.js:2013
+#: assets/js/public.js:2086
+#: assets/js/public.js:2215
+#: assets/js/public.js:2305
+#: assets/js/public.js:2368
+#: assets/js/public.js:2498
+msgid "Request timed out. Please try again."
+msgstr ""
+
+#: assets/js/public.js:299
+msgid "Network error. An error occurred while fetching price details."
+msgstr ""
+
+#: assets/js/public.js:404
+msgid "No available pricing options for the selected currency."
+msgstr ""
+
+#: assets/js/public.js:598
+msgid "Price selection is invalid. Please select a valid option."
+msgstr ""
+
+#: assets/js/public.js:608
+msgid "Continue to Payment"
+msgstr ""
+
+#: assets/js/public.js:628
+msgid "Loading..."
+msgstr ""
+
+#: assets/js/public.js:640
+#: assets/js/public.js:669
+msgid "Incomplete payment data received. Please try again."
+msgstr ""
+
+#: assets/js/public.js:647
+msgid "Failed to create subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:651
+msgid "Network error. An error occurred while creating the subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:701
+msgid "Payment form not found. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:708
+msgid "Payment form is invalid. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:715
+msgid "Stripe.js is not initialized. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:822
+msgid "Start Free Trial"
+msgstr ""
+
+#: assets/js/public.js:824
+msgid "Pay %s"
+msgstr ""
+
+#: assets/js/public.js:824
+msgid "Pay Now"
+msgstr ""
+
+#: assets/js/public.js:855
+#: assets/js/public.js:872
+#: assets/js/public.js:1194
+msgid "Error"
+msgstr ""
+
+#: assets/js/public.js:859
+#: assets/js/public.js:1194
+msgid "Success"
+msgstr ""
+
+#: assets/js/public.js:863
+msgid "Info"
+msgstr ""
+
+#: assets/js/public.js:867
+msgid "Warning"
+msgstr ""
+
+#: assets/js/public.js:914
+msgid "Payment system not properly initialized. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:919
+#: assets/js/public.js:1028
+msgid "Missing payment information. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:926
+#: assets/js/public.js:972
+msgid "Too many failed attempts (%d). Redirecting to order summary..."
+msgstr ""
+
+#: assets/js/public.js:933
+msgid "Failed to submit payment details. Please check your information and try again."
+msgstr ""
+
+#: assets/js/public.js:940
+#: assets/js/public.js:2466
+msgid "Processing..."
+msgstr ""
+
+#: assets/js/public.js:957
+#: assets/js/public.js:981
+msgid "Payment confirmation failed. Please try again."
+msgstr ""
+
+#: assets/js/public.js:999
+msgid "Invalid invoice ID or invoice section not found."
+msgstr ""
+
+#: assets/js/public.js:1008
+msgid "Popup blocked. Please allow popups for this site and try again."
+msgstr ""
+
+#: assets/js/public.js:1011
+msgid "Download failed. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1023
+msgid "Cancel section not found. Please refresh and try again."
+msgstr ""
+
+#: assets/js/public.js:1033
+#: assets/js/public.js:1284
+msgid "Canceling..."
+msgstr ""
+
+#: assets/js/public.js:1050
+msgid "Subscription canceled successfully."
+msgstr ""
+
+#: assets/js/public.js:1068
+msgid "Failed to cancel subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1072
+msgid "Network error. An error occurred while canceling the subscription. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1093
+#: assets/js/public.js:1149
+msgid "This field is required."
+msgstr ""
+
+#: assets/js/public.js:1094
+msgid "Please fix this field."
+msgstr ""
+
+#: assets/js/public.js:1095
+msgid "Please enter at least {0} characters."
+msgstr ""
+
+#: assets/js/public.js:1096
+msgid "Please enter no more than {0} characters."
+msgstr ""
+
+#: assets/js/public.js:1097
+msgid "Please enter a value between {0} and {1} characters long."
+msgstr ""
+
+#: assets/js/public.js:1098
+msgid "Please enter a value greater than or equal to {0}."
+msgstr ""
+
+#: assets/js/public.js:1099
+msgid "Please enter a value less than or equal to {0}."
+msgstr ""
+
+#: assets/js/public.js:1100
+msgid "Please enter a value between {0} and {1}."
+msgstr ""
+
+#: assets/js/public.js:1101
+msgid "Please enter a multiple of {0}."
+msgstr ""
+
+#: assets/js/public.js:1102
+msgid "Please enter a valid email address."
+msgstr ""
+
+#: assets/js/public.js:1103
+msgid "Please enter a valid URL."
+msgstr ""
+
+#: assets/js/public.js:1104
+msgid "Please enter a valid date."
+msgstr ""
+
+#: assets/js/public.js:1105
+msgid "Please enter a valid date (ISO)."
+msgstr ""
+
+#: assets/js/public.js:1106
+msgid "Please enter a valid number."
+msgstr ""
+
+#: assets/js/public.js:1107
+msgid "Please enter only digits."
+msgstr ""
+
+#: assets/js/public.js:1108
+msgid "Please enter the same value again."
+msgstr ""
+
+#: assets/js/public.js:1111
+msgid "Please enter a file with a valid type."
+msgstr ""
+
+#: assets/js/public.js:1112
+msgid "Please enter a valid credit card number."
+msgstr ""
+
+#: assets/js/public.js:1113
+msgid "Please enter a file with a valid extension."
+msgstr ""
+
+#: assets/js/public.js:1114
+msgid "Please enter a valid US phone number."
+msgstr ""
+
+#: assets/js/public.js:1115
+msgid "Please fill at least {0} of these fields."
+msgstr ""
+
+#: assets/js/public.js:1133
+msgid "Enter a secure password (mix of letters, numbers)"
+msgstr ""
+
+#: assets/js/public.js:1141
+msgid "Please enter a valid phone number"
+msgstr ""
+
+#: assets/js/public.js:1157
+msgid "The results could not be loaded."
+msgstr ""
+
+#: assets/js/public.js:1161
+msgid "Please delete {0} character(s)."
+msgstr ""
+
+#: assets/js/public.js:1165
+msgid "Please enter {0} or more characters."
+msgstr ""
+
+#: assets/js/public.js:1168
+msgid "Loading more results…"
+msgstr ""
+
+#: assets/js/public.js:1171
+msgid "You can only select {0} item(s)."
+msgstr ""
+
+#: assets/js/public.js:1174
+msgid "No results found"
+msgstr ""
+
+#: assets/js/public.js:1177
+msgid "Searching…"
+msgstr ""
+
+#: assets/js/public.js:1180
+msgid "Remove all items"
+msgstr ""
+
+#: assets/js/public.js:1253
+msgid "An error occurred while submitting your answers. Please try again."
+msgstr ""
+
+#: assets/js/public.js:1259
+msgid "A network error occurred. Please check your connection and try again."
+msgstr ""
+
+#: assets/js/public.js:1293
+msgid "Cancel Payment"
+msgstr ""
+
+#: assets/js/public.js:1320
+msgid "Very Weak"
+msgstr ""
+
+#: assets/js/public.js:1321
+msgid "Weak"
+msgstr ""
+
+#: assets/js/public.js:1322
+msgid "Medium"
+msgstr ""
+
+#: assets/js/public.js:1324
+msgid "Strong"
+msgstr ""
+
+#. translators: %d: number of hours
+#: assets/js/public.js:1378
+msgid "%d hr "
+msgid_plural "%d hrs "
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of minutes
+#: assets/js/public.js:1386
+msgid "%d min "
+msgid_plural "%d mins "
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d: number of seconds
+#: assets/js/public.js:1394
+msgid "%d sec"
+msgid_plural "%d secs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: assets/js/public.js:1464
+msgid "Select an option"
+msgstr ""
+
+#: assets/js/public.js:1515
+#: assets/js/public.js:1630
+#: assets/js/public.js:1811
+msgid "First name is required."
+msgstr ""
+
+#: assets/js/public.js:1516
+#: assets/js/public.js:1631
+#: assets/js/public.js:1812
+msgid "Last name is required."
+msgstr ""
+
+#: assets/js/public.js:1518
+#: assets/js/public.js:1633
+#: assets/js/public.js:1729
+#: assets/js/public.js:1814
+#: assets/js/public.js:2128
+msgid "Email is required."
+msgstr ""
+
+#: assets/js/public.js:1519
+#: assets/js/public.js:1634
+#: assets/js/public.js:1730
+#: assets/js/public.js:1815
+#: assets/js/public.js:2129
+msgid "Enter a valid email address."
+msgstr ""
+
+#: assets/js/public.js:1522
+#: assets/js/public.js:1822
+#: assets/js/public.js:2131
+msgid "Password is required."
+msgstr ""
+
+#: assets/js/public.js:1523
+#: assets/js/public.js:1823
+msgid "Password must be at least 6 characters."
+msgstr ""
+
+#: assets/js/public.js:1526
+#: assets/js/public.js:1826
+msgid "Please confirm your password."
+msgstr ""
+
+#: assets/js/public.js:1527
+#: assets/js/public.js:1827
+msgid "Passwords do not match."
+msgstr ""
+
+#: assets/js/public.js:1529
+#: assets/js/public.js:1640
+#: assets/js/public.js:1829
+msgid "You must agree to the terms."
+msgstr ""
+
+#: assets/js/public.js:1575
+msgid "Registration completed, check your email for further instruction."
+msgstr ""
+
+#: assets/js/public.js:1593
+#: assets/js/public.js:1893
+msgid "Registration failed."
+msgstr ""
+
+#: assets/js/public.js:1599
+msgid "Network error. An error occurred while processing your registration."
+msgstr ""
+
+#: assets/js/public.js:1637
+#: assets/js/public.js:1818
+msgid "Phone number is required."
+msgstr ""
+
+#: assets/js/public.js:1638
+#: assets/js/public.js:1819
+msgid "Enter a valid phone number."
+msgstr ""
+
+#: assets/js/public.js:1684
+msgid "Super manager added successfully, check you email for further instruction."
+msgstr ""
+
+#: assets/js/public.js:1693
+msgid "Failed to add super manager."
+msgstr ""
+
+#: assets/js/public.js:1699
+msgid "Network error. An error occurred while adding the super manager."
+msgstr ""
+
+#: assets/js/public.js:1727
+msgid "Promocode is required."
+msgstr ""
+
+#: assets/js/public.js:1750
+msgid "Promocode redeemed successfully."
+msgstr ""
+
+#: assets/js/public.js:1753
+msgid "Failed to redeem promocode."
+msgstr ""
+
+#: assets/js/public.js:1759
+msgid "Network error. An error occurred while redeeming the promocode."
+msgstr ""
+
+#: assets/js/public.js:1797
+msgid "Organization name is required."
+msgstr ""
+
+#: assets/js/public.js:1799
+msgid "Organization type is required."
+msgstr ""
+
+#: assets/js/public.js:1800
+msgid "Select a valid Organization type."
+msgstr ""
+
+#: assets/js/public.js:1803
+#: assets/js/public.js:1804
+msgid "Department is required."
+msgstr ""
+
+#: assets/js/public.js:1805
+msgid "Select a valid Department."
+msgstr ""
+
+#: assets/js/public.js:1808
+msgid "Country is required."
+msgstr ""
+
+#: assets/js/public.js:1809
+msgid "Select a valid Country."
+msgstr ""
+
+#: assets/js/public.js:1875
+msgid "Registration completed, check you email for further process."
+msgstr ""
+
+#: assets/js/public.js:1899
+msgid "Network error. An error occurred while registering."
+msgstr ""
+
+#: assets/js/public.js:1932
+#: assets/js/public.js:2103
+msgid "OTP is required."
+msgstr ""
+
+#: assets/js/public.js:1933
+#: assets/js/public.js:2104
+msgid "Enter a valid OTP."
+msgstr ""
+
+#: assets/js/public.js:1934
+#: assets/js/public.js:1935
+#: assets/js/public.js:2105
+#: assets/js/public.js:2106
+msgid "OTP must be 6 digits."
+msgstr ""
+
+#: assets/js/public.js:1993
+msgid "OTP verified successfully. Redirecting..."
+msgstr ""
+
+#: assets/js/public.js:2008
+msgid "OTP verification failed."
+msgstr ""
+
+#: assets/js/public.js:2014
+msgid "Network error. An error occurred while verifying OTP."
+msgstr ""
+
+#: assets/js/public.js:2066
+msgid "OTP (One-Time-Password) resent successfully. Please check your email."
+msgstr ""
+
+#: assets/js/public.js:2075
+msgid "Failed to resend OTP (One-Time-Password)."
+msgstr ""
+
+#: assets/js/public.js:2087
+msgid "Network error. An error occurred while resending OTP."
+msgstr ""
+
+#: assets/js/public.js:2196
+msgid "Login succeed. Redirecting..."
+msgstr ""
+
+#: assets/js/public.js:2210
+msgid "Login failed."
+msgstr ""
+
+#: assets/js/public.js:2216
+msgid "Network error. An error occurred while logging in."
+msgstr ""
+
+#: assets/js/public.js:2236
+msgid "Don't have an account?"
+msgstr ""
+
+#: assets/js/public.js:2238
+msgid "Register here"
+msgstr ""
+
+#: assets/js/public.js:2244
+msgid "Forgotten password?"
+msgstr ""
+
+#: assets/js/public.js:2246
+msgid "Reset Password"
+msgstr ""
+
+#: assets/js/public.js:2255
+msgid "Already have an account?"
+msgstr ""
+
+#: assets/js/public.js:2257
+msgid "Login here"
+msgstr ""
+
+#: assets/js/public.js:2297
+#: assets/js/public.js:2300
+msgid "Failed to load registration form."
+msgstr ""
+
+#: assets/js/public.js:2306
+msgid "Network error. An error occurred while loading registration form."
+msgstr ""
+
+#: assets/js/public.js:2360
+#: assets/js/public.js:2363
+msgid "Failed to load login form."
+msgstr ""
+
+#: assets/js/public.js:2369
+msgid "Network error. An error occurred while loading login form."
+msgstr ""
+
+#: assets/js/public.js:2432
+msgid "Start Your Free Trial"
+msgstr ""
+
+#: assets/js/public.js:2432
+msgid "Continue to Subscribe"
+msgstr ""
+
+#: assets/js/public.js:2484
+msgid "Name:"
+msgstr ""
+
+#: assets/js/public.js:2485
+msgid "Great! You still have"
+msgstr ""
+
+#: assets/js/public.js:2485
+msgid "coupons to redeem."
+msgstr ""
+
+#: assets/js/public.js:2499
+msgid "Network error. An error occurred while redeeming the code."
+msgstr ""

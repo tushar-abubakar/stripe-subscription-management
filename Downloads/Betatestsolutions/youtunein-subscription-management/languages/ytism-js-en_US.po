@@ -1,0 +1,30 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YouTuneIn Subscription Management 3.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/youtunein-subscription-management\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-11-18T12:08:01+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Language: \n"
+"X-Generator: WP-CLI 2.6.0\n"
+"X-Domain: ytism\n"
+
+#. Plugin Name of the plugin
+msgid "YouTuneIn Subscription Management"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://youtunein.com/"
+msgstr ""
+
+#. Description of the plugin
+msgid "Subscription plugin with admin settings, plan management, and frontend display with WP-ML translation support."
+msgstr ""
+
+#. Author of the plugin
+msgid "Abubakar Wazih Tushar"
+msgstr ""

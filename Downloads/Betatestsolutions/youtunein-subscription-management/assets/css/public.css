@@ -1,0 +1,3425 @@
+/*******************************
+ * YTISM Public CSS
+ * 
+ * Styles for the public-facing pages of YTISM
+ *******************************/
+@keyframes ytism-spin {
+    to { transform: rotate(360deg); }
+}
+@keyframes ytism-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+
+/*****************************
+* Icon Fonts
+*****************************/
+@font-face {
+    font-family: 'ytism';
+    src: url('../fonts/ytism/ytism.eot?30806527');
+    src: url('../fonts/ytism/ytism.eot?30806527#iefix') format('embedded-opentype'),
+        url('../fonts/ytism/ytism.woff2?30806527') format('woff2'),
+        url('../fonts/ytism/ytism.woff?30806527') format('woff'),
+        url('../fonts/ytism/ytism.ttf?30806527') format('truetype'),
+        url('../fonts/ytism/ytism.svg?30806527#ytism') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+.ytism-icon::before, [class^="ytism-icon-"]::before, [class*=" ytism-icon-"]::before {
+    font-family: "ytism";
+    font-style: normal;
+    font-weight: normal;
+    speak: never;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 1em;
+    margin-right: .2em;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1em;
+    margin-left: .2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.ytism-icon-ytism-logo:before { content: '\e800'; }
+.ytism-icon-download-alt:before { content: '\e801'; }
+.ytism-icon-eye:before { content: '\e802'; }
+.ytism-icon-eye-off:before { content: '\e803'; }
+.ytism-icon-shield-check:before { content: '\e804'; }
+.ytism-icon-cross-circle:before { content: '\e805'; }
+.ytism-icon-cross:before { content: '\e806'; }
+.ytism-icon-check-circle:before { content: '\e807'; }
+.ytism-icon-info-circle:before { content: '\e808'; }
+.ytism-icon-user:before { content: '\e809'; }
+.ytism-icon-language-switch:before { content: '\e80a'; }
+.ytism-icon-attention:before { content: '\e80b'; }
+
+
+/*****************************
+* General Styles
+*****************************/
+:root {
+    --ytism-font-family: 'Poppins', Verdana, sans-serif;
+    --ytism-text-color: #fff;
+    --ytism-button-primary-bg: #6C398B;
+    --ytism-button-primary-bg-hover: #4A4063;
+    --ytism-button-primary-text: #fff;
+    --ytism-button-secondary-bg: #fff;
+}
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body.page-purchase-individual-plan, body.page-purchase-family-plan, body.page-purchase-enterprise-plan, body.page-order-summary {
+    font-family: var(--ytism-font-family);
+    color: var(--ytism-text-color);
+}
+.ytism-btn, button[type="button"].ytism-btn, button[type="submit"].ytism-btn, input[type="submit"].ytism-btn, input[type="button"].ytism-btn, a.ytism-btn {
+    background: var(--ytism-button-primary-bg);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.8750rem 1.5625rem;
+    display: inline-block;
+    border: 0.0625rem solid var(--ytism-button-primary-bg);
+    border-radius: 1.8750rem;
+    font-size: 0.9375rem;
+    max-width: 100%;
+    cursor: pointer;
+    transition: 0.2s all;
+    text-align: center;
+}
+.ytism-btn:hover, button[type="button"].ytism-btn:hover, button[type="submit"].ytism-btn:hover, input[type="submit"].ytism-btn:hover, input[type="button"].ytism-btn:hover, a.ytism-btn:hover {
+    text-decoration: none;
+    background: #fff;
+    color: #6C398B;
+    box-shadow: 0 0.2500rem 0.7500rem rgba(108, 57, 139, 0.3);
+}
+.ytism-btn:focus, button[type="button"].ytism-btn:focus, button[type="submit"].ytism-btn:focus, input[type="submit"].ytism-btn:focus, input[type="button"].ytism-btn:focus, a.ytism-btn:focus {
+    outline: 0.1875rem solid rgba(108, 57, 139, 0.5);
+    outline-offset: 0.1250rem;
+}
+.ytism-btn:disabled, button[type="button"].ytism-btn:disabled, button[type="submit"].ytism-btn:disabled, input[type="submit"].ytism-btn:disabled, input[type="button"].ytism-btn:disabled, a.ytism-btn:disabled, .ytism-btn.disabled, button[type="button"].ytism-btn.disabled, button[type="submit"].ytism-btn.disabled, input[type="submit"].ytism-btn.disabled, input[type="button"].ytism-btn.disabled, a.ytism-btn.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.6;
+}
+.ytism-shimmer {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: ytism-shimmer 1.5s infinite;
+}
+.ytism-spinner {
+    display: inline-block;
+    width: 0.7500rem;
+    height: 0.7500rem;
+    border: 0.1250rem solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: ytism-spin 1s ease-in-out infinite;
+}
+.ytism-btn-spinner {
+    display: inline-block;
+    width: 1.0000rem;
+    height: 1.0000rem;
+    border: 0.1250rem solid #fff;
+    border-top: 0.1250rem solid #3498db;
+    border-radius: 50%;
+    animation: ytism-spin 0.6s linear infinite;
+    margin-left: 0.5000rem;
+    vertical-align: middle;
+}
+.ytism-menu-icon {
+    display: inline-block;
+    margin-right: 0.3125rem;
+    font-size: 1.2500rem;
+}
+
+/*****************************
+* Alias Auth Page
+*****************************/
+body.ytism-alias-auth {
+    background-color: #534262;
+    background-image: url('../img/alias-auth-bg.webp');
+    background-repeat: repeat-y;
+    background-size: cover;
+    font-family: 'Poppins', sans-serif;
+    padding: 1.2500rem;
+}
+.ytism-alias-auth-header {
+    margin-bottom: 3.1250rem;
+    text-align: center;
+}
+.ytism-alias-auth-header img {
+    height: 3.0000rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+.ytism-alias-auth-wrapper {
+    font-size: 0.8125rem;
+    line-height: 1.5;
+}
+.ytism-alias-auth-container {
+    background: #FFFFFF33;
+    -webkit-backdrop-filter: blur(2.5000rem);
+    backdrop-filter: blur(2.5000rem);
+    color: #ffffff;
+    border-radius: 1.2500rem;
+    padding: 3.7500rem 2.8125rem;
+    margin: 0 auto;
+    width: 50%;
+    max-width: 56.2500rem;
+}
+.ytism-alias-auth-card {
+    max-width: 29.3750rem;
+    width: 60%;
+    margin: 0 auto;
+}
+.ytism-alias-auth-wrapper a {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: none
+}
+.ytism-alias-auth-wrapper a:hover {
+    color: #6C398B;
+}
+.ytism-alias-auth-wrapper .ytism-btn,
+.ytism-alias-auth-wrapper .ytism-btn[type="submit"],
+.ytism-alias-auth-wrapper .ytism-btn[type="button"],
+.ytism-alias-auth-wrapper a.ytism-btn,
+.ytism-alias-auth-wrapper button.ytism-btn {
+    width: 100%;
+    padding: 0.5625rem 1.0000rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    text-align: center;
+    background: #6C398B;
+    border: 0.0625rem solid #6C398B;
+    line-height: 1.5;
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+.ytism-alias-auth-wrapper .ytism-btn:hover,
+.ytism-alias-auth-wrapper .ytism-btn[type="submit"]:hover,
+.ytism-alias-auth-wrapper .ytism-btn[type="button"]:hover,
+.ytism-alias-auth-wrapper a.ytism-btn:hover,
+.ytism-alias-auth-wrapper button.ytism-btn:hover {
+    background: #fff;
+    color: #6C398B;
+}
+.ytism-alias-auth-wrapper .ytism-btn:focus,
+.ytism-alias-auth-wrapper .ytism-btn[type="submit"]:focus,
+.ytism-alias-auth-wrapper .ytism-btn[type="button"]:focus,
+.ytism-alias-auth-wrapper a.ytism-btn:focus,
+.ytism-alias-auth-wrapper button.ytism-btn:focus {
+    border-color: #6c3a8b;
+    box-shadow: 0 0 0 0.2rem rgba(108,57,139,.25);
+}
+.ytism-alias-auth-wrapper .ytism-btn:disabled,
+.ytism-alias-auth-wrapper .ytism-btn[type="submit"]:disabled,
+.ytism-alias-auth-wrapper .ytism-btn[type="button"]:disabled,
+.ytism-alias-auth-wrapper a.ytism-btn:disabled,
+.ytism-alias-auth-wrapper button.ytism-btn:disabled,
+.ytism-alias-auth-wrapper .ytism-btn.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.ytism-alias-auth-wrapper form > input[type="submit"], .ytism-alias-auth-wrapper form > button[type="submit"], .ytism-alias-auth-wrapper form > button.ytism-btn, .ytism-alias-auth-wrapper form > a.ytism-btn, .ytism-alias-auth-wrapper form > input.ytism-btn, .ytism-alias-auth-wrapper form > .ytism-btn, .ytism-alias-auth-wrapper form > .ytism-btn[type="submit"], .ytism-alias-auth-wrapper form > .ytism-btn[type="button"] {
+    margin-top: 1.2500rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.ytism-alias-auth-wrapper .ytism-form-field {
+    margin-bottom: 0.9375rem;
+}
+.ytism-alias-auth-wrapper .ytism-form-field:last-child {
+    margin-bottom: 0;
+}
+.ytism-alias-auth-wrapper .ytism-form-field > label.ytism-form-field-label {
+    font-weight: 600;
+    margin: 0 0 0.4375rem;
+    width: 100%;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="text"], 
+.ytism-alias-auth-wrapper .ytism-form-field input[type="email"], 
+.ytism-alias-auth-wrapper .ytism-form-field input[type="password"], 
+.ytism-alias-auth-wrapper .ytism-form-field input[type="date"], 
+.ytism-alias-auth-wrapper .ytism-form-field input[type="tel"], 
+.ytism-alias-auth-wrapper .ytism-form-field textarea, 
+.ytism-alias-auth-wrapper .ytism-form-field select {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    border-radius: 1.2500rem;
+    color: #fff;
+    border: 0.0625rem solid #fff;
+    background: #FFFFFF4F;
+    font-weight: 400;
+    font-size: 0.8125rem;
+    padding: 0.5000rem 1.0000rem;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="text"]::placeholder,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="email"]::placeholder,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="password"]::placeholder,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="date"]::placeholder,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="tel"]::placeholder,
+.ytism-alias-auth-wrapper .ytism-form-field textarea::placeholder {
+    color: #e0e0e0;
+    opacity: 1;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="text"]:hover,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="email"]:hover,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="password"]:hover,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="date"]:hover,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="tel"]:hover,
+.ytism-alias-auth-wrapper .ytism-form-field textarea:hover,
+.ytism-alias-auth-wrapper .ytism-form-field select:hover {
+    border-color: #ffc403;
+    background: #FFFFFF80;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="text"]:focus,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="email"]:focus,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="password"]:focus,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="date"]:focus,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="tel"]:focus,
+.ytism-alias-auth-wrapper .ytism-form-field textarea:focus,
+.ytism-alias-auth-wrapper .ytism-form-field select:focus {
+    border-color: #6c3a8b;
+    box-shadow: 0 0 0 0.2rem rgba(108,57,139,.25);
+    outline: none;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="text"]:disabled,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="email"]:disabled,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="password"]:disabled,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="date"]:disabled,
+.ytism-alias-auth-wrapper .ytism-form-field input[type="tel"]:disabled,
+.ytism-alias-auth-wrapper .ytism-form-field textarea:disabled,
+.ytism-alias-auth-wrapper .ytism-form-field select:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.ytism-alias-auth-wrapper .ytism-form-field select {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    display: block;
+    padding: 0.3750rem 2.2500rem 0.3750rem 0.7500rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: right .75rem center;
+    background-size: 1.0000rem 0.7500rem;
+}
+.ytism-alias-auth-wrapper .ytism-form-field > label.ytism-form-field-label.ytism-form-field-label-checkbox {
+    font-weight: 400;
+    cursor: pointer;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="checkbox"] {
+    border-radius: 0.2500rem;
+    float: left;
+    flex-shrink: 0;
+    width: 0.8750rem;
+    height: 0.8750rem;
+    margin-right: 0.5000rem;
+    vertical-align: middle;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 0.0625rem solid #6c3a8b;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+}
+.ytism-alias-auth-wrapper .ytism-form-field input[type="checkbox"]:checked {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+    background-color: #6c3a8b;
+}
+.ytism-alias-auth-wrapper .ytism-form-field > label.ytism-form-field-label.ytism-form-field-terms {
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 0;
+    line-height: 1.4;
+}
+.ytism-alias-auth-wrapper .ytism-form-field .ytism-form-field-password-wrapper {
+    position: relative;
+}
+.ytism-alias-auth-wrapper .ytism-form-field .ytism-form-field-password-wrapper > .ytism-form-toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 0.3125rem;
+    transform: translateY(-50%);
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    color: #fff;
+    padding: 0.3125rem;
+    margin: 0;
+    cursor: pointer;
+    width: 2.1250rem;
+    text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+}
+.ytism-alias-auth-wrapper .ytism-form-field .ytism-form-field-password-wrapper > input[type="password"], .ytism-alias-auth-wrapper .ytism-form-field .ytism-form-field-password-wrapper > input[type="text"] {
+    width: 100%;
+    padding-right: 2.5000rem;
+    margin-bottom: 0;
+}
+.ytism-alias-auth-wrapper .ytism-alias-auth-head {
+    margin-bottom: 2.5000rem;
+    text-align: center;
+}
+.ytism-alias-auth-wrapper .ytism-alias-auth-head .ytism-alias-auth-header-heading {
+    font-size: 2.0000rem;
+    font-weight: 600;
+    margin: 0;
+    display: block;
+}
+.ytism-alias-auth-wrapper .ytism-alias-auth-footer {
+    margin-top: 1.2500rem;
+    text-align: center;
+}
+.ytism-alias-auth-wrapper .ytism-messages {
+    background: #fff;
+    color: #4f5450;
+    border-left: 0.1875rem solid #ffffff;
+    border-radius: 0.6250rem;
+    padding: 0.8125rem 0.9375rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 0.9375rem;
+    max-width: 34.3750rem;
+    flex-direction: column;
+}
+.ytism-alias-auth-wrapper .ytism-messages.ytism-error {
+    background-color: #faf0ed;
+    border-left-color: #fc5758;
+}
+.ytism-alias-auth-wrapper .ytism-messages.ytism-success {
+    background-color: #f2f9f5;
+    border-left-color: #51dc6b;
+}
+.ytism-alias-auth-wrapper .ytism-messages.ytism-info {
+    background-color: #e8eefa;
+    border-left-color: #3086eb;
+}
+.ytism-alias-auth-wrapper .ytism-messages.ytism-warning {
+    background-color: #fef7eb;
+    border-left-color: #fec222;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-heading {
+    margin: 0;
+    color: #10151b;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #495462;
+    line-height: 1.5;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content a {
+	color: #6C398B;
+	font-weight: 600;
+	text-decoration: none;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content a:hover {
+	text-decoration: underline;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content > p {
+    margin: 0 0 0.6250rem;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content > p:last-child {
+    margin-bottom: 0;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content > ul.ytism-message-list {
+    margin: 0;
+    padding: 0 0 0 1.2500rem;
+    list-style: circle;
+    font-weight: 500;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content > ul.ytism-message-list > li {
+    margin-bottom: 0.5000rem;
+}
+.ytism-alias-auth-wrapper .ytism-messages .ytism-messages-content > ul.ytism-message-list > li:last-child {
+    margin-bottom: 0;
+}
+.ytism-alias-auth-card > .ytism-messages {
+    margin-bottom: 1.2500rem;
+}
+
+
+
+
+
+
+
+
+
+
+.ytism-plan-container {
+    color: var(--ytism-text-color);
+    font-family: var(--ytism-font-family);
+    max-width: 75.0000rem;
+    margin: 0 auto;
+}
+.ytism-plan-container a {
+    color: var(--ytism-text-color);
+    text-decoration: none;
+}
+.ytism-plan-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5.0000rem;
+    justify-content: center;
+}
+.ytism-plan-row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.ytism-plan-info {
+    flex: 1 0 0;
+    width: 100%;
+    max-width: 33.4375rem;
+    min-width: 21.8750rem;
+}
+
+
+
+
+.ytism-plan-desctiption {
+    color: #fff;
+    text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+    font-size: 0.9375rem;
+    margin-top: 2.8125rem;
+    line-height: 1.5;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-desc-head {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    margin: 0 0 0.6250rem;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-features, .ytism-plan-desctiption .ytism-plan-family-features {
+    list-style: none;
+    margin: 0;
+    padding: 0 0 0 1.2500rem;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-features > li {
+    list-style: disc;
+    margin: 0.6250rem 0;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-desc-subhead {
+    font-size: 0.9375rem;
+    margin: 1.5625rem 0 0;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-desc-subhead::marker, .ytism-plan-desctiption .ytism-plan-enterprise-links > li ::marker {
+
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-links {
+    list-style: none;
+    margin: 1.8750rem 0 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2500rem;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-links > li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-links > li a {
+    font-weight: 300;
+    text-decoration: underline;
+}
+.ytism-plan-desctiption .ytism-plan-enterprise-links > li a:hover {
+    color: #4A4063;
+}
+.ytism-plan-desctiption .ytism-plan-desctiption {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ytism-plan-desctiption .ytism-plan-list li {
+    vertical-align: middle;
+    display: flex;
+    gap: 0.6250rem;
+    align-items: center;
+    margin: 1.2500rem 0;
+}
+.ytism-plan-desctiption .ytism-plan-list li::marker {
+
+}
+.ytism-plan-desctiption .ytism-plan-list li img {
+    height: 2.5000rem;
+    width: 2.5000rem;
+}
+.ytism-plan-desctiption .ytism-plan-family-desc-head, .ytism-plan-desctiption .ytism-plan-individual-desc-head {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    margin: 0 0 0.9375rem;
+}
+.ytism-plan-desctiption .ytism-plan-family-features, .ytism-plan-desctiption .ytism-plan-individual-features {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ytism-plan-desctiption .ytism-plan-family-features li, .ytism-plan-desctiption .ytism-plan-individual-features li {
+    display: flex;
+    gap: 0.6250rem;
+    align-items: center;
+    margin-bottom: 1.2500rem;
+}
+.ytism-plan-desctiption .ytism-plan-family-features li:last-child, .ytism-plan-desctiption .ytism-plan-individual-features li:last-child {
+    margin-bottom: 0;
+}
+.ytism-plan-desctiption .ytism-plan-family-features li .ytism-plan-family-feature-icon, .ytism-plan-desctiption .ytism-plan-individual-features li .ytism-plan-individual-feature-icon {
+    height: 2.5000rem;
+    width: 2.5000rem;
+    object-fit: cover;
+}
+
+
+
+.ytism-plan-info .ytism-plan-cards {
+    display: flex;
+    gap: 0.9375rem;
+    margin-top: 2.5000rem;
+}
+.ytism-plan-info .ytism-plan-card {
+    background: linear-gradient(180deg, #494062 0%, #B75478 49.04%, #EE8572 91.83%);
+    border: 0.0625rem solid #FFC400;
+    border-radius: 1.4375rem;
+    flex: 1 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.9375rem 1.2500rem;
+    align-items: center;
+    text-align: center;
+    gap: 1.2500rem;
+}
+.ytism-plan-info .ytism-plan-cards .ytism-plan-card > img {
+    height: 2.6875rem;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
+.ytism-plan-info .ytism-plan-cards .ytism-plan-card:nth-child(2) > img, .ytism-plan-info .ytism-plan-cards .ytism-plan-card:nth-child(3) > img {
+    height: 3.4375rem;
+}
+.ytism-plan-info .ytism-plan-cards .ytism-plan-card .ytism-plan-card-desc {
+    margin: 0;
+    font-size: 0.8125rem;
+}
+.ytism-user-panel {
+    flex: 1 0 0;
+    width: 100%;
+    max-width: 33.4375rem;
+    min-width: 21.8750rem;
+}
+.ytism-supermanager-container {
+	width: 100%;
+	max-width: 33.4375rem;
+	color: var(--ytism-text-color);
+    font-family: var(--ytism-font-family);
+	margin: 0 auto;
+}
+.ytism-auth-container, .ytism-supermanager-container {
+    line-height: 1.4;
+    padding: 2.500rem;
+    background: linear-gradient(180deg, rgb(172 104 108) 8.17%, rgb(171 86 111) 50.96%, rgb(159 79 124) 100%);
+    border: .0625rem solid #FFC400;
+    border-radius: 1.250rem;
+}
+.ytism-auth-container .ytism-panel-header, .ytism-supermanager-container .ytism-supermanager-header {
+    font-size: 1.3125rem;
+    font-weight: 500;
+	text-align: center;
+	margin: 0 0 1.5625rem;
+	text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+}
+.ytism-auth-container .ytism-auth-form, .ytism-supermanager-container .ytism-supermanager-form {
+    width: 100%;
+    position: relative;
+}
+.ytism-auth-form .ytism-form-field, .ytism-supermanager-form .ytism-form-field {
+    position: relative;
+    margin-bottom: 1.2500rem;
+}
+.ytism-auth-form .ytism-form-field .iti, .ytism-supermanager-form .ytism-form-field .iti {
+	width: 100%;
+}
+.ytism-auth-form .ytism-form-field input[type="text"], .ytism-auth-form .ytism-form-field input[type="email"], .ytism-auth-form .ytism-form-field input[type="password"], .ytism-auth-form .ytism-form-field input[type="date"], .ytism-auth-form .ytism-form-field input[type="tel"], .ytism-auth-form .ytism-form-field select, .ytism-supermanager-form .ytism-form-field input[type="text"], .ytism-supermanager-form .ytism-form-field input[type="email"], .ytism-supermanager-form .ytism-form-field input[type="password"], .ytism-supermanager-form .ytism-form-field input[type="date"], .ytism-supermanager-form .ytism-form-field input[type="tel"], .ytism-supermanager-form .ytism-form-field select {
+    transition: all .3s ease;
+    width: 100%;
+    padding: 0.6250rem 0.7500rem;
+    font-size: 0.9375rem;
+    border: 0.0625rem solid #fff;
+    border-radius: 0.7500rem;
+    outline: none;
+    box-shadow: none;
+    color: #474747;
+}
+.ytism-auth-form .ytism-form-field input[type="text"]:focus, .ytism-auth-form .ytism-form-field input[type="email"]:focus, .ytism-auth-form .ytism-form-field input[type="password"]:focus, .ytism-auth-form .ytism-form-field input[type="date"]:focus, .ytism-auth-form .ytism-form-field input[type="tel"]:focus, .ytism-auth-form .ytism-form-field select:focus, .ytism-supermanager-form .ytism-form-field input[type="text"]:focus, .ytism-supermanager-form .ytism-form-field input[type="email"]:focus, .ytism-supermanager-form .ytism-form-field input[type="password"]:focus, .ytism-supermanager-form .ytism-form-field input[type="date"]:focus, .ytism-supermanager-form .ytism-form-field input[type="tel"]:focus, .ytism-supermanager-form .ytism-form-field select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+    outline: none;
+}
+.ytism-auth-form .ytism-form-field input[type="text"].ytism-error-input, .ytism-auth-form .ytism-form-field input[type="email"].ytism-error-input, .ytism-auth-form .ytism-form-field input[type="password"].ytism-error-input, .ytism-auth-form .ytism-form-field input[type="date"].ytism-error-input, .ytism-auth-form .ytism-form-field input[type="tel"].ytism-error-input, .ytism-auth-form .ytism-form-field select.ytism-error-input, .ytism-supermanager-form .ytism-form-field input[type="text"].ytism-error-input, .ytism-supermanager-form .ytism-form-field input[type="email"].ytism-error-input, .ytism-supermanager-form .ytism-form-field input[type="password"].ytism-error-input, .ytism-supermanager-form .ytism-form-field input[type="date"].ytism-error-input, .ytism-supermanager-form .ytism-form-field input[type="tel"].ytism-error-input, .ytism-supermanager-form .ytism-form-field select.ytism-error-input {
+    border-color: #b20808;
+}
+.ytism-auth-form .ytism-form-field input[type="text"].ytism-error-input:focus, .ytism-auth-form .ytism-form-field input[type="email"].ytism-error-input:focus, .ytism-auth-form .ytism-form-field input[type="password"].ytism-error-input:focus, .ytism-auth-form .ytism-form-field input[type="date"].ytism-error-input:focus, .ytism-auth-form .ytism-form-field input[type="tel"].ytism-error-input:focus, .ytism-auth-form .ytism-form-field select:focus, .ytism-supermanager-form .ytism-form-field input[type="text"].ytism-error-input:focus, .ytism-supermanager-form .ytism-form-field input[type="email"].ytism-error-input:focus, .ytism-supermanager-form .ytism-form-field input[type="password"].ytism-error-input:focus, .ytism-supermanager-form .ytism-form-field input[type="date"].ytism-error-input:focus, .ytism-supermanager-form .ytism-form-field input[type="tel"].ytism-error-input:focus, .ytism-supermanager-form .ytism-form-field select:focus {
+    border-color: #b20808;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--single, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--single {
+    background-color: #fff;
+    padding: 0.6250rem 1.8750rem 0.6250rem 0.7500rem;
+    border-radius: 0.7500rem;
+    border: 0.0625rem solid #ffff;
+    transition: all .2s ease;
+}
+.ytism-auth-form .ytism-form-field input:focus::placeholder, .ytism-auth-form .ytism-form-field textarea::placeholder, .ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--single .select2-selection__placeholder, .ytism-supermanager-form .ytism-form-field input:focus::placeholder, .ytism-supermanager-form .ytism-form-field textarea::placeholder, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--single .select2-selection__placeholder {
+    color: #747474;
+    opacity: 1;
+    transition: color 0.3s ease;
+}
+.ytism-auth-form .ytism-form-field input:focus::placeholder, .ytism-auth-form .ytism-form-field textarea:focus::placeholder, .ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open .select2-selection--single .select2-selection__placeholder, .ytism-supermanager-form .ytism-form-field input:focus::placeholder, .ytism-supermanager-form .ytism-form-field textarea:focus::placeholder, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open .select2-selection--single .select2-selection__placeholder {
+    color: #B5B5B5;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--single .select2-selection__arrow, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--single .select2-selection__arrow {
+    right: 0.6250rem;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--single .select2-selection__rendered, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 1.5;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.ytism-error-input .select2-selection--single, .ytism-supermanager-form .ytism-form-field .select2-container--default.ytism-error-input .select2-selection--single {
+    border-color: #b20808;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open .select2-selection--single, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open .select2-selection--single {
+    border: 0.0625rem solid #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open.ytism-error-input .select2-selection--single, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open.ytism-error-input .select2-selection--single {
+    border-color: #b20808;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .ytism-auth-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--above .select2-selection--single, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--open.select2-container--above .select2-selection--multiple {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.ytism-auth-form .ytism-form-field .select2-container .select2-selection--single .select2-selection__rendered, .ytism-supermanager-form .ytism-form-field .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+    padding-right: 0;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--multiple, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--multiple {
+    background-color: #fff;
+    border: 0.0625rem solid #ffff;
+    border-radius: 0.7500rem;
+    padding-bottom: 0.6250rem;
+    padding-right: 0.7500rem;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.ytism-error-input .select2-selection--multiple, .ytism-supermanager-form .ytism-form-field .select2-container--default.ytism-error-input .select2-selection--multiple {
+    border-color: #b20808;
+}
+.ytism-auth-form .ytism-form-field .select2-container .select2-search--inline .select2-search__field, .ytism-supermanager-form .ytism-form-field .select2-container .select2-search--inline .select2-search__field {
+    margin-top: 0.6250rem;
+    margin-left: 0.7500rem;
+    height: 1.5625rem;
+    font-family: inherit;
+}
+.ytism-auth-form .ytism-form-field  .select2-container--default .select2-selection--multiple .select2-selection__clear, .ytism-supermanager-form .ytism-form-field  .select2-container--default .select2-selection--multiple .select2-selection__clear {
+    margin-right: 0.7500rem;
+    margin-top: 0.6250rem;
+}
+.ytism-auth-form .ytism-form-field  .select2-container--default .select2-selection--multiple .select2-selection__clear:hover, .ytism-supermanager-form .ytism-form-field  .select2-container--default .select2-selection--multiple .select2-selection__clear:hover {
+    color: #ff0000;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    margin-left: 0.7500rem;
+    margin-top: 0.6250rem;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.select2-container--focus .select2-selection--multiple, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border: 0.0625rem solid #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+.ytism-auth-form .ytism-form-field .select2-container--default.select2-container--focus.ytism-error-input .select2-selection--multiple, .ytism-supermanager-form .ytism-form-field .select2-container--default.select2-container--focus.ytism-error-input .select2-selection--multiple {
+    border-color: #b20808;
+    box-shadow: 0 0 0 0.2rem rgba(220,53,69,.25);
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice {
+    background-color: #d5797d;
+    border: 0.0625rem solid #cd3d44;
+}
+.ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    border: none;
+    border-right: 0.0625rem solid #d5797d;
+    color: #fff;
+    font-size: 0.9em;
+}
+.ytism-auth-form .ytism-form-field  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover, .ytism-auth-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus, .ytism-supermanager-form .ytism-form-field  .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:hover, .ytism-supermanager-form .ytism-form-field .select2-container--default .select2-selection--multiple .select2-selection__choice__remove:focus {
+    background-color: #fff;
+    color: #474747;
+}
+.ytism-select2-dropdown.select2-dropdown {
+    background-color: #fff;
+    border-top: 0.0625rem solid #ddd;
+    border-bottom: 0.0625rem solid #ddd;
+    border-left: 0;
+    border-right: 0;
+    border-radius: 0.6250rem;
+}
+.ytism-select2-dropdown.select2-dropdown.select2-dropdown--above {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.ytism-select2-dropdown.select2-dropdown.select2-dropdown--below {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.ytism-select2-dropdown .select2-search--dropdown {
+    padding: 0.6250rem 0.7500rem;
+}
+.ytism-select2-dropdown .select2-results__option {
+    padding: 0.6250rem 0.7500rem;
+    font-size: 0.9em;
+    color: #474747;
+}
+.select2-container--open .ytism-select2-dropdown.select2-dropdown--below {
+    border-top: 0.0625rem solid #ddd;
+}
+.select2-container--open .ytism-select2-dropdown.select2-dropdown--above {
+    border-bottom: 0.0625rem solid #ddd;
+}
+.select2-container--default .ytism-select2-dropdown .select2-search--dropdown .select2-search__field {
+    border: 0.0625rem solid #d1cdcd;
+    padding: 0.3750rem 0.5000rem;
+    border-radius: 0.3125rem;
+}
+
+.ytism-auth-form .ytism-form-field .ytism-form-text, .ytism-supermanager-form .ytism-form-field .ytism-form-text {
+    font-size: 0.8em;
+    font-style: italic;
+    margin-top: 0.3125rem;
+    color: #ffffffd6;
+}
+.ytism-auth-form .ytism-form-field .ytism-field-error, .ytism-supermanager-form .ytism-form-field .ytism-field-error {
+    color: #ffc403;
+    font-size: 0.8750rem;
+    display: block;
+    margin-top: 0.1875rem;
+}
+.ytism-auth-form .ytism-form-field .ytism-form-field-label, .ytism-supermanager-form .ytism-form-field .ytism-form-field-label {
+    line-height: 1.4;
+    display: inline-block;
+    width: 100%;
+}
+.ytism-auth-form .ytism-form-field .ytism-form-field-label.not-require, .ytism-supermanager-form .ytism-form-field .ytism-form-field-label.not-require {
+    display: none;
+}
+.ytism-auth-form .ytism-form-field .ytism-form-field-label.ytism-form-field-terms, .ytism-supermanager-form .ytism-form-field .ytism-form-field-label.ytism-form-field-terms {
+    margin-bottom: 0.3125rem;
+    font-size: 0.8125rem;
+}
+.ytism-auth-form .ytism-form-field .ytism-form-field-label > a, .ytism-supermanager-form .ytism-form-field .ytism-form-field-label > a {
+    color: #ffc403;
+}
+.ytism-auth-form .ytism-form-field .ytism-form-field-label > a:hover, .ytism-supermanager-form .ytism-form-field .ytism-form-field-label > a:hover {
+    color: #336;
+}
+.ytism-auth-form .ytism-form-field input[type="checkbox"], .ytism-supermanager-form .ytism-form-field input[type="checkbox"] {
+    vertical-align: top;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    flex-shrink: 0;
+    width: 1.0000rem;
+    height: 1.0000rem;
+    background-color: #fff;
+    border-radius: 0.2500rem;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border: 0.0625rem solid #6c3a8b;
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+    print-color-adjust: exact;
+    vertical-align: middle;
+    margin-right: 0.3125rem;
+}
+.ytism-auth-form .ytism-form-field input[type="checkbox"]:checked, .ytism-supermanager-form .ytism-form-field input[type="checkbox"]:checked {
+    background-color: #6c3a8b;
+    border-color: #6c3a8b;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
+}
+.ytism-form-field .ytism-form-field-password-wrapper {
+    position: relative;
+}
+.ytism-form-field .ytism-form-field-password-wrapper > input[type="password"], .ytism-form-field .ytism-form-field-password-wrapper > input[type="text"] {
+    width: 100%;
+    padding-right: 2.5000rem;
+    margin-bottom: 0;
+}
+.ytism-form-field .ytism-form-field-password-wrapper > .ytism-form-toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 0.3125rem;
+    transform: translateY(-50%);
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    color: #000;
+    padding: 0.3125rem;
+    margin: 0;
+    cursor: pointer;
+    width: 2.1250rem;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter {
+    width: 100%;
+    height: 0.3750rem;
+    border-radius: 0.3750rem;
+    background: #eee;
+    margin-top: .4rem;
+    position: relative;
+    overflow: hidden;
+    display: none;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 0%;
+    transition: width .3s ease, background .3s ease;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter[data-strength="0"]::after {
+    width: 10%;
+    background: #ccc;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter[data-strength="1"]::after {
+    width: 25%;
+    background: #e74c3c;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter[data-strength="2"]::after {
+    width: 50%;
+    background: #f39c12;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter[data-strength="3"]::after {
+    width: 75%;
+    background: #27ae60;
+}
+.ytism-form-field.ytism-form-password-field .ytism-form-password-meter[data-strength="4"]::after {
+    width: 100%;
+    background: #2ecc71;
+}
+.ytism-auth-form .ytism-btn, .ytism-auth-form [type="button"].ytism-btn, .ytism-auth-form [type="submit"].ytism-btn, .ytism-supermanager-form .ytism-btn, .ytism-supermanager-form [type="button"].ytism-btn, .ytism-supermanager-form [type="submit"].ytism-btn {
+    background: #6C398B;
+    border: 0.0625rem solid #6C398B;
+    outline: none;
+    color: #fff;
+    padding: 0.7500rem 1.2500rem;
+    border-radius: 1.8750rem;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    transition: background .3s ease;
+    margin: 0 auto;
+    display: block;
+	min-width: 15.6250rem;
+}
+.ytism-auth-form .ytism-btn:hover:not(:disabled), .ytism-auth-form [type="button"].ytism-btn:hover:not(:disabled), .ytism-auth-form [type="submit"].ytism-btn:hover:not(:disabled), .ytism-supermanager-form .ytism-btn:hover:not(:disabled), .ytism-supermanager-form [type="button"].ytism-btn:hover:not(:disabled), .ytism-supermanager-form [type="submit"].ytism-btn:hover:not(:disabled) {
+    background: #592f72;
+    border-color: #592f72;
+    color: #fff;
+}
+.ytism-auth-form .ytism-btn:focus:not(:disabled), .ytism-auth-form [type="button"].ytism-btn:focus:not(:disabled), .ytism-auth-form [type="submit"].ytism-btn:focus:not(:disabled), .ytism-supermanager-form .ytism-btn:focus:not(:disabled), .ytism-supermanager-form [type="button"].ytism-btn:focus:not(:disabled), .ytism-supermanager-form [type="submit"].ytism-btn:focus:not(:disabled) {
+    outline: none;
+    box-shadow: 0 0 0 0.1875rem rgba(108, 57, 139, 0.4);
+}
+.ytism-auth-form .ytism-btn:disabled, .ytism-auth-form [type="button"].ytism-btn:disabled, .ytism-auth-form [type="submit"].ytism-btn:disabled, .ytism-supermanager-form .ytism-btn:disabled, .ytism-supermanager-form [type="button"].ytism-btn:disabled, .ytism-supermanager-form [type="submit"].ytism-btn:disabled {
+    cursor: not-allowed; 
+    opacity: 0.9;
+}
+.ytism-auth-form .ytism-loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+.ytism-auth-form .ytism-loading-overlay .ytism-spinner, .ytism-supermanager-form .ytism-loading-overlay .ytism-spinner {
+    width: 2.5000rem;
+    height: 2.5000rem;
+    border: 0.2500rem solid #ccc;
+    border-top: 0.2500rem solid #6C398B;
+    border-radius: 50%;
+    animation: ytism-spin 1s linear infinite;
+}
+.ytism-auth-options {
+    margin-top: 1.8750rem;
+}
+.ytism-auth-options p {
+    margin: 0 0 0.2rem;
+}
+.ytism-auth-options p:last-child {
+	margin-bottom: 0;
+}
+.ytism-auth-options a {
+    color: #ffc403;
+}
+
+/***********************
+* Auth Form Response
+***********************/
+.ytism-auth-form .ytism-response-message, .ytism-supermanager-form .ytism-response-message {
+    margin-bottom: 1.8750rem;
+}
+.ytism-payment-section .ytism-response-message {
+    margin-bottom: 1.2500rem;
+}
+.ytism-response-message {
+    background: #fff;
+    color: #4f5450;
+    border-left: 0.1875rem solid #ffffff;
+    border-radius: 0.6250rem;
+    padding: 0.8125rem 0.9375rem;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9375rem;
+    max-width: 34.3750rem;
+}
+.ytism-response-message.ytism-error {
+    background-color: #faf0ed;
+    border-left-color: #fc5758;
+}
+.ytism-response-message.ytism-success {
+    background-color: #f2f9f5;
+    border-left-color: #51dc6b;
+}
+.ytism-response-message.ytism-info {
+    background-color: #e8eefa;
+    border-left-color: #3086eb;
+}
+.ytism-response-message.ytism-warning {
+    background-color: #fef7eb;
+    border-left-color: #fec222;
+}
+.ytism-response-message .ytism-response-message-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6250rem;
+}
+.ytism-response-message .ytism-response-message-text-heading {
+    margin: 0;
+    color: #10151b;
+    font-size: 0.9375rem;
+    font-weight: 600;
+}
+.ytism-response-message .ytism-response-message-body {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: #495462;
+    line-height: 1.5;
+}
+.ytism-response-message .ytism-response-message-body a {
+	color: #6C398B;
+	font-weight: 600;
+}
+.ytism-response-message .ytism-response-message-body a:hover {
+	text-decoration: underline;
+}
+.ytism-response-message .ytism-response-message-close {
+    background: transparent;
+    color: #505a62;
+    padding: 0.1250rem;
+    border-radius: 0.3750rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    height: 1.6250rem;
+    width: 1.6250rem;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-start;
+    display: flex;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.ytism-response-message .ytism-response-message-close .ytism-icon {
+    font-size: 0.9375rem;
+    color: #505a62;
+    transition: color 0.2s ease;
+}
+.ytism-response-message .ytism-response-message-close:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+.ytism-response-message .ytism-response-message-close:hover .ytism-icon {
+    color: #000000;
+}
+
+
+
+
+
+
+
+/******************************
+* skeleton
+******************************/
+[class*=" ytism-skeleton-"].ytism-skeleton {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(90deg,rgba(255, 255, 255, 0.2) 0%,rgba(255, 255, 255, 0.35) 20%,rgba(255, 255, 255, 0.35) 40%,rgba(255, 255, 255, 0.2) 100%);
+    animation: ytism-shimmer 1.5s ease-in-out infinite;
+    background-size: 200% 100%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-100 {
+    width: 100%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-90 {
+    width: 90%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-80 {
+    width: 80%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-70 {
+    width: 70%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-60 {
+    width: 60%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-50 {
+    width: 50%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-40 {
+    width: 40%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-30 {
+    width: 30%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-20 {
+    width: 20%;
+}
+[class*=" ytism-skeleton-"].ytism-skeleton-w-10 {
+    width: 10%;
+}
+
+
+/*************************
+* Pyament Form
+**************************/
+/* Loading Skeleton */
+.ytism-loading-skeleton {
+    overflow: hidden;
+}
+.ytism-skeleton-card {
+    padding: 2.5000rem;
+    border-bottom: 0.0625rem solid #e6ebf1;
+}
+.ytism-skeleton-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.0000rem;
+}
+.ytism-skeleton-logo {
+    width: 8.7500rem;
+    height: 1.2500rem;
+    background: #e6ebf1;
+    border-radius: 0.2500rem;
+}
+.ytism-skeleton-download {
+    width: 2.2500rem;
+    height: 2.2500rem;
+    background: #e6ebf1;
+    border-radius: 0.3750rem;
+}
+.ytism-skeleton-amount {
+    width: 11.2500rem;
+    height: 3.0000rem;
+    background: #e6ebf1;
+    border-radius: 0.3750rem;
+    margin-bottom: 0.5000rem;
+}
+.ytism-skeleton-due {
+    width: 7.5000rem;
+    height: 1.0000rem;
+    background: #e6ebf1;
+    border-radius: 0.2500rem;
+    margin-bottom: 2.0000rem;
+}
+.ytism-skeleton-details .ytism-skeleton-row {
+    display: flex;
+    margin-bottom: 0.7500rem;
+    gap: 1.0000rem;
+}
+.ytism-skeleton-details .ytism-skeleton-row:last-child {
+    margin-bottom: 0;
+}
+.ytism-skeleton-details .ytism-skeleton-row .ytism-skeleton-row-small {
+    width: 3.7500rem;
+    height: 0.8750rem;
+    border-radius: 0.2500rem;
+    flex-shrink: 0;
+}
+.ytism-skeleton-details .ytism-skeleton-row .ytism-skeleton-row-big {
+    flex: 1;
+    height: 0.8750rem;
+    border-radius: 0.2500rem;
+}
+.ytism-skeleton-form {
+    padding: 2.5000rem;
+}
+.ytism-skeleton-title {
+    width: 12.5000rem;
+    height: 1.0000rem;
+    background: #e6ebf1;
+    border-radius: 0.2500rem;
+    margin-bottom: 1.2500rem;
+}
+.ytism-skeleton-methods {
+    display: flex;
+    gap: 0.7500rem;
+    margin-bottom: 2.0000rem;
+}
+.ytism-skeleton-methods-option {
+    width: 5.0000rem;
+    height: 2.5000rem;
+    background: #e6ebf1;
+    border-radius: 0.3750rem;
+}
+.ytism-skeleton-input-row {
+    display: flex;
+    gap: 0.7500rem;
+    margin-bottom: 1.5000rem;
+}
+.ytism-skeleton-input-small {
+    flex: 1;
+    height: 3.0000rem;
+    background: #e6ebf1;
+    border-radius: 0.3750rem;
+}
+.ytism-skeleton-button {
+    width: 100%;
+    height: 3.0000rem;
+    background: #e6ebf1;
+    border-radius: 0.3750rem;
+}
+
+
+/**************************
+* Loading Price
+***************************/
+.ytism-price-loading {
+    max-width: 15.6250rem;
+    width: 100%;
+    margin-left: auto;
+    min-width: 12.5000rem;
+}
+.ytism-price-loading .ytism-skeleton-price-large {
+    height: 1.2500rem;
+    border-radius: 0.3125rem;
+}
+.ytism-price-loading .ytism-skeleton-price-medium {
+    border-radius: 0.3750rem;
+    height: 1.2500rem;
+    width: 50%;
+    text-align: right;
+    margin-left: auto;
+    margin-top: 0.6250rem;
+}
+.ytism-price-loading .ytism-skeleton-price-text {
+    height: 0.9375rem;
+    width: 60%;
+    margin-left: auto;
+    margin-top: 0.6250rem;
+    border-radius: 0.3125rem;
+}
+
+
+/************************
+* Login Form
+*************************/
+.ytism-login-form-skeleton {
+    width: 100%;
+}
+.ytism-skeleton-input {
+    width: 100%;
+    height: 3.0000rem;
+    margin-bottom: 1.2500rem;
+    border-radius: 0.7500rem;
+}
+.ytism-skeleton-dropdown {
+    width: 100%;
+    height: 3.0000rem;
+    border-radius: 0.7500rem;
+    margin-bottom: 1.2500rem;
+    position: relative;
+}
+.ytism-skeleton-dropdown::after {
+    content: '';
+    position: absolute;
+    right: 0.9375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 0;
+    border-left: 0.3750rem solid transparent;
+    border-right: 0.3750rem solid transparent;
+    border-top: 0.5000rem solid #d0d0d0;
+}
+.ytism-skeleton-phone {
+    width: 100%;
+    height: 3.0000rem;
+    margin-bottom: 1.2500rem;
+    border-radius: 0.7500rem;
+    position: relative;
+}
+.ytism-skeleton-phone::before {
+    content: '';
+    position: absolute;
+    left: 0.9375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.7500rem;
+    height: 1.2500rem;
+    background: #d0d0d0;
+    border-radius: 0.1875rem;
+}
+.ytism-skeleton-text {
+    width: 100%;
+    background: transparent;
+    margin-top: 3.1250rem;
+}
+.ytism-skeleton-text-line {
+    height: 0.8750rem;
+    margin-bottom: 0.6250rem;
+    border-radius: 0.2500rem;
+    background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.15) 0%,
+    rgba(255, 255, 255, 0.3) 20%,
+    rgba(255, 255, 255, 0.3) 40%,
+    rgba(255, 255, 255, 0.15) 100%
+    );
+    background-size: 200% 100%;
+    animation: ytism-shimmer 1.5s ease-in-out infinite;
+}
+.ytism-skeleton-text-line:last-child {
+    margin-bottom: 0;
+    width: 55%;
+}
+.ytism-skeleton-password {
+    width: 100%;
+    height: 3.0000rem;
+    margin-bottom: 1.2500rem;
+    border-radius: 0.7500rem;
+    position: relative;
+}
+.ytism-skeleton-password::after {
+    content: '';
+    position: absolute;
+    right: 0.9375rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.2500rem;
+    height: 1.2500rem;
+    background: #d0d0d0;
+    border-radius: 50%;
+}
+.ytism-skeleton-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.7500rem;
+    margin-bottom: 1.2500rem;
+}
+.ytism-skeleton-checkbox-box {
+    width: 1.2500rem;
+    height: 1.2500rem;
+    flex-shrink: 0;
+    border-radius: 0.2500rem;
+}
+.ytism-skeleton-checkbox-text {
+    height: 1.0625rem;
+    border-radius: 0.5000rem;
+    width: 30%;
+}
+.ytism-skeleton-submit {
+    height: 3.0000rem;
+    border-radius: 2.2500rem;
+    margin: 0 auto 1.2500rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.ytism-user-loggedin {
+    background: linear-gradient(180deg, rgba(238, 133, 114, 0.5) 8.17%, rgba(183, 84, 120, 0.5) 50.96%, rgba(108, 57, 139, 0.5) 100%);
+    border: 0.0625rem solid #FFC400;
+    border-radius: 1.2500rem;
+}
+.ytism-user-loggedin .ytism-loggedin-heading {
+    font-size: 1.4375rem;
+    text-align: center;
+    margin: 0;
+}
+.ytism-user-loggedin .ytism-loggedin-subheading {
+    font-size: 1.1875rem;
+    text-align: center;
+    margin: 0.9375rem 0 0;
+}
+.ytism-start-subscription-button {
+    background: #6C398B;
+    border: 0.0625rem solid #6C398B;
+    text-decoration: none !important;
+    color: #fff;
+    padding: 0.7500rem 1.2500rem;
+    border-radius: 1.8750rem;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: bold;
+    transition: background .3s ease;
+    width: 100%;
+    max-width: 20.1250rem;
+    margin: 1.8750rem auto 0;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+}
+.ytism-start-subscription-button:hover:not(:disabled) {
+    background: #592f72;
+    border-color: #592f72;
+    color: #fff;
+}
+.ytism-start-subscription-button:focus:not(:disabled) {
+    outline: none;
+    box-shadow: 0 0 0 0.1875rem rgba(108, 57, 139, 0.4);
+}
+.ytism-start-subscription-button:disabled {
+    cursor: not-allowed; 
+    opacity: 0.9;
+}
+.ytism-form-field .select2-container .select2-selection--single {
+    height: inherit;
+}
+.ytism-form-field .select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 50%;
+    transform: translateY(-50%);
+}
+.ytism-form-field .iti.iti--inline-dropdown {
+    width: 100%;
+    color: #333232;
+}
+.ytism-form-field .iti__selected-country, .ytism-form-field [type=button].iti__selected-country {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0;
+    color: inherit;
+    padding: 0.6250rem 0.6250rem;
+}
+.ytism-form-field .iti__selected-country:focus, .ytism-form-field [type=button].iti__selected-country:focus {
+    outline: none;
+}
+.ytism-form-field .iti__selected-country:hover, .ytism-form-field [type=button].iti__selected-country:hover {
+    background: transparent;
+    border: none;
+    color: inherit;
+}
+.iti--fullscreen-popup .iti__country {
+    color: #333232;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* Payment Interface */
+.ytism-payment-interface {
+    overflow: hidden;
+    color: #fff;
+}
+.ytism-invoice-card {
+    padding: 2.5000rem;
+    border-bottom: 0.0625rem solid #e6ebf1;
+}
+
+.ytism-invoice-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.0000rem;
+}
+.ytism-logo {
+    font-weight: 900;
+    font-size: 1.5625rem;
+    color: #fff;
+}
+.ytism-invoice-download-btn {
+    background: transparent;
+    border: 0.0625rem solid #ffff;
+    font-size: 0.8125rem;
+    padding: 0.3750rem 0.3750rem;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.2s ease;
+}
+.ytism-invoice-download-btn:hover {
+    background-color: #ffffff;
+    color: #e7796f;
+}
+
+.ytism-invoice-amount {
+    font-size: 2.5000rem;
+    font-weight: 600;
+    margin-bottom: 0.5000rem;
+    line-height: 1;
+}
+.ytism-invoice-due {
+    font-size: 0.9375rem;
+    margin-bottom: 2.0000rem;
+}
+
+.ytism-invoice-details {
+    
+}
+.ytism-invoice-details > .ytism-detail-row {
+    display: flex;
+    margin-bottom: 0.7500rem;
+    align-items: flex-start;
+}
+.ytism-invoice-details > .ytism-detail-row:last-child {
+    margin-bottom: 0;
+}
+.ytism-label {
+    font-size: 0.8125rem;
+    min-width: 3.7500rem;
+    margin-right: 1.0000rem;
+}
+.ytism-detail-row span:last-child {
+    font-size: 0.8125rem;
+    flex: 1;
+    line-height: 1.4;
+}
+
+/* Payment Form */
+.ytism-payment-section {
+    padding: 2.5000rem;
+}
+.ytism-payment-section > h3 {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin: 0 0 1.2500rem 0;
+}
+.ytism-payment-methods {
+    display: flex;
+    gap: 0.7500rem;
+    margin-bottom: 2.0000rem;
+    flex-wrap: wrap;
+}
+
+.ytism-payment-method {
+    display: flex;
+    align-items: center;
+    gap: 0.5000rem;
+    padding: 0.7500rem 1.0000rem;
+    border: 0.0625rem solid #e6ebf1;
+    border-radius: 0.3750rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-size: 0.8125rem;
+    color: #425a72;
+}
+
+.ytism-payment-method:hover {
+    border-color: #c7d2fe;
+    background: #f6f9fc;
+}
+
+.ytism-payment-method.ytism-active {
+    border-color: #635bff;
+    background: #f6f9fc;
+    color: #635bff;
+}
+
+.ytism-payment-method-more {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5000rem;
+    height: 2.5000rem;
+    border: 0.0625rem solid #e6ebf1;
+    border-radius: 0.3750rem;
+    background: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: #8898aa;
+    font-size: 0.9375rem;
+}
+
+.ytism-payment-method-more:hover {
+    border-color: #c7d2fe;
+    background: #f6f9fc;
+}
+
+.ytism-method-icon {
+    font-size: 0.9375rem;
+}
+.ytism-stripe-payment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2500rem;
+    justify-content: space-between;
+}
+.ytism-stripe-payment-form button[type="submit"].ytism-btn.ytism-pay-button, .ytism-stripe-payment-form .ytism-pay-button {
+    margin: 0.6250rem 0 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+.ytism-cancel-section {
+    text-align: center;
+    margin-top: 0.9375rem;
+}
+.ytism-cancel-section .ytism-payment-cancel-button, .ytism-cancel-section a.ytism-payment-cancel-button, .ytism-cancel-section a.ytism-payment-myaccount-button {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: -0.0625rem 0.0000rem 0.3312rem #00000040;
+}
+.ytism-cancel-section .ytism-payment-cancel-button:hover, .ytism-cancel-section a.ytism-payment-cancel-button:hover, .ytism-cancel-section a.ytism-payment-myaccount-button:hover {
+    text-decoration: underline;
+}
+.ytism-cancel-section .ytism-payment-cancel-button.disabled, .ytism-cancel-section a.ytism-payment-cancel-button.disabled, .ytism-cancel-section a.ytism-payment-myaccount-button.disabled {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+
+
+/* Card Form */
+.ytism-card-form h4 {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    color: #425a72;
+    margin: 0 0 1.0000rem 0;
+}
+
+.ytism-card-input {
+    border: 0.0625rem solid #e6ebf1;
+    border-radius: 0.3750rem;
+    padding: 0.7500rem;
+    margin-bottom: 1.0000rem;
+    background: white;
+    transition: border-color 0.2s ease;
+}
+
+.ytism-card-input:focus-within {
+    border-color: #635bff;
+    box-shadow: 0 0 0 0.1250rem rgba(99, 91, 255, 0.1);
+}
+
+.ytism-card-row {
+    display: flex;
+    gap: 0.7500rem;
+    margin-bottom: 1.5000rem;
+}
+
+.ytism-card-expiry,
+.ytism-card-cvc {
+    flex: 1;
+    position: relative;
+}
+
+.ytism-card-expiry input,
+.ytism-card-cvc input {
+    width: 100%;
+    padding: 0.7500rem;
+    border: 0.0625rem solid #e6ebf1;
+    border-radius: 0.3750rem;
+    font-size: 0.9375rem;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.ytism-card-expiry input:focus,
+.ytism-card-cvc input:focus {
+    outline: none;
+    border-color: #635bff;
+    box-shadow: 0 0 0 0.1250rem rgba(99, 91, 255, 0.1);
+}
+
+.ytism-help-icon {
+    position: absolute;
+    right: 0.7500rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.0000rem;
+    height: 1.0000rem;
+    background: #8898aa;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6250rem;
+    cursor: help;
+}
+
+/* Payment Button */
+.ytism-pay-button {
+    width: 100%;
+    background: #00d4aa;
+    color: white;
+    border: none;
+    padding: 1.0000rem;
+    font-size: 0.9375rem;
+    font-weight: 600;
+    border-radius: 0.3750rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 1.5000rem;
+}
+
+.ytism-pay-button:hover {
+    background: #00c49a;
+    transform: translateY(-0.0625rem);
+    box-shadow: 0 0.2500rem 0.7500rem rgba(0, 212, 170, 0.3);
+}
+
+.ytism-pay-button:active {
+    transform: translateY(0);
+}
+
+.ytism-pay-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Footer */
+.ytism-footer {
+    padding: 1.5000rem 2.0000rem;
+    background: #fafbfc;
+    border-top: 0.0625rem solid #e6ebf1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 0.7500rem;
+    color: #8898aa;
+}
+
+.ytism-footer-links {
+    display: flex;
+    gap: 1.0000rem;
+}
+
+.ytism-footer-links a {
+    color: #8898aa;
+    text-decoration: none;
+}
+
+.ytism-footer-links a:hover {
+    color: #635bff;
+}
+
+
+
+.ytism-download-receipt {
+    background: #635bff;
+    color: white;
+    border: none;
+    padding: 0.7500rem 1.5000rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border-radius: 0.3750rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ytism-download-receipt:hover {
+    background: #5a52ff;
+    transform: translateY(-0.0625rem);
+    box-shadow: 0 0.2500rem 0.7500rem rgba(99, 91, 255, 0.3);
+}
+
+/* Card logos */
+.ytism-card-brands {
+    display: flex;
+    gap: 0.5000rem;
+    margin-left: auto;
+}
+
+.ytism-card-brands img {
+    height: 1.2500rem;
+    opacity: 0.7;
+}
+
+
+.ytism-section {
+    padding: 2.0000rem;
+    border-bottom: 0.0625rem solid #f7fafc;
+}
+
+.ytism-section:last-child {
+    border-bottom: none;
+}
+
+.ytism-section-title {
+    font-size: 1.1875rem;
+    font-weight: 600;
+    margin: 0 0 1.5000rem 0;
+    color: var(--ytism-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 0.5000rem;
+}
+
+.ytism-section-icon {
+    font-size: 1.0625rem;
+}
+
+.ytism-details-grid {
+    display: grid;
+    gap: 1.0000rem;
+}
+
+.ytism-detail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.7500rem 0;
+}
+
+.ytism-detail-label {
+    font-weight: 500;
+    color: var(--ytism-text-secondary);
+    font-size: 0.8125rem;
+}
+
+.ytism-detail-value {
+    color: var(--ytism-text-primary);
+    font-weight: 500;
+    font-size: 0.8125rem;
+    text-align: right;
+}
+
+.ytism-amount {
+    font-size: 1.0625rem;
+    font-weight: 700;
+    background: var(--ytism-gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.ytism-status-badge {
+    padding: 0.2500rem 0.7500rem;
+    border-radius: 0.7500rem;
+    font-size: 0.7500rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.0313rem;
+}
+
+.ytism-status-badge.ytism-status-succeeded {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+.ytism-status-badge.ytism-status-failed {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+}
+
+.ytism-status-badge.ytism-status-processing {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+    color: white;
+}
+
+.ytism-status-badge.ytism-status-requires_action,
+.ytism-status-badge.ytism-status-requires_payment_method {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+}
+
+.ytism-actions {
+    padding: 2.0000rem;
+    display: grid;
+    gap: 0.7500rem;
+    grid-template-columns: repeat(auto-fit, minmax(12.5000rem, 1fr));
+}
+
+.ytism-action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5000rem;
+    padding: 1.0000rem 1.5000rem;
+    border-radius: 0.7500rem;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.ytism-action-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.ytism-action-btn:hover::before {
+    left: 100%;
+}
+
+.ytism-action-primary {
+    background: var(--ytism-gradient-primary);
+    color: white;
+    box-shadow: 0 0.2500rem 0.9375rem rgba(102, 126, 234, 0.4);
+}
+
+.ytism-action-success {
+    background: var(--ytism-gradient-success);
+    color: white;
+    box-shadow: 0 0.2500rem 0.9375rem rgba(79, 172, 254, 0.4);
+}
+
+.ytism-action-secondary {
+    background: linear-gradient(135deg, #718096, #4a5568);
+    color: white;
+    box-shadow: 0 0.2500rem 0.9375rem rgba(113, 128, 150, 0.4);
+}
+
+.ytism-action-gradient {
+    background: var(--ytism-gradient-secondary);
+    color: white;
+    box-shadow: 0 0.2500rem 0.9375rem rgba(240, 147, 251, 0.4);
+}
+
+.ytism-action-outline {
+    background: transparent;
+    color: var(--ytism-text-primary);
+    border: 0.1250rem solid #e2e8f0;
+    box-shadow: none;
+}
+
+.ytism-action-btn:hover {
+    transform: translateY(-0.1250rem);
+    box-shadow: 0 0.5000rem 1.5625rem rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+    color: white;
+}
+
+.ytism-action-outline:hover {
+    background: #f7fafc;
+    color: var(--ytism-text-primary);
+}
+
+.ytism-btn-icon {
+    font-size: 1.0625rem;
+}
+
+
+
+
+/*********************************
+* Product/Plan Catelog View
+**********************************/
+.ytism-product-container {
+    line-height: 1.33;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8750rem;
+}
+.ytism-product-container .ytism-product-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.9375rem;
+    align-items: flex-start;
+}
+.ytism-product-container .ytism-product-options .ytism-price-selector {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6250rem;
+}
+.ytism-product-container .ytism-product-options .ytism-price-selector .ytism-price-option > label {
+    background: #D9D9D980;
+    color: #fff;
+    font-weight: 400;
+    padding: 0.4375rem 1.1875rem;
+    border-radius: 1.8750rem;
+    line-height: 1.33;
+    font-size: 0.9375rem;
+    cursor: pointer;
+}
+.ytism-product-container .ytism-product-options .ytism-price-selector .ytism-price-option.ytism-price-option-checked > label {
+    /*background-color: #fff;
+    color: #4A4063; */
+	background-color: #ffc403;
+    color: #fff; 
+    font-weight: 600;
+}
+.ytism-product-container .ytism-product-options .ytism-price-selector .ytism-price-option > label.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+.ytism-product-container .ytism-product-options .ytism-price-selector .ytism-price-option > label:hover:not(.ytism-price-option-checked):not(.disabled) {
+    transform: translateY(-0.1250rem);
+    box-shadow: 0 0.2500rem 0.7500rem rgba(0,0,0,0.15);
+}
+.ytism-product-container .ytism-product-options .ytism-price-selector .ytism-price-option input[type="radio"] {
+    display: none;
+}
+.ytism-product-container .ytism-product-options .ytism-currency-selector {
+    flex-shrink: 0;
+    flex-grow: 0;
+}
+.ytism-product-container .ytism-product-options .ytism-currency-selector select.ytism-currency-select {
+    padding: 0.4375rem 1.8750rem 0.4375rem 0.6875rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border-radius: 0.3750rem;
+    border: 0.0625rem solid #4A4063;
+    background: #fff;
+    color: #4A4063;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%234a4a5e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.4375rem center;
+    background-size: 1.1250rem;
+    min-width: 4.6875rem;
+    line-height: 1.33;
+}
+.ytism-product-container .ytism-product-options .ytism-currency-selector select.ytism-currency-select:hover {
+    background-color: #f8f8f8;
+}
+.ytism-product-container .ytism-product-options .ytism-currency-selector select.ytism-currency-select:focus {
+    outline: 0.1875rem solid rgba(255, 255, 255, 0.5);
+    outline-offset: 0.0000rem;
+}
+.ytism-product-container .ytism-price-summary {
+    background: #D9D9D980;
+    border-radius: 0.8125rem;
+    padding: 1.2500rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.9375rem;
+    color: #fff;
+    text-shadow: -0.0625rem 0.0000rem 0.3312rem #00000040;
+}
+.ytism-product-container .ytism-price-notice {
+    font-size: 0.7500rem;
+    text-align: center;
+    margin: 0;
+}
+.ytism-product-container .ytism-quantity-section {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6250rem;
+    align-items: center;
+}
+.ytism-product-container .ytism-quantity-section > label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    line-height: 1.33;
+}
+.ytism-product-container .ytism-quantity-section input[type="number"] {
+    width: 5.0000rem;
+    padding: 0.5000rem 0.6250rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    border-radius: 0.6250rem;
+    border: 0.0625rem solid #fff;
+    background: #fff;
+    color: #4A4063;
+    cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: all 0.3s ease;
+    line-height: 1.33;
+    text-align: center;
+}
+.ytism-product-container .ytism-quantity-section input[type="number"]:hover {
+    border-color: #4A4063;
+}
+.ytism-product-container .ytism-quantity-section input[type="number"]:focus {
+    outline: none;
+    outline-offset: 0.0000rem;
+}
+.ytism-product-container .ytism-price-summary .ytism-calculated-price {
+    
+}
+.ytism-product-container .ytism-price-summary .ytism-calculated-price > .ytism-calculated-response {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6875rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+.ytism-product-container .ytism-price-summary .ytism-price-subtotal {
+    font-size: 1.1875rem;
+    font-weight: 900;
+    line-height: 1;
+}
+.ytism-product-container .ytism-price-summary .ytism-price-recurring-interval {
+    font-size: 1.1875rem;
+    font-weight: 600;
+}
+.ytism-product-container .ytism-price-summary .ytism-price-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.3750rem;
+}
+.ytism-product-container .ytism-price-summary .ytism-price-details .ytsim-price-unit {
+    color: #4A4063;
+    font-weight: 900;
+    font-size: 1.1875rem;
+    line-height: 1;
+}
+.ytism-product-container .ytism-price-summary .ytism-price-details .ytism-price-desc {
+    font-size: 0.6875rem;
+    line-height: 1.33;
+}
+.ytism-product-container .ytism-price-summary .ytism-trail-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5000rem;
+    align-items: flex-end;
+    justify-content: center;
+}
+.ytism-product-container .ytism-price-summary .ytism-trail-info .ytism-trail-price {
+    color: #4A4063;
+    font-weight: 700;
+    font-size: 1.1875rem;
+    line-height: 1;
+}
+.ytism-product-container .ytism-price-summary .ytism-trail-info .ytism-trail-info {
+    font-weight: 700;
+    font-size: 0.7500rem;
+}
+/*************************
+* Individual product view
+**************************/
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-calculated-price {
+    align-items: flex-start;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-calculated-price > .ytism-calculated-response {
+    align-items: flex-start;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-details {
+    align-items: flex-start;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-subtotal {
+    font-size: 1.0625rem;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-recurring-interval, .ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-details .ytsim-price-unit {
+    font-size: 1.1875rem;
+    color: #fff;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-details .ytism-price-desc {
+    display: none;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-loading {
+    max-width: 14.3750rem;
+    min-width: 10.0000rem;
+    margin-right: auto;
+    margin-left: 0;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-loading .ytism-skeleton-price-large {
+    height: 1.2500rem;
+}
+.ytism-product-container[data-plan="individual"] .ytism-price-summary .ytism-price-loading .ytism-skeleton-price-medium {
+    height: 1.5625rem;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+
+
+
+
+
+.ytism-user-loggedin .ytism-user-disabled {
+    padding: 2.5000rem;
+    text-align: center;
+}
+.ytism-user-loggedin .ytism-box-heading {
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.4375rem;
+    text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+    text-align: center;
+}
+.ytism-user-loggedin .ytism-box-image {
+    width: 75%;
+    max-width: 11.2500rem;
+    aspect-ratio: 1/1;
+    height: auto;
+    margin: 1.8750rem auto 0;
+    text-align: center;
+}
+.ytism-user-loggedin .ytism-box-subheading {
+    font-size: 1.0625rem;
+    text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+    margin: 1.8750rem 0 1.2500rem;
+    text-align: center;
+}
+.ytism-user-loggedin .ytism-box-buttons {
+    display: flex;
+    gap: 0.6250rem;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.ytism-user-loggedin .ytism-box-buttons .ytism-btn {
+    min-width: 9.3750rem;
+}
+.ytism-subscription-container {}
+.ytism-subscribe-section {
+    padding: 2.5000rem;
+    text-align: center;
+}
+.ytism-subscribe-section .ytism-subscribe-heading {
+    font-weight: 400;
+    margin: 0;
+    font-size: 1.4375rem;
+    text-align: center;
+}
+.ytism-subscribe-section .ytism-subscribe-image {
+    width: 75%;
+    max-width: 11.2500rem;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    height: auto;
+    margin: 1.8750rem auto 0;
+    text-align: center;
+}
+.ytism-subscribe-section .ytism-subscribe-button  {
+    margin-top: 1.8750rem;
+}
+.ytism-subscribe-section .ytism-box-buttons {
+    text-align: center;
+}
+
+
+
+@media print {
+    .ytism-skeleton-container {
+        display: none !important;
+    }
+}
+@media (prefers-reduced-motion: reduce) {
+    .ytism-skeleton::after {
+        animation: none;
+    }
+    .ytism-skeleton {
+        animation: ytism-skeleton-pulse 3s ease-in-out infinite;
+    }
+}
+@media (prefers-contrast: high) {
+    .ytism-pricing-section {
+        border: 0.1250rem solid #fff;
+    }
+    .ytism-select {
+        border: 0.1250rem solid #000;
+    }
+}
+
+/**************************
+* Order Summary Page
+***************************/
+.ytism-order-summary-wrapper {
+    background: #FFFFFF33;
+    border: 0.0625rem solid #FFC400;
+    padding: 1.2500rem;
+    border-radius: 1.0625rem;
+    max-width: 31.2500rem;
+    margin: 0 auto;
+    width: 100%;
+    line-height: 1.5;
+}
+.ytism-order-summary-wrapper .ytism-badge {
+    padding: 0.1875rem 0.3125rem;
+    border-radius: 0.4375rem;
+    color: #fff;
+    font-size: 0.9em;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header {
+    background: #fff;
+    color: #474747;
+    box-shadow: 0.0000rem 0.6319rem 1.8950rem 0.0000rem #AAAAAA1F;
+    border-radius: 0.9375rem;
+    padding: 1.2500rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6250rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-icon {
+    background: #2f88ea1f;
+    height: 3.7500rem;
+    width: 3.7500rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: #2f88ea;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-icon.success {
+    color: #23A26D;
+    background-color: #23A26D1F;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-icon.error {
+    color: #ec3323;
+    background-color: #E82B3A1F;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-icon .ytism-icon {
+    font-size: 2.1875rem;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-message-heading {
+    font-size: 1.1875rem;
+    font-weight: 500;
+    margin: 0;
+}
+.ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-message-body, .ytism-order-summary-wrapper .ytism-order-summary-header .ytism-order-message-payment {
+    margin: 0;
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+.ytism-order-summary-wrapper .ytism-payment-method-details {
+    background: #fff;
+    color: #474747;
+    box-shadow: 0.0000rem 0.6319rem 1.8950rem 0.0000rem #AAAAAA1F;
+    border-radius: 0.9375rem;
+    margin-top: 1.2500rem;
+    padding: 1.2500rem;
+}
+.ytism-order-summary-wrapper .ytism-payment-method-details .ytism-payment-method-heading {
+    font-size: 1.1875rem;
+    font-weight: 500;
+    margin: 0;
+}
+.ytism-order-summary-wrapper .ytism-payment-method-details table.ytism-payment-method-list {
+    border-collapse: collapse;
+    background: transparent;
+    border-spacing: 0;
+    font-size: 0.9em;
+    margin: 0.9375rem 0 0;
+    color: #707070;
+}
+.ytism-order-summary-wrapper .ytism-payment-method-details table.ytism-payment-method-list tbody > tr:nth-child(odd) > td, .ytism-order-summary-wrapper .ytism-payment-method-details table.ytism-payment-method-list tbody > tr:nth-child(odd) > th, .ytism-order-summary-wrapper .ytism-payment-method-details table.ytism-payment-method-list tbody > tr > td {
+    background: transparent;
+    padding: 0.5000rem 0 0.5000rem;
+    border: none;
+}
+.ytism-order-summary-wrapper .ytism-payment-method-details table.ytism-payment-method-list tbody > tr > td:first-child {
+    text-align: left;
+    padding-right: 0.2500rem;
+    font-weight: normal;
+}
+.ytism-order-summary-wrapper .ytism-payment-method-details table.ytism-payment-method-list tbody > tr > td:last-child {
+    text-align: right;
+    color: #333333;
+    font-weight: 500;
+}
+.ytism-order-summary-wrapper .ytism-order-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6250rem;
+    margin-top: 1.8750rem;
+}
+.ytism-order-summary-wrapper .ytism-order-bottom-extra {
+    margin-top: 1.2500rem;
+    text-align: center;
+    font-size: 0.8125rem;
+    color: #fff;
+    opacity: 0.8;
+    line-height: 1.5;
+    font-style: italic;
+    pointer-events: none;
+    user-select: none;
+}
+.ytism-order-summary-wrapper .ytism-order-bottom-extra .ytism-webapp-link {
+    
+}
+.ytism-order-summary-wrapper .ytism-order-bottom-extra .ytism-webapp-link:hover {
+    text-decoration: underline;
+}
+
+/***************************
+* Thank You Page
+****************************/
+.ytism-thankyou {
+
+}
+.ytism-thankyou > .ytism-response-message {
+    margin-bottom: 1.2500rem;
+}
+.ytism-thankyou .ytism-thankyou-video .ytism-thankyou-video-player {
+    width: 100%;
+    max-width: 62.0000rem;
+    height: auto;
+    display: block;
+    margin: 0 auto 1.2500rem;
+    box-shadow: 0.8750rem 1.0000rem 1.0688rem 0.0000rem #000000A8;
+    border-radius: 2.5000rem;
+}
+.ytism-thankyou .ytism-thankyou-video-button {
+    margin-top: 1.8750rem;
+    text-align: center;
+}
+.ytism-thankyou .ytism-thankyou-video-button .ytism-continut-btn {
+	color: #fff;
+}
+
+
+
+/***************************
+* Questions
+****************************/
+.ytism-questions {
+    color: #fff;
+    line-height: 1.5;
+}
+.ytism-questions .ytism-questions-heading {
+    font-size: 1.4375rem;
+    font-weight: 800;
+    text-align: center;
+    margin: 0 0 1.8750rem;
+}
+.ytism-questions .ytism-questions-row {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -1.2500rem;
+}
+.ytism-questions .ytism-questions-row > .ytism-questions-column {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+    max-width: 100%;
+    padding: 1.2500rem;
+}
+.ytism-questions .ytism-questions-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2500rem;
+}
+.ytism-questions .ytism-questions-container > .ytism-questions-title {
+    font-weight: 600;
+    font-size: 1.0625rem;
+    min-height: 3.3750rem;
+    align-items: center;
+	text-align: center;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.ytism-questions .ytism-questions-lists {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2500rem;
+}
+.ytism-questions .ytism-questions-lists .ytism-questions-label {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="checkbox"], .ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="radio"] {
+    display: none;
+}
+.ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="checkbox"] ~ .ytism-questions-checkmark, .ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="radio"] ~ .ytism-questions-checkmark {
+    background: #FFFFFF4D;
+    border-radius: 0.8750rem;
+    padding: 0.9375rem 1.2500rem;
+    font-size: 0.9375rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="checkbox"]:checked ~ .ytism-questions-checkmark, .ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="radio"]:checked ~ .ytism-questions-checkmark {
+    background: #FFFFFFBF;
+    color: #B75478;
+    font-weight: 700;
+}
+.ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="checkbox"]:disabled ~ .ytism-questions-checkmark, .ytism-questions .ytism-questions-lists .ytism-questions-label > input[type="radio"]:disabled ~ .ytism-questions-checkmark {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+.ytism-questions .ytism-questions-buttons {
+    display: flex;
+    margin-top: 1.8750rem;
+    gap: 0.9375rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.ytism-questions .ytism-questions-button, .ytism-questions .ytism-questions-button[type=button] {
+    background: var(--ytism-button-primary-bg);
+    color: var(--ytism-button-primary-text);
+    border: 0.0625rem solid var(--ytism-button-primary-bg);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 3.1250rem;
+    padding: 0.8125rem 1.2500rem;
+    min-width: 9.3750rem;
+    text-align: center;
+    text-shadow: 0.0000rem 0.1250rem 0.2500rem #00000040;
+    transition: all 0.2s ease;
+}
+.ytism-questions .ytism-questions-button:disabled, .ytism-questions .ytism-questions-button[type=button]:disabled, .ytism-questions .ytism-questions-button.disabled, .ytism-questions .ytism-questions-button[type=button].disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.ytism-questions .ytism-questions-button:hover, .ytism-questions .ytism-questions-button[type=button]:hover {
+    background: var(--ytism-button-primary-text);
+    color: var(--ytism-button-primary-bg);
+}
+.ytism-questions .ytism-questions-buttons .ytism-questions-button-skip { visibility: hidden;}    
+     
+.ytism-questions .ytism-questions-buttons .ytism-questions-button-submit {
+	background-color: transparent;
+    border: none;
+    text-decoration: underline;
+}
+
+
+
+/**************************
+* Checkout Page
+***************************/
+.ytism-checkout-container {
+}
+.ytism-checkout-cart {
+    background: linear-gradient(180deg, rgba(238, 133, 114, 0.5) 8.17%, rgba(183, 84, 120, 0.5) 50.96%, rgba(108, 57, 139, 0.5) 100%);
+    border: 0.0625rem solid #FFC400;
+    border-radius: 1.2500rem;
+    max-width: 33.4375rem;
+    width: 100%;
+    margin: 0 auto;
+}
+.ytism-error-message {
+	color: #fff;
+}
+
+
+
+
+/**************************
+* Individual Plan Form
+***************************/
+.ytism-price-container {
+	color: #fff;
+}
+.ytism-price-container .ytism-price-items {
+	display: flex;
+	flex-direction: column;
+	gap: 0.9375rem;
+}
+.ytism-price-container .ytism-price-items > label {
+	position: relative;
+	border: 0.1250rem solid transparent;
+	width: 100%;
+	border-radius: 1.2500rem;
+	padding: 0.9375rem 0.6250rem;
+	cursor: pointer;
+}
+.ytism-price-container .ytism-price-items > label.checked {
+	border-color: #F6DA46;
+	background-color: rgba(255, 224, 102, 0.12);
+}
+.ytism-price-items .ytism-plan-badge {
+	position: absolute;
+	top: -1.8750rem;
+	right: -1.8750rem;
+	height: 3.7500rem;
+	width: 3.7500rem;
+}
+.ytism-plan-item {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	width: 100%;
+	justify-content: space-between;
+	gap: 0.9375rem;
+	align-items: center;
+}
+.ytism-plan-item input[type="radio"] {
+	background-image: url('../img/radio-uncheck.png');
+	flex-shrink: 0;
+	width: 2.5000rem;
+	height: 2.5000rem;
+	vertical-align: middle;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	border: none;
+	-webkit-print-color-adjust: exact;
+	color-adjust: exact;
+	print-color-adjust: exact;
+	flex: 0 0 2.5000rem;
+	text-align: left;
+}
+.ytism-plan-item input[type="radio"]:checked {
+	background-image: url('../img/radio-checked.png');
+}
+.ytism-plan-item .ytism-plan-info {
+	display: flex;
+	flex: 1;
+	gap: 0.6250rem;
+	align-items: center;
+}
+.ytism-plan-item .ytism-plan-price {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6250rem;
+	align-items: center;
+	flex: 0 0 10.0000rem;
+	flex-wrap: wrap;
+}
+.ytism-plan-item .ytism-plan-info .ytism-plan-pack {
+	font-size: 1.1875rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.6250rem;
+	flex: 1;
+}
+.ytism-plan-item .ytism-plan-info .ytism-plan-title {
+	
+}
+.ytism-plan-item .ytism-plan-info .ytism-plan-free {}
+.ytism-plan-item .ytism-plan-price {
+	display: flex;
+	flex-direction: column;
+	gap: 0.6250rem;
+	align-items: center;
+}
+.ytism-plan-item .ytism-plan-price .ytism-plan-details {
+	font-size: 1.5625rem;
+	font-weight: bold;
+	text-align: center;
+}
+.ytism-plan-item .ytism-plan-price .ytism-price {}
+.ytism-plan-item .ytism-plan-price .ytism-price-sub {
+    font-weight: normal;
+	font-size: 85%;
+}
+.ytism-plan-item .ytism-plan-price .ytism-plan-notice {
+    font-size: small;
+    text-align: center;
+}
+.ytism-price-container .ytism-plan-submit {
+	width: 100%;
+	background: #F6DA46;
+	color: #fff;
+	font-size: 1.1875rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 1.0625rem;
+	padding: 1.0625rem 0;
+	margin: 1.0625rem 0 0;
+	cursor: pointer;
+	box-shadow: 0 0.1250rem 0.5000rem rgba(0, 0, 0, 0.08);
+	transition: background 0.2s;
+	text-shadow: 0.1250rem 0.1250rem 0.2500rem rgba(0, 0, 0, 0.5);
+}
+.ytism-price-container .ytism-plan-submit:hover {
+	background-color: #38B6FF;
+}
+
+
+/****************************
+* Thank you Page - Enterprise
+*****************************/
+.ytism-thankyou-container {
+	color: var(--ytism-text-color);
+	font-family: var(--ytism-font-family);
+	text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+	margin: 0 auto;
+	max-width: 75.0000rem;
+}
+.ytism-thankyou-welcome {
+	text-align: center;
+	max-width: 50.0000rem;
+	margin: 0 auto;
+	text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+}
+.ytism-thankyou-welcome .ytism-thankyou-header {
+	margin-bottom: 0.9375rem;
+}
+.ytism-thankyou-welcome .custom-logo-link img {
+	width: 8.7500rem;
+}
+.ytism-thankyou-welcome h1 {
+	font-size: 2.2500rem;
+	margin: 0 0 0.7rem;
+}
+.ytism-thankyou-welcome p {
+	font-weight: 500;
+	font-size: 1.1250rem;
+	text-align: center;
+	line-height: 1.6;
+}
+.ytism-thankyou-boxes {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1.2500rem;
+	flex-wrap: wrap;
+	margin: 3.5000rem 0 0;
+	text-align: center;
+}
+.ytism-thankyou-boxes-box {
+	flex: 1;
+	min-width: 12.5000rem;
+	max-width: 13.7500rem;
+	padding: 0.9375rem;
+	border-radius: 0.9375rem;
+	box-shadow: 0 0.3125rem 0.9375rem rgba(0, 0, 0, 0.2);
+	min-height: 9.3750rem;
+	background: #ffffffa3;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 0.1875rem solid;
+	border-source: linear-gradient(90deg, #B75478 0%, #EE8572 25%, #FFBB00 53.85%, #4A4063 84.62%);
+	background: linear-gradient(#ffffffa3, #ffffffa3) padding-box, linear-gradient(180deg, #643571 0%, #B1467E 52%, #EB6A63 100%) border-box;
+	border: 0.0938rem solid transparent;
+	box-shadow: 0.3750rem 0.1250rem 0.8438rem 0.0000rem #00000040;
+	color: #4A4063;
+	font-size: 0.8750rem;
+	font-weight: normal;
+	flex-direction: column;
+}
+.ytism-thankyou-step-images {
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	gap: 1.2500rem;
+	flex-wrap: wrap;
+	text-align: center;
+}
+.ytism-thankyou-boxes-box img {
+	flex: 1;
+	min-width: 12.5000rem;
+	max-width: 13.7500rem;
+	padding: 0.9375rem;
+	border-radius: 0.9375rem;
+}
+.ytism-thankyou-boxes-box h3 {
+	font-size: 1.0000rem;
+	margin-bottom: 0.3125rem;
+}
+.ytism-thankyou-boxes-box p span {
+	font-weight: 700;
+	font-size: 0.8750rem;
+	text-align: center;
+}
+.ytism-thankyou-boxes-box img {
+	width: 100%;
+	border-radius: 0.6250rem;
+}
+.ytism-thankyou-boxes-image {
+	align-self: center;
+	color: #ffda79;
+	font-size: 1.5000rem;
+	margin: 0 0.3125rem;
+	flex-shrink: 0;
+}
+.b2b-app-links img {
+	width: 6.8750rem;
+	margin: 0.3125rem;
+}
+.ytism-thankyou-bottom {
+	display: flex;
+	justify-content: space-between;
+	gap: 3.5rem;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 3rem 0 0;
+}
+.ytism-thankyou-info-container {
+	flex: 1;
+	text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+	align-self: flex-start;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-heading {
+	font-weight: 700;
+	font-size: 1.5625rem;
+	text-transform: uppercase;
+	margin: 0 0 .8rem;
+	text-align: center;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-heading > .ytism-icon {
+	color: #efbc1b;
+	margin-left: 0.5rem;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-subheading {
+	font-weight: 500;
+	font-size: 1.6250rem;
+	text-align: center;
+	margin: 0 0 1rem;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-subheading span {
+	font-weight:700;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages {
+	border: 0.1875rem solid;
+	border-image-source: linear-gradient(180deg, #E46A69 0%, #B75478 34.13%, #AC4A78 74.04%, #4A4063 96.63%);
+	padding: 1.5625rem;
+	border-image-slice: 1;
+	text-align: left;
+	font-size: 1.1250rem;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages p {
+	margin: 0 0 1.5rem;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages p:last-child {
+	margin-bottom: 0;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages ul {
+	padding: 0;
+	margin: 0 0 1.5rem .6250rem;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages ul:last-child {
+	margin-bottom: 0;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages ul > li {
+	margin: 0 0 0.8rem 0;
+}
+.ytism-thankyou-info-container .ytism-thankyou-info-messages ul > li:last-child {
+	margin-bottom: 0;
+}
+.ytism-thankyou-registration {
+    flex: 1;
+    max-width: 35.0000rem;
+    text-shadow: none;
+}
+.ytism-thankyou-step-images .ytism-thankyou-images-image {
+	flex: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 12.5000rem;
+	max-width: 13.7500rem;
+	margin: 0 1.6250rem;
+}
+.ytism-thankyou-step-images .ytism-thankyou-images-image img {
+	border-style: none;
+	height: auto;
+	min-width: 17.5000rem;
+	max-width: 13.7500rem;
+}
+
+
+
+/**************************
+* Welcome box 
+***************************/
+.ytism-welcome-box {
+	width: 100%;
+	max-width: 33.4375rem;
+	color: var(--ytism-text-color);
+    font-family: var(--ytism-font-family);
+	line-height: 1.4;
+    padding: 2.500rem;
+	background-color: #b57792;
+    background-image: linear-gradient(180deg, #856c83 8.17%, #b07885 50.96%, #db8587 100%);
+    border: .0625rem solid #FFC400;
+    border-radius: 1.250rem;
+	text-align: center;
+	text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+	margin: 0 auto;
+}
+.ytism-welcome-box .ytism-welcome-box-icon {
+    width: 4.3750rem;
+    height: auto;
+    margin: 0 auto 0.6rem;
+    text-align: center;
+}
+.ytism-welcome-box .ytism-welcome-box-title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 0 0 1.5rem;
+}
+.ytism-welcome-box .ytism-welcome-box-qr-images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2500rem;
+    flex-wrap: wrap;
+}
+.ytism-welcome-box .ytism-welcome-box-qr-images > .ytism-welcome-box-qr-image-box {
+	width: 45%;
+}
+.ytism-welcome-box .ytism-welcome-box-qr-images > .ytism-welcome-box-qr-image-box > a {
+	display: inline-block;
+}
+.ytism-welcome-box .ytism-welcome-box-qr-images img {
+	width: 100%;
+    max-width: 16rem;
+    height: auto;
+    border-radius: 0.6250rem;
+}
+.ytism-welcome-box .ytism-welcome-box-list {
+    margin: 2rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+.ytism-welcome-box .ytism-welcome-box-list > li {
+    position: relative;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+	gap: 0.6rem;
+}
+.ytism-welcome-box .ytism-welcome-box-list > li:last-child {
+	margin-bottom: 0;
+}
+.ytism-welcome-box .ytism-welcome-box-list > li::before {
+    content: "";
+    position: absolute;
+    left: 1.218rem;
+    top: 50%;
+    bottom: -50%;
+    z-index: 0;
+    border: 0.0625rem dashed #AC4A78;
+}
+.ytism-welcome-box .ytism-welcome-box-list > li:last-child::before {
+	display: none;
+}
+.ytism-welcome-box .ytism-welcome-box-list > li > .ytism-welcome-box-list-circle {
+    width: 2.5000rem;
+    height: 2.5000rem;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    flex-shrink: 0;
+    font-weight: 700;
+    font-size: 1.1250rem;
+	line-height: 1;
+	background-color: #382B64;
+    background-image: linear-gradient(180deg, #382B64 0%, #A34776 49.04%, #E67A6A 100%);
+    margin-top: 0.1250rem;
+}
+.ytism-welcome-box .ytism-welcome-box-list > li > p {
+    text-align: left;
+    margin: 0;
+}
+.ytism-welcome-box .ytism-welcome-box-divider {
+    margin: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+.ytism-welcome-box .ytism-welcome-box-webapp-link {
+    color: #F6DA46;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+
+
+/*************************
+* My Account
+**************************/
+.ytism-myaccount-container {
+	color: var(--ytism-text-color);
+	font-family: var(--ytism-font-family);
+	margin: 0 auto;
+	max-width: 75.0000rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.2500rem;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container {
+	flex: 1;
+	color: #fff;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tabs-content {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 1.2500rem;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tabs-title {
+	font-size: 1.1250rem;
+	margin: 0 0 1.2500rem;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tabs {
+	display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tab {
+	padding: 0.7500rem 0.9375rem;
+    cursor: pointer;
+    border-radius: 0.3750rem;
+    background: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tab > a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tab:hover {
+	background-color: rgba(255,255,255,0.2);
+}
+.ytism-myaccount-container .ytism-myaccount-tabs-container .ytism-myaccount-tab.active {
+	background-color: rgba(255,255,255,0.3);
+	font-weight: 600;
+	cursor: default;
+}
+.ytism-myaccount-container  .ytism-myaccount-content {
+	flex: 2;
+    position: relative;
+}
+.ytism-myaccount-default-content {
+	margin: 0 auto;
+}
+
+
+
+/* Profile Page Styling */
+.ytism-myaccount-default-content .ytism-myaccount-profile-page {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+}
+.ytism-myaccount-default-content .ytism-myaccount-profile-card {
+	border: 0.0625rem solid #FFC400;
+	border-radius: 1.4375rem;
+	padding: 2.5000rem;
+	text-align: center;
+	width: 100%;
+	max-width: 33.4375rem;
+	color: #ffffff;
+	background: #FFFFFF33;
+}
+.ytism-myaccount-default-content .ytism-myaccount-profile-card h3 {
+	margin: 0.9375rem 0 0.6250rem;
+	font-size: 1.3750rem;
+	font-weight: 600;
+}
+.ytism-myaccount-default-content .ytism-myaccount-profile-card .subtext {
+	font-size: 0.8750rem;
+	color: #ddd;
+	margin-bottom: 1.5625rem;
+}
+.ytism-myaccount-default-content .ytism-myaccount-profile-form {
+	text-align: left;
+}
+.ytism-myaccount-default-content .ytism-myaccount-form-group {
+	margin-bottom: 1.1250rem;
+}
+.ytism-myaccount-default-content .ytism-myaccount-form-group label {
+	display: block;
+	margin-bottom: 0.3750rem;
+	font-size: 0.8750rem;
+	font-weight: 500;
+	color: #f8c291;
+}
+.ytism-myaccount-default-content .ytism-myaccount-form-group input {
+	width: 100%;
+	padding: 0.6250rem 0.7500rem;
+	border: none;
+	border-radius: 0.5000rem;
+	outline: none;
+	font-size: 0.8750rem;
+	background: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	cursor: not-allowed;
+}
+
+/**************************
+* Redeem code
+***************************/
+.ytism-promocode-container {
+    width: 100%;
+    max-width: 33.4375rem;
+    color: var(--ytism-text-color);
+    font-family: var(--ytism-font-family);
+    margin: 0 auto;
+    line-height: 1.4;
+    text-align: center;
+}
+.ytism-promocode-container .ytism-promocode-heading {
+    text-shadow: 0.0000rem 0.1250rem 0.2375rem #00000040;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.3rem;
+	margin: 0 0 1.5rem;
+}
+.ytism-promocode-form > .ytism-response-message {
+	margin-bottom: 1.2500rem;
+	text-align: left;
+}
+.ytism-promocode-form .ytism-form-field {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+.ytism-promocode-form .ytism-form-field:last-child {
+    margin-bottom: 0;
+}
+.ytism-promocode-form .ytism-form-field > label.ytism-form-field-label {
+    font-weight: 600;
+    margin: 0 0 0.4375rem;
+    width: 100%;
+}
+.ytism-promocode-form .ytism-form-field > .ytism-form-field-label.not-require {
+	display: none;
+}
+.ytism-promocode-form .ytism-field-error {
+    color: #fec222;
+    font-size: 0.875rem;
+    margin-top: 0.3125rem;
+}
+.ytism-promocode-form .ytism-form-field input[type="text"],
+.ytism-promocode-form .ytism-form-field input[type="email"] {
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100%;
+    border-radius: 1.7500rem;
+    color: #000;
+    border: 0.0625rem solid #fff;
+    background: #fff;
+    font-weight: 400;
+	font-size: 0.9rem;
+    padding: .8000rem 1.0000rem;
+	margin: 0;
+}
+.ytism-promocode-form .ytism-form-field input[type="text"]::placeholder,
+.ytism-promocode-form .ytism-form-field input[type="email"]::placeholder {
+    color: #afafaf;
+    opacity: 1;
+}
+.ytism-promocode-form .ytism-form-field input[type="text"]:hover,
+.ytism-promocode-form .ytism-form-field input[type="email"]:hover {
+    border-color: #ffc403;
+}
+.ytism-promocode-form .ytism-form-field input[type="text"]:focus,
+.ytism-promocode-form .ytism-form-field input[type="email"]:focus {
+    border-color: #6c3a8b;
+    box-shadow: 0 0 0 0.2rem rgba(108,57,139,.25);
+    outline: none;
+}
+.ytism-promocode-form .ytism-form-field input[type="text"]:disabled,
+.ytism-promocode-form .ytism-form-field input[type="email"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+.ytism-promocode-form .ytism-form-field input[type="text"].ytism-field-error, .ytism-promocode-form .ytism-form-field input[type="email"].ytism-field-error {
+	border-color: #ff6b6b;
+	font-size: 0.9rem;
+}
+.ytism-promocode-form .ytism-apply-promocode-btn, .ytism-promocode-form button[type="submit"].ytism-apply-promocode-btn {
+    border: 1px solid #F6DA46;
+    background-image: linear-gradient(90deg, #48306D, #C24A82, #F87458);
+    margin: 0 auto;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-weight: 600;
+    padding: 0.8000rem 3.0000rem;
+    font-size: 20px;
+    border-radius: 2rem;
+}
+.ytism-promocode-form .ytism-apply-promocode-btn:hover, .ytism-promocode-form button[type="submit"].ytism-apply-promocode-btn:hover {
+	background-image: linear-gradient(90deg, #F87458, #C24A82, #48306D);
+	color: #fff;
+}
+.ytism-promocode-form .ytism-apply-promocode-btn.disabled, .ytism-promocode-form button[type="submit"].ytism-apply-promocode-btn.disabled, .ytism-promocode-form .ytism-apply-promocode-btn:disabled, .ytism-promocode-form button[type="submit"].ytism-apply-promocode-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}
+
+
+
+
+
+
+
+
+
+/**************************
+* Responsive Design
+***************************/
+/* 1024px and below */
+@media (max-width: 600rem) {
+    .ytism-alias-auth-container {
+        width: 70%;
+    }
+    .ytism-plan-row {
+        gap: 3.7500rem;
+    }
+    .ytism-user-loggedin .ytism-user-disabled {
+        padding-left: 2.1875rem;
+        padding-right: 2.1875rem;
+    }
+    .ytism-auth-container, .ytism-supermanager-container, .ytism-welcome-box, .ytism-myaccount-default-content .ytism-myaccount-profile-card {
+        padding-left: 2.1875rem;
+        padding-right: 2.1875rem;
+    }
+    .ytism-skeleton-card, .ytism-skeleton-form {
+        padding-left: 2.1875rem;
+        padding-right: 2.1875rem;
+    }
+	
+	.ytism-price-items .ytism-plan-badge {
+		top: -1.5625rem;
+		right: -1.5625rem;
+		height: 3.1250rem;
+		width: 3.1250rem;
+	}
+	.ytism-plan-item input[type="radio"] {
+		height: 2.0000rem;
+		width: 2.0000rem;
+		flex: 0 0 2.0000rem;
+	}
+	.ytism-plan-item .ytism-plan-info .ytism-plan-pack {
+		font-size: 1.0625rem;
+	}
+	.ytism-plan-item .ytism-plan-price .ytism-plan-details {
+		font-size: 1.1875rem;
+	}
+	.ytism-price-container .ytism-plan-submit {
+		font-size: 1.0625rem;
+	}
+	.ytism-price-container .ytism-disclaimer {
+		font-size: 0.7500rem;
+	}
+}
+/* 992px and below */
+@media (max-width: 62.0000rem) {
+    .ytism-questions .ytism-questions-row > .ytism-questions-column {
+        width: 50%;
+    }
+	.ytism-thankyou-boxes {
+		flex-direction: column;
+		align-items: center;
+		margin-top: 3rem;
+	}
+	.ytism-thankyou-boxes-image {
+		transform: rotate(90deg);
+	}
+	.ytism-thankyou-step-images {
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+	}
+	.ytism-thankyou-step-images > .ytism-thankyou-images-image {
+		margin-top: -2rem;
+	}
+	.ytism-thankyou-step-images > .ytism-thankyou-images-image:first-child {
+		margin-top: 0;
+	}
+	.ytism-thankyou-bottom {
+		flex-direction: column;
+		align-items: center;
+		gap: 3rem;
+	}
+}
+/* 768px and below */
+@media (max-width: 48.0000rem) {
+	/** Skeleton adjustments **/
+    .ytism-skeleton-card, .ytism-skeleton-form {
+        padding: 2.1875rem 1.8750rem;
+    }
+    .ytism-skeleton-badge {
+        width: 7.5000rem;
+        height: 2.5000rem;
+    }
+    .ytism-skeleton-title {
+        width: 11.2500rem;
+        height: 1.7500rem;
+    }
+    .ytism-skeleton-dropdown {
+        width: 100%;
+        max-width: 20.0000rem;
+        height: 3.5000rem;
+    }
+    .ytism-skeleton-price-large {
+        width: 100%;
+        max-width: 21.8750rem;
+        height: 3.7500rem;
+        margin-left: 0;
+    }
+    .ytism-skeleton-price-small {
+        width: 9.3750rem;
+        height: 2.6250rem;
+        margin-left: 0;
+    }
+    .ytism-skeleton-label {
+        width: 6.2500rem;
+        height: 1.2500rem;
+        margin-left: 0;
+    }
+
+	/** Other adjustments **/
+    .ytism-alias-auth-container {
+        width: 85%;
+        padding: 3.1250rem 2.5000rem;
+    }
+    .ytism-alias-auth-card {
+        width: 70%;
+    }
+    .ytism-plan-row {
+        gap: 3.1250rem;
+    }
+    .ytism-user-panel, .ytism-supermanager-container, .ytism-welcome-box, .ytism-myaccount-default-content .ytism-myaccount-profile-card {
+        min-width: inherit;
+    }
+    .ytism-user-loggedin .ytism-user-disabled {
+        padding: 2.1875rem 1.8750rem;
+    }
+    .ytism-plan-desctiption .ytism-plan-family-features li .ytism-plan-family-feature-icon, .ytism-plan-desctiption .ytism-plan-individual-features li .ytism-plan-individual-feature-icon {
+        height: 2.3750rem;
+        width: 2.3750rem;
+    }
+    .ytism-plan-info .ytism-plan-card {
+        padding: 0.9375rem;
+        gap: 1.2500rem;
+    }
+    .ytism-plan-info .ytism-plan-cards .ytism-plan-card > img {
+        height: 2.3750rem;
+    }
+    .ytism-plan-info .ytism-plan-cards .ytism-plan-card:nth-child(2) > img, .ytism-plan-info .ytism-plan-cards .ytism-plan-card:nth-child(3) > img {
+        height: 3.3125rem;
+    }
+    .ytism-auth-container, .ytism-supermanager-container, .ytism-welcome-box, .ytism-myaccount-default-content .ytism-myaccount-profile-card {
+        padding: 2.1875rem 1.8750rem;
+    }
+    .ytism-subscribe-section, .ytism-invoice-card, .ytism-payment-section {
+        padding: 2.1875rem 1.8750rem;
+    }
+    .ytism-questions .ytism-questions-row > .ytism-questions-column {
+        max-width: inherit;
+    }
+
+	/** Thank You Page Adjustments **/
+	.ytism-thankyou-welcome h1 {
+		font-size: 1.5625rem;
+	}
+	.ytism-thankyou-welcome p {
+		font-size: 1.0000rem;
+	}
+	.ytism-thankyou-step-images > .ytism-thankyou-images-image {
+		margin-top: -3.1250rem;
+	}
+	.ytism-thankyou-info-container .ytism-thankyou-info-subheading {
+		font-size: 1.2500rem;
+	}
+
+	/** My Account Adjustments **/
+	.ytism-myaccount-container {
+		flex-direction: column;
+		gap: 2.5000rem;
+	}
+	.ytism-myaccount-container .ytism-myaccount-tabs-container, .ytism-myaccount-container  .ytism-myaccount-content {
+		flex: none;
+		width: 100%;
+	}
+}
+/* 576px and below */
+@media (max-width: 36.0000rem) {
+    .ytism-alias-auth-container {
+        width: 100%;
+        padding: 2.8125rem 2.1875rem;
+    }
+    .ytism-alias-auth-card {
+        width: 100%;
+    }
+    .ytism-auth-container, .ytism-supermanager-container, .ytism-welcome-box, .ytism-myaccount-default-content .ytism-myaccount-profile-card {
+        padding: 1.8750rem 1.5625rem;
+    }
+    .ytism-subscribe-section, .ytism-invoice-card, .ytism-payment-section {
+        padding: 1.8750rem 1.5625rem;
+    }
+    .ytism-skeleton-card, .ytism-skeleton-form {
+        padding: 1.8750rem 1.5625rem;
+    }
+    .ytism-user-loggedin .ytism-user-disabled {
+        padding: 1.8750rem 1.5625rem;
+    }
+    .ytism-questions .ytism-questions-row > .ytism-questions-column {
+        width: 100%;
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "require": {
+        "stripe/stripe-php": "^18.0",
+        "giggsey/libphonenumber-for-php": "^9.0"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    }
+}
