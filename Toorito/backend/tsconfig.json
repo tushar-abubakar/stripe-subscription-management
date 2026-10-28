@@ -1,0 +1,27 @@
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "ES2021",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "rootDir": "./src",
+        "outDir": "./dist",
+        "strict": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "paths": {
+            "@prisma-client/*": ["./src/generated/prisma/*"],
+            "@core/*": ["./src/core/*"],
+            "@common/*": ["./src/common/*"],
+			"@api/*": ["./src/api/*"],
+            "@modules/*": ["./src/modules/*"],
+            "@config/*": ["./src/config/*"],
+            "@integrations/*": ["./src/integrations/*"]
+        }
+    },
+    "include": ["src/**/*.ts"],
+    "exclude": ["node_modules", "dist", "test", "src/**/*.spec.ts"],
+    "ts-node": {
+        "files": true
+    }
+}

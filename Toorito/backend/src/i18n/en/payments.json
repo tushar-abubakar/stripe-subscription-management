@@ -1,0 +1,11 @@
+{
+  "errors": {
+    "badSignature": "Invalid signature",
+    "noEventId": "Missing event id",
+    "webhookSignatureRequired": "A valid webhook signature header is required."
+  },
+  "notes": {
+    "refundTitle": "Refund initiated",
+    "refund": "{amount} refund for order {orderNumber}"
+  }
+}

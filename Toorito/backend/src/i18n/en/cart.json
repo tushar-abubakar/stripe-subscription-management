@@ -1,0 +1,12 @@
+{
+    "errors": {
+        "exactlyOneItem": "Provide exactly one of variantId or bundleId",
+        "storeNotAvailable": "Store not available",
+        "storeMismatch": "Your cart contains items from another store",
+        "itemCannotBeAdded": "This item cannot be added",
+        "quantityNotAvailable": "This quantity is not available",
+        "cartNotFound": "Cart not found",
+        "itemNotFound": "Item not found",
+        "tooManyGuestCarts": "Too many carts created from this network. Try again later."
+    }
+}

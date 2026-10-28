@@ -1,0 +1,27 @@
+{
+    "errors": {
+        "screenNotFound": "Screen not found",
+        "versionNotFound": "Version not found",
+        "ruleNotFound": "Rule not found",
+        "sectionNotFound": "Section not found",
+        "invalidKey": "Key must be lower-case letters, digits and _ : - (2–80 characters)",
+        "oneShell": "There is only one app shell (\"shell\")",
+        "pageKey": "Campaign page keys start with \"page:\"",
+        "keyTaken": "Key \"{key}\" is already used",
+        "systemScreen": "System screens can't be deleted or switched off",
+        "draftConflict": "Someone else saved this in the meantime. Reload and apply your changes again",
+        "draftChanged": "The draft changed after you reviewed it",
+        "scheduleVariant": "A scheduled version always becomes the live one",
+        "nothingToPublish": "The draft is the same as the live version",
+        "noLive": "This screen has no live version",
+        "notPublished": "Only published versions can be used",
+        "notScheduled": "This version isn't scheduled",
+        "invalidWindow": "The end must be after the start",
+        "sectionInUse": "This section is used by a published screen",
+        "nameRequired": "A name is required",
+        "invalidLayout": "The layout has {count} problem(s)",
+        "groupNotFound": "Custom group not found",
+        "groupInUse": "This custom group is used by a published screen",
+        "landingInUse": "Custom groups open this screen. Point them to another screen first"
+    }
+}

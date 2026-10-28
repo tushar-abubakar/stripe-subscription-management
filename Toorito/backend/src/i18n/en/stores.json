@@ -1,0 +1,27 @@
+{
+    "errors": {
+        "notFound": "Store not found",
+        "notServiceable": "We do not deliver here yet",
+        "codeInvalid": "Store code may only contain letters, digits and single hyphens (2–30 characters).",
+        "codeTaken": "Store code {code} is already in use.",
+        "serviceRadiusRequired": "Service radius is required",
+        "areaRequired": "At least one service area is required",
+        "tooManyAreas": "A store can have at most {max} delivery areas.",
+        "polygonTooFewPoints": "Area \"{area}\" needs at least 3 distinct points.",
+        "polygonTooManyPoints": "Area \"{area}\" has more than {max} points. Simplify the shape.",
+        "polygonSelfIntersecting": "Area \"{area}\" crosses itself. Redraw it without overlapping edges.",
+        "polygonTooSmall": "Area \"{area}\" is too small (minimum {min} m²).",
+        "polygonTooFar": "Area \"{area}\" reaches more than {max} km from the store pin.",
+        "openingHoursInvalid": "{property} must map days (sun–sat) to up to 4 time ranges like [[\"09:00\", \"23:00\"]].",
+        "smallCartLimitRequired": "Set a small cart limit when charging a small cart fee.",
+        "chargeDuplicateKind": "Only one {kind} charge is allowed per store.",
+        "chargeLabelRequired": "Custom charges need a label.",
+        "chargePercentTooHigh": "A percentage charge cannot exceed 100%.",
+        "chargeScheduleRequired": "Scheduled charges need a time window with different start and end times.",
+        "notReady": "The store can't be activated yet. Missing: {missing}.",
+        "deleteActive": "Deactivate the store before deleting it.",
+        "deleteHasOrders": "This store has {count} order(s) and can't be deleted. Set it to INACTIVE instead.",
+        "deleteInUse": "This store still has stock or receipt history and can't be deleted. Set it to INACTIVE instead.",
+        "chargeNotFound": "Charge not found on this store."
+    }
+}

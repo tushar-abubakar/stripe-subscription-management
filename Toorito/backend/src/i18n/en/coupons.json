@@ -1,0 +1,12 @@
+{
+  "errors": {
+    "invalid": "Invalid coupon",
+    "expired": "Coupon expired",
+    "fullyRedeemed": "Coupon fully redeemed",
+    "notValidForStore": "Coupon not valid for this store",
+    "minOrder": "Minimum order is {amount}",
+    "firstOrderOnly": "Valid on first order only",
+    "alreadyUsed": "You have already used this coupon",
+    "notFound": "Coupon not found."
+  }
+}

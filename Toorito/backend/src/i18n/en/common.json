@@ -1,0 +1,22 @@
+{
+    "errors": {
+        "internal": "Something went wrong. Please try again.",
+        "duplicate": "This record already exists",
+        "relatedRecord": "This record is linked to other data",
+        "notFound": "Not found",
+        "invalidId": "Invalid id",
+        "invalidCoordinates": "Invalid coordinates",
+        "reasonRequired": "A reason is required",
+        "invalidStoreId": "storeId must be a positive integer"
+    },
+    "duration": {
+        "day": "{count} day",
+        "days": "{count} days",
+        "hour": "{count} hour",
+        "hours": "{count} hours",
+        "minute": "{count} minute",
+        "minutes": "{count} minutes",
+        "second": "{count} second",
+        "seconds": "{count} seconds"
+    }
+}

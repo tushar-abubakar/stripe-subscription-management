@@ -1,0 +1,71 @@
+{
+  "store": {
+    "idRequired": "storeId is required"
+  },
+  "category": {
+    "notFound": "Category not found",
+    "parentNotFound": "Parent category not found",
+    "selfParent": "A category cannot be its own parent",
+    "slugTaken": "This category slug is already in use",
+    "inUse": "Cannot archive a category that is referenced by products.",
+    "hasChildren": "Cannot archive a category that has child categories.",
+    "minimumRequired": "At least one active category must remain.",
+    "iconRequired": "Category icon is required"
+  },
+  "product": {
+    "notFound": "Product not found",
+    "slugTaken": "This slug is already in use",
+    "trashNotFound": "Deleted product not found.",
+    "restoreSlugConflict": "Cannot restore product because its slug is already in use.",
+    "restoreVariantConflict": "Cannot restore product because one or more SKUs or variant combinations are already in use.",
+    "restoreMetadataMissing": "This product was deleted before restore metadata was enabled and cannot be restored automatically."
+  },
+  "translation": {
+    "unsupportedLanguage": "Language \"{language}\" is not supported",
+    "duplicate": "Language \"{language}\" is listed more than once",
+    "defaultRequired": "A translation in the default language ({language}) is required"
+  },
+  "barcode": {
+    "multiplePrimary": "Only one barcode can be primary"
+  },
+  "variant": {
+    "notFound": "Variant not found",
+    "skuExists": "SKU {sku} already exists",
+    "duplicateSku": "SKU {sku} is repeated in the request",
+    "combinationExists": "A variant with this option combination already exists",
+    "duplicateCombination": "Variant {sku} repeats another variant's option combination",
+    "minimumActive": "A product must keep at least one active variant",
+    "minimumRequired": "A product must keep at least one variant",
+    "optionsRequired": "Products with several variants need option types",
+    "optionValueCount": "Variant {sku} needs exactly {count} option value(s)",
+    "unknownOptionValue": "Variant {sku} uses an unknown option value",
+    "optionMismatch": "Variant {sku} option values do not match the product options",
+    "notInProduct": "Variant {id} does not belong to this product",
+    "duplicateInRequest": "Variant {id} is listed more than once",
+    "changeNotAllowed": "Variant {id} cannot be changed with this action",
+    "optionAssignmentsRequired": "Provide an option-value assignment for every existing non-deleted variant."
+  },
+  "brand": {
+    "slugTaken": "This brand slug is already in use",
+    "inUse": "Cannot archive a brand that is referenced by products.",
+    "logoRequired": "Brand logo is required"
+  },
+  "optionType": {
+    "notFound": "Option type not found.",
+    "inUse": "Cannot delete an option type that is assigned to products or variants."
+  },
+  "optionValue": {
+    "notFound": "Option value not found.",
+    "inUse": "Cannot delete an option value that is assigned to variants."
+  },
+  "media": {
+    "notFound": "One or more media files were not found",
+    "invalidDimensions": "{purpose} images must be uploaded with purpose={purpose} and be {width}x{height}px"
+  },
+  "categoryGroup": {
+    "notFound": "Category group not found",
+    "slugTaken": "This category group slug is already in use",
+    "categoryNotFound": "One or more categories don't exist",
+    "tooManyCategories": "A category group can hold at most {max} categories"
+  }
+}

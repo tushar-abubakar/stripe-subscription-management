@@ -1,0 +1,16 @@
+{
+    "errors": {
+        "accessDenied": "You do not have access to this ticket",
+        "orderNotFound": "Order not found",
+        "ticketClosed": "This ticket is closed",
+        "ticketNotFound": "Ticket not found",
+        "invalidAssignee": "The assignee must be a manager or staff member of this ticket's store",
+        "attachmentInvalid": "Attachments must be your own uploads with purpose SUPPORT",
+        "alreadyEscalated": "This ticket is already escalated"
+    },
+    "notification": {
+        "replied": "Support replied",
+        "resolved": "Your support request was resolved",
+        "escalated": "A store escalated a support ticket"
+    }
+}

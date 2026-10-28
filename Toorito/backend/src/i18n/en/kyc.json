@@ -1,0 +1,24 @@
+{
+    "errors": {
+        "notFound": "KYC document not found",
+        "mediaInvalid": "Upload the files with purpose KYC first (your own uploads only)",
+        "mediaInUse": "A file is already used by another KYC document",
+        "duplicateMedia": "The same file is sent twice",
+        "notPending": "Only pending documents can be forwarded",
+        "reasonRequired": "A reason is required",
+        "docsMissing": "KYC documents missing: {missing}",
+        "duplicateType": "Each document type can be sent once (use OTHER for extra documents)",
+        "titleRequired": "Give the OTHER document a title",
+        "tooManyOther": "At most {max} OTHER documents",
+        "notDraft": "Submitted documents can't be deleted: upload a new one of the same type to replace it, or ask an admin to remove an approved one",
+        "nothingToSubmit": "There are no draft documents to submit",
+        "draftDeleteDirectly": "This document is still a draft: delete it directly",
+        "memberNotFound": "Team member not found in your store",
+        "onboardingLocked": "KYC can only be edited by the store before the sign-up is sent to the admin"
+    },
+    "notification": {
+        "verified": "Document verified",
+        "rejected": "Document rejected",
+        "submitted": "A team member submitted KYC documents"
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "errors": {
+        "tooManyRequests": "Too many OTP requests, try later",
+        "requestInProgress": "An OTP request is already in progress",
+        "waitBeforeRequest": "Please wait before requesting another OTP",
+        "dailyLimit": "Daily OTP limit reached. Try again tomorrow.",
+        "repeatedDailyLimit": "This number has been permanently blocked after repeatedly reaching the daily OTP limit. Contact support.",
+        "destinationBlocked": "This number has been blocked from requesting OTPs. Contact support.",
+        "invalidOtp": "Invalid OTP",
+        "expired": "OTP expired or not requested",
+        "maxAttemptsExceeded": "Max attempts exceeded"
+    }
+}

@@ -1,0 +1,6 @@
+{
+    "errors": {
+        "invalidRefreshToken": "Invalid refresh token",
+        "accountNotActive": "Account not active"
+    }
+}

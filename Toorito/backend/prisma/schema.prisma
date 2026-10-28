@@ -1,0 +1,1804 @@
+generator client {
+  provider     = "prisma-client"
+  output       = "../src/generated/prisma"
+  moduleFormat = "cjs"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ============================ ENUMS ============================
+enum UserRole {
+  CUSTOMER
+  ADMIN
+  SUPER_ADMIN
+  STORE_MANAGER
+  STORE_STAFF
+  DELIVERY_PARTNER
+}
+
+enum UserStatus {
+  ACTIVE
+  SUSPENDED
+  BLOCKED
+}
+
+enum ApprovalStatus {
+  PENDING
+  APPROVED
+  REJECTED
+}
+
+enum StoreStatus {
+  ACTIVE
+  INACTIVE
+  SUSPENDED
+  DRAFT
+}
+
+enum StoreServiceMode {
+  RADIUS
+  AREA
+}
+
+/// What a store staff member works on (drives their permissions).
+enum StaffDuty {
+  PACKING
+  SUPPORT
+  INVENTORY
+}
+
+/// Everything that needs a higher authority's decision lives in ApprovalRequest.
+enum ApprovalType {
+  /// Store manager added a staff member / delivery partner (with KYC) -> admin
+  MEMBER_ONBOARDING
+  /// Store manager reviewed a KYC document and forwards it -> admin
+  KYC_VERIFICATION
+  /// Staff / delivery partner wants an old KYC document removed -> admin
+  KYC_DOC_REMOVAL
+  /// Store proposes a barcode the catalogue doesn't have -> admin
+  BARCODE_ADD
+  /// Store corrects a posted goods receipt -> admin
+  GRN_EDIT
+  /// Store asks the admin to fix a catalogue product / variation (text, media, MRP, ...) -> admin
+  CATALOG_CHANGE
+  /// Customer return (refund) -> store manager
+  ORDER_RETURN
+  /// Customer exchange (replacement) -> store manager
+  ORDER_EXCHANGE
+}
+
+/// Who decides a request.
+enum ApprovalLevel {
+  ADMIN
+  STORE
+}
+
+enum ApprovalRequestStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  CANCELLED
+}
+
+enum GoodsReceiptStatus {
+  POSTED
+  /// An edit request is waiting for admin approval
+  EDIT_PENDING
+}
+
+enum StorageProvider {
+  LOCAL
+  S3
+  R2
+  GCS
+  CLOUDINARY
+  BUNNY
+}
+
+enum MediaType {
+  IMAGE
+  VIDEO
+  AUDIO
+  DOCUMENT
+}
+
+enum MediaPurpose {
+  PRODUCT
+  CATEGORY
+  CATEGORY_BANNER
+  BRAND
+  BRAND_BANNER
+  OPTIONVALUE
+  STORE
+  BUNDLE
+  AVATAR
+  KYC
+  DELIVERY_PROOF
+  SUPPORT
+  INVOICE
+  BANNER
+  OTHER
+}
+
+enum MediaStatus {
+  PENDING
+  PROCESSING
+  READY
+  FAILED
+}
+
+enum CategoryStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+enum BrandStatus {
+  ACTIVE
+  INACTIVE
+  ARCHIVED
+}
+
+enum ProductStatus {
+  DRAFT
+  PUBLISHED
+  ARCHIVED
+}
+
+enum DietType {
+  VEG
+  NON_VEG
+  VEGAN
+  EGG
+}
+
+enum UnitType {
+  G
+  KG
+  ML
+  PCS
+  PACK
+  DOZEN
+  PIECE
+  GRAM
+  LITRE
+}
+
+enum BarcodeType {
+  EAN13
+  EAN8
+  UPC_A
+  CODE128
+  QR
+  OTHER
+}
+
+enum OptionValueType {
+  TEXT // Standard text buttons / pills (e.g., "S", "M", "L", "XL"
+  COLOR // Color hex swatch circle/square (e.g., "#000000", "#FFFFFF")
+  IMAGE // Visual thumbnail / pattern swatch (e.g., Fabric texture, graphic print)
+  DROPDOWN // Standard <select> menu (used when list is long, e.g., Shoe sizes 5-15)
+}
+
+enum BatchStatus {
+  ACTIVE
+  QUARANTINE
+  DAMAGED
+  RECALLED
+  EXPIRED
+  DEPLETED
+}
+
+enum StockMovementType {
+  PURCHASE
+  RESERVE
+  RELEASE
+  SALE
+  RETURN
+  ADJUSTMENT
+  DAMAGE
+  EXPIRED
+  LOST
+  VENDOR_RETURN
+}
+
+/// Lifecycle of a store listing, set by the store manager / admin.
+/// (Catalogue products have no SCHEDULED state: admins use DRAFT / PUBLISHED / ARCHIVED.)
+enum StoreListingStatus {
+  /// Being prepared; never visible to customers
+  DRAFT
+  /// Goes ACTIVE automatically at `publishAt`
+  SCHEDULED
+  /// Visible and sellable (while the catalogue product / variant is live)
+  ACTIVE
+  /// Switched off by the store
+  INACTIVE
+  /// Waiting for admin approval (e.g. a new barcode proposed while listing); never sellable
+  PENDING_APPROVAL
+}
+
+/// How the current StoreProduct.sellingPrice was set.
+enum StorePriceStatus {
+  /// Price set by the store manager / admin.
+  CUSTOM
+  /// Admin lowered the catalogue MRP below the store price: the store price was discarded and reset to the new MRP.
+  MRP_RESET
+}
+
+enum BundlePricingType {
+  FIXED_PRICE
+  PERCENT_OFF
+  AMOUNT_OFF
+}
+
+enum DiscountType {
+  PERCENT
+  FLAT
+  FREE_DELIVERY
+}
+
+enum OrderSource {
+  APP
+  WEB
+}
+
+enum OrderStatus {
+  PENDING_PAYMENT
+  PLACED
+  ACCEPTED
+  PACKING
+  READY_FOR_PICKUP
+  OUT_FOR_DELIVERY
+  DELIVERED
+  CANCELLED
+  REJECTED
+  FAILED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  PARTIALLY_REFUNDED
+  REFUNDED
+}
+
+enum PaymentMethod {
+  UPI
+  CARD
+  NETBANKING
+  WALLET
+  COD
+  CASH
+}
+
+enum PickMethod {
+  MANUAL
+  SCAN
+}
+
+enum PickStatus {
+  PENDING
+  PICKED
+  PARTIAL
+  OUT_OF_STOCK
+}
+
+enum DeliveryStatus {
+  ASSIGNED
+  ACCEPTED
+  REACHED_STORE
+  PICKED_UP
+  REACHED_CUSTOMER
+  DELIVERED
+  REJECTED
+  CANCELLED
+  FAILED
+}
+
+enum VehicleType {
+  BICYCLE
+  SCOOTER
+  BIKE
+  EV
+}
+
+/// Bangladesh: NID / PASSPORT / DRIVING_LICENSE prove identity. AADHAAR, PAN, VOTER_ID are legacy
+/// (kept so old rows stay valid; new uploads are refused). OTHER = any extra document, several allowed, needs a title.
+enum KycDocType {
+  NID
+  AADHAAR
+  PAN
+  DRIVING_LICENSE
+  VOTER_ID
+  PASSPORT
+  SELFIE
+  VEHICLE_RC
+  OTHER
+}
+
+enum KycStatus {
+  PENDING
+  VERIFIED
+  REJECTED
+}
+
+enum TransactionType {
+  PAYMENT
+  REFUND
+  COD_COLLECTION
+}
+
+enum TransactionStatus {
+  PENDING
+  SUCCESS
+  FAILED
+  CANCELLED
+}
+
+enum TicketCategory {
+  ORDER_ISSUE
+  PAYMENT
+  REFUND
+  DELIVERY
+  PRODUCT_QUALITY
+  ACCOUNT
+  OTHER
+}
+
+enum TicketStatus {
+  OPEN
+  IN_PROGRESS
+  WAITING_CUSTOMER
+  RESOLVED
+  CLOSED
+}
+
+enum TicketPriority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum AuthEvent {
+  OTP_SENT
+  OTP_VERIFIED
+  OTP_FAILED
+  OTP_RATE_LIMITED
+  OTP_UNBLOCKED
+  PASSWORD_OK
+  PASSWORD_FAILED
+  LOGIN_SUCCESS
+  LOGOUT
+  TOKEN_REFRESH
+  ACCOUNT_BLOCKED
+}
+
+enum WalletTxnType {
+  CREDIT
+  DEBIT
+}
+
+enum WalletTxnReason {
+  REFUND
+  CASHBACK
+  TOPUP
+  ORDER_PAYMENT
+  ADMIN_ADJUSTMENT
+  EXPIRY
+}
+
+enum WebhookStatus {
+  RECEIVED
+  PROCESSED
+  FAILED
+  IGNORED
+}
+
+// ============================ AUTH & USERS ============================
+// One row per (phone, role). Soft delete: anonymise phone => "deleted:<id>".
+model User {
+  id                  BigInt         @id @default(autoincrement())
+  phone               String         @db.VarChar(20)
+  role                UserRole
+  passwordHash        String?        @db.VarChar(255)
+  failedPasswordCount Int            @default(0)
+  passwordLockedUntil DateTime?
+  name                String?        @db.VarChar(120)
+  email               String?        @db.VarChar(191)
+  language            String         @default("en") @db.VarChar(10)
+  /// App preferences: { "theme": "LIGHT|DARK|SYSTEM", "notifications": { "orderUpdates": true, ... } }
+  settings            Json           @default("{}")
+  avatarId            BigInt?
+  walletBalance       Decimal        @default(0) @db.Decimal(12, 2)
+  accessRoleId        BigInt?
+  status              UserStatus     @default(ACTIVE)
+  statusReason        String?        @db.VarChar(255)
+  approvalStatus      ApprovalStatus @default(APPROVED)
+  approvedById        BigInt?
+  approvedAt          DateTime?
+  rejectionReason     String?        @db.VarChar(255)
+  storeId             BigInt?
+  /// Who created the account (admin or the store manager who added the member)
+  createdById         BigInt?
+  /// STORE_STAFF only: what they work on. Empty = legacy (packing + inventory).
+  staffDuties         StaffDuty[]    @default([])
+  /// Active hold, null when none. FULL hold also sets status = SUSPENDED.
+  /// { "scope": "FULL" | "PARTIAL", "restrictions": ["ORDERS","WITHDRAWAL","KYC_UPDATE","SUPPORT","INVENTORY","PROFILE_UPDATE"],
+  ///   "level": "ADMIN" | "STORE", "byId": "12", "byRole": "ADMIN", "note": "...", "at": "2026-10-23T..." }
+  /// A STORE-level hold can be lifted by the store manager; an ADMIN-level hold only by an admin.
+  hold                Json?
+  phoneVerifiedAt     DateTime?
+  lastLoginAt         DateTime?
+  createdAt           DateTime       @default(now())
+  updatedAt           DateTime       @updatedAt
+  deletedAt           DateTime?
+
+  uploadedMedia         MediaFile[]             @relation("MediaUploadedBy")
+  avatar                MediaFile?              @relation("UserAvatar", fields: [avatarId], references: [id], onDelete: SetNull)
+  store                 Store?                  @relation("StoreMembers", fields: [storeId], references: [id], onDelete: SetNull)
+  accessRole            AccessRole?             @relation(fields: [accessRoleId], references: [id], onDelete: SetNull)
+  sessions              Session[]
+  addresses             Address[]
+  cart                  Cart?
+  orders                Order[]                 @relation("CustomerOrders")
+  deliveries            Delivery[]
+  partnerProfile        DeliveryPartnerProfile?
+  kycDocuments          KycDocument[]
+  tickets               SupportTicket[]         @relation("TicketRequester")
+  assigned              SupportTicket[]         @relation("TicketAssignee")
+  notifications         Notification[]
+  walletTxns            WalletTransaction[]
+  wishlist              WishlistItem[]
+  createdCategoryGroups CategoryGroup[]         @relation("CategoryGroupCreatedBy")
+
+  @@unique([phone, role])
+  @@index([role, status, approvalStatus])
+  @@index([storeId, role, approvalStatus])
+}
+
+// Single OTP table: current state per (destination, role). History => AuthLog.
+model Otp {
+  id                    BigInt    @id @default(autoincrement())
+  destination           String
+  role                  UserRole
+  codeHash              String?   @db.VarChar(255)
+  expiresAt             DateTime?
+  verifyAttempts        Int       @default(0)
+  sendCountToday        Int       @default(0)
+  sendDate              DateTime  @db.Date
+  lastSentAt            DateTime?
+  nextSendAt            DateTime?
+  consecutiveFailedDays Int       @default(0)
+  lastFailedDate        DateTime? @db.Date
+  isBlocked             Boolean   @default(false)
+  blockedAt             DateTime?
+  blockedUntil          DateTime?
+  blockedReason         String?   @db.VarChar(255)
+  lastVerifiedAt        DateTime?
+  createdAt             DateTime  @default(now())
+  updatedAt             DateTime  @updatedAt
+
+  @@unique([destination, role], name: "destination_role")
+  @@index([isBlocked])
+}
+
+// Single session table (refresh token rotation + device/push info).
+model Session {
+  id               BigInt    @id @default(autoincrement())
+  userId           BigInt
+  refreshTokenHash String    @unique @db.VarChar(64)
+  accessTokenJti   String?   @db.VarChar(64)
+  deviceId         String?   @db.VarChar(100)
+  deviceName       String?   @db.VarChar(120)
+  platform         String?   @db.VarChar(20)
+  appVersion       String?   @db.VarChar(20)
+  pushToken        String?   @db.VarChar(512)
+  ipAddress        String?   @db.VarChar(45)
+  userAgent        String?   @db.VarChar(255)
+  lastUsedAt       DateTime  @default(now())
+  expiresAt        DateTime
+  revokedAt        DateTime?
+  createdAt        DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, revokedAt])
+  @@index([expiresAt])
+}
+
+model Address {
+  id            BigInt   @id @default(autoincrement())
+  userId        BigInt
+  label         String?  @db.VarChar(40)
+  receiverName  String   @db.VarChar(120)
+  receiverPhone String   @db.VarChar(20)
+  line1         String   @db.VarChar(255)
+  line2         String?  @db.VarChar(255)
+  landmark      String?  @db.VarChar(255)
+  /// ISO 3166-1 alpha-2, one of ADDRESS_COUNTRIES (null only on rows saved before validation existed)
+  countryCode   String?  @db.Char(2)
+  /// Level-1 region code (state / division), see core/address/address.data.ts
+  stateCode     String?  @db.VarChar(10)
+  /// Level-1 region name, derived from stateCode
+  state         String   @db.VarChar(100)
+  /// Level-2 region (district), when the country has one
+  districtCode  String?  @db.VarChar(10)
+  district      String?  @db.VarChar(100)
+  city          String   @db.VarChar(100)
+  /// Postcode, validated per country ("" when the country has none)
+  pincode       String   @db.VarChar(12)
+  latitude      Decimal  @db.Decimal(10, 7)
+  longitude     Decimal  @db.Decimal(10, 7)
+  placeId       String?  @db.VarChar(255)
+  isDefault     Boolean  @default(false)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, isDefault])
+}
+
+/// Products a customer saved for later.
+model WishlistItem {
+  userId    BigInt
+  productId BigInt
+  createdAt DateTime @default(now())
+
+  user    User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@id([userId, productId])
+  @@index([userId, createdAt])
+}
+
+model DeliveryPartnerProfile {
+  id               BigInt      @id @default(autoincrement())
+  userId           BigInt      @unique
+  vehicleType      VehicleType
+  vehicleNumber    String?     @db.VarChar(20)
+  kycStatus        KycStatus   @default(PENDING)
+  kycVerifiedById  BigInt?
+  kycVerifiedAt    DateTime?
+  isOnline         Boolean     @default(false)
+  isAvailable      Boolean     @default(true)
+  activeOrderCount Int         @default(0)
+  lastLatitude     Decimal?    @db.Decimal(10, 7)
+  lastLongitude    Decimal?    @db.Decimal(10, 7)
+  lastLocationAt   DateTime?
+  createdAt        DateTime    @default(now())
+  updatedAt        DateTime    @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([isOnline, isAvailable])
+}
+
+model KycDocument {
+  id              BigInt     @id @default(autoincrement())
+  userId          BigInt
+  type            KycDocType
+  documentNumber  String?    @db.VarChar(255)
+  frontMediaId    BigInt
+  backMediaId     BigInt?
+  status          KycStatus  @default(PENDING)
+  reviewedById    BigInt?
+  reviewedAt      DateTime?
+  rejectionReason String?    @db.VarChar(255)
+  expiresAt       DateTime?  @db.Date
+  /// Who uploaded it (the member themself, or the store manager while onboarding)
+  uploadedById    BigInt?
+  /// Name of an OTHER document (e.g. "Police clearance certificate")
+  title           String?    @db.VarChar(120)
+  /// null = DRAFT: the uploader can still preview, replace or delete it. Set on submit; then it's locked for review.
+  submittedAt     DateTime?
+  /// Set when an admin approves a removal request, or when a not-yet-approved document is replaced. Kept for audit but ignored.
+  removedAt       DateTime?
+  /// ADMIN_REMOVAL | REPLACED
+  removedReason   String?    @db.VarChar(30)
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  /// One live non-OTHER document per type (a re-upload replaces an unapproved one; an approved one stays until an admin removes it).
+  @@index([userId, type])
+  @@index([userId, submittedAt])
+  @@index([status, createdAt])
+}
+
+// ============================ MEDIA (CDN-ready) ============================
+model MediaFile {
+  id            BigInt          @id @default(autoincrement())
+  purpose       MediaPurpose
+  type          MediaType       @default(IMAGE)
+  provider      StorageProvider @default(LOCAL)
+  status        MediaStatus     @default(READY)
+  bucket        String          @default("") @db.VarChar(100)
+  key           String          @db.VarChar(191)
+  originalName  String?         @db.VarChar(255)
+  title         Json?
+  mimeType      String          @db.VarChar(100)
+  sizeBytes     Int
+  width         Int?
+  height        Int?
+  checksum      String?         @db.VarChar(64)
+  variants      Json?
+  alt           Json?
+  /// Forensic metadata captured from the ORIGINAL bytes (support / KYC / invoice / delivery proof):
+  /// { exif: { make, model, software, dateTimeOriginal, dateTime, gps }, xmp: { creatorTool, digitalSourceType },
+  ///   c2pa, pdf: { producer, creator, modDate }, flags: { edited, aiSuspected, noCameraData, reused, ... },
+  ///   riskScore: 0-100, reusedBy: [mediaIds] }
+  metadata      Json?
+  isPrivate     Boolean         @default(false)
+  attempts      Int             @default(0)
+  lockedAt      DateTime?
+  failureReason String?         @db.VarChar(255)
+  updatedAt     DateTime        @default(now()) @updatedAt
+  uploadedById  BigInt
+  createdAt     DateTime        @default(now())
+  deletedAt     DateTime?
+
+  uploadedBy          User                 @relation("MediaUploadedBy", fields: [uploadedById], references: [id], onDelete: Restrict)
+  userAvatars         User[]               @relation("UserAvatar")
+  OptionValuesImages  OptionValue[]        @relation("OptionValueImage")
+  categoryIcons       Category[]           @relation("CategoryIcon")
+  categoryBanners     Category[]           @relation("CategoryBanner")
+  brandLogos          Brand[]              @relation("BrandLogo")
+  brandBanners        Brand[]              @relation("BrandBanner")
+  storeLogos          Store[]              @relation("StoreLogo")
+  productThumbs       Product[]            @relation("ProductThumbnail")
+  productMedia        ProductMedia[]
+  productAudios       Product[]            @relation("ProductAudio")
+  bundleThumbs        Bundle[]             @relation("BundleThumbnail")
+  variantOptionImages VariantOptionValue[] @relation("VariantOptionImage")
+  variantAudios       ProductVariant[]     @relation("VariantAudio")
+
+  @@index([status, createdAt])
+  @@index([status, lockedAt])
+  @@index([checksum])
+  @@index([uploadedById, purpose, createdAt])
+}
+
+// ============================ STORES ============================
+model Store {
+  id                BigInt           @id @default(autoincrement())
+  code              String           @unique @db.VarChar(30)
+  name              Json
+  nameSearch        String           @default("") @db.VarChar(500)
+  phone             String?          @db.VarChar(20)
+  email             String?          @db.VarChar(191)
+  licenseNumber     String?          @db.VarChar(60)
+  logoId            BigInt?
+  countryCode       String           @db.Char(2)
+  stateCode         String           @db.VarChar(10)
+  state             String           @db.VarChar(100)
+  districtCode      String?          @db.VarChar(10)
+  district          String?          @db.VarChar(100)
+  city              String           @db.VarChar(100)
+  addressLine       String           @db.VarChar(255)
+  addressLine2      String?          @db.VarChar(255)
+  pincode           String           @db.VarChar(12)
+  latitude          Decimal          @db.Decimal(10, 7)
+  longitude         Decimal          @db.Decimal(10, 7)
+  placeId           String?          @db.VarChar(255)
+  serviceMode       StoreServiceMode @default(RADIUS)
+  serviceRadiusM    Int?
+  bboxMinLat        Decimal          @db.Decimal(10, 7)
+  bboxMaxLat        Decimal          @db.Decimal(10, 7)
+  bboxMinLng        Decimal          @db.Decimal(10, 7)
+  bboxMaxLng        Decimal          @db.Decimal(10, 7)
+  status            StoreStatus      @default(DRAFT)
+  isOpen            Boolean          @default(true)
+  acceptingOrders   Boolean          @default(true)
+  openingHours      Json?
+  timezone          String           @default("Asia/Dhaka") @db.VarChar(50)
+  avgPrepMinutes    Int              @default(8)
+  minOrderValue     Decimal          @default(0) @db.Decimal(10, 2)
+  deliveryFee       Decimal          @default(0) @db.Decimal(10, 2)
+  freeDeliveryAbove Decimal?         @db.Decimal(10, 2)
+  handlingFee       Decimal          @default(0) @db.Decimal(10, 2)
+  smallCartLimit    Decimal?         @db.Decimal(10, 2)
+  smallCartFee      Decimal?         @db.Decimal(10, 2)
+  /// Surcharges (rain / night / peak surge …), see StoreCharge in stores.util.ts. Array of:
+  /// {
+  ///   "id": "a1b2c3d4e5f6",
+  ///   "kind": "RAIN_SURGE" | "NIGHT_SURGE" | "PEAK_SURGE" | "PACKAGING" | "CUSTOM",
+  ///   "label": { "en": "Rain surge" },          // required for CUSTOM
+  ///   "calc": "FLAT" | "PERCENT",
+  ///   "amount": 20,                             // money, or 0–100 for PERCENT
+  ///   "maxAmount": 40,                          // PERCENT cap, else null
+  ///   "trigger": "MANUAL" | "SCHEDULE",
+  ///   "schedule": { "days": [0..6], "from": "22:00", "to": "06:00" },  // SCHEDULE only
+  ///   "isActive": true                          // MANUAL: on/off switch
+  /// }
+  charges           Json             @default("[]")
+  createdAt         DateTime         @default(now())
+  updatedAt         DateTime         @updatedAt
+
+  logo          MediaFile?         @relation("StoreLogo", fields: [logoId], references: [id], onDelete: SetNull)
+  members       User[]             @relation("StoreMembers")
+  areas         StoreServiceArea[]
+  storeProducts StoreProduct[]
+  bundles       Bundle[]
+  carts         Cart[]
+  orders        Order[]
+
+  @@index([status, isOpen])
+  @@index([bboxMinLat, bboxMaxLat])
+  @@index([bboxMinLng, bboxMaxLng])
+  @@index([countryCode, stateCode])
+}
+
+model StoreServiceArea {
+  id                  BigInt   @id @default(autoincrement())
+  storeId             BigInt
+  name                String   @db.VarChar(120)
+  placeId             String?  @db.VarChar(255)
+  polygon             Json
+  minLat              Decimal  @db.Decimal(10, 7)
+  maxLat              Decimal  @db.Decimal(10, 7)
+  minLng              Decimal  @db.Decimal(10, 7)
+  maxLng              Decimal  @db.Decimal(10, 7)
+  deliveryFeeOverride Decimal? @db.Decimal(10, 2)
+  isActive            Boolean  @default(true)
+  createdAt           DateTime @default(now())
+
+  store Store @relation(fields: [storeId], references: [id], onDelete: Cascade)
+
+  @@index([storeId, isActive])
+  @@index([minLat, maxLat])
+}
+
+// ============================ CATALOG ============================
+model Category {
+  id          BigInt         @id @default(autoincrement())
+  parentId    BigInt?
+  slug        String         @unique @db.VarChar(150)
+  name        Json
+  description Json?
+  status      CategoryStatus @default(ACTIVE)
+  iconId      BigInt?
+  bannerId    BigInt?
+  depth       Int            @default(0)
+  position    Int            @default(0)
+  createdById BigInt?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  parent          Category?           @relation("CategoryTree", fields: [parentId], references: [id], onDelete: Restrict)
+  children        Category[]          @relation("CategoryTree")
+  icon            MediaFile?          @relation("CategoryIcon", fields: [iconId], references: [id], onDelete: SetNull)
+  banner          MediaFile?          @relation("CategoryBanner", fields: [bannerId], references: [id], onDelete: SetNull)
+  primaryProducts Product[]           @relation("ProductPrimaryCategory")
+  products        Product[]           @relation("ProductCategories")
+  groupItems      CategoryGroupItem[]
+
+  @@index([parentId, status, position])
+}
+
+/// Display grouping of categories ("Vegetables & Fruits" → Fresh Vegetables, Fresh Fruits, …).
+/// Holds categories only: products are never assigned to a group. A category may be in several groups.
+model CategoryGroup {
+  id          BigInt         @id @default(autoincrement())
+  slug        String         @unique @db.VarChar(150)
+  name        Json
+  status      CategoryStatus @default(ACTIVE)
+  position    Int            @default(0)
+  createdById BigInt?
+  createdAt   DateTime       @default(now())
+  updatedAt   DateTime       @updatedAt
+
+  createdBy User?               @relation("CategoryGroupCreatedBy", fields: [createdById], references: [id], onDelete: SetNull)
+  items     CategoryGroupItem[]
+
+  @@index([status, position])
+}
+
+/// Ordered membership of a category in a group.
+model CategoryGroupItem {
+  groupId    BigInt
+  categoryId BigInt
+  position   Int    @default(0)
+
+  group    CategoryGroup @relation(fields: [groupId], references: [id], onDelete: Cascade)
+  category Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+
+  @@id([groupId, categoryId])
+  @@index([categoryId])
+}
+
+model Brand {
+  id          BigInt      @id @default(autoincrement())
+  slug        String      @unique @db.VarChar(150)
+  name        Json
+  description Json?
+  status      BrandStatus @default(ACTIVE)
+  logoId      BigInt?
+  bannerId    BigInt?
+  createdAt   DateTime    @default(now())
+  updatedAt   DateTime    @updatedAt
+
+  logo     MediaFile? @relation("BrandLogo", fields: [logoId], references: [id], onDelete: SetNull)
+  banner   MediaFile? @relation("BrandBanner", fields: [bannerId], references: [id], onDelete: SetNull)
+  products Product[]
+
+  @@index([status])
+}
+
+model Product {
+  id                    BigInt         @id @default(autoincrement())
+  slug                  String         @unique @db.VarChar(191)
+  brandId               BigInt?
+  categoryId            BigInt
+  thumbnailId           BigInt?
+  audioMediaId          BigInt?
+  status                ProductStatus  @default(DRAFT)
+  dietType              DietType?
+  hsnCode               String?        @db.VarChar(10)
+  gstRate               Decimal        @default(0) @db.Decimal(5, 2)
+  countryOfOrigin       String?        @db.VarChar(2)
+  shelfLifeDays         Int?
+  isPerishable          Boolean        @default(false)
+  manufacturerName      String?        @db.VarChar(191)
+  nutrition             Json?
+  createdById           BigInt?
+  publishedAt           DateTime?
+  createdAt             DateTime       @default(now())
+  updatedAt             DateTime       @updatedAt
+  deletedAt             DateTime?
+  deletedPreviousStatus ProductStatus?
+  deletedPreviousSlug   String?        @db.VarChar(191)
+
+  brand         Brand?               @relation(fields: [brandId], references: [id], onDelete: SetNull)
+  category      Category             @relation("ProductPrimaryCategory", fields: [categoryId], references: [id], onDelete: Restrict)
+  categories    Category[]           @relation("ProductCategories")
+  thumbnail     MediaFile?           @relation("ProductThumbnail", fields: [thumbnailId], references: [id], onDelete: SetNull)
+  audioMedia    MediaFile?           @relation("ProductAudio", fields: [audioMediaId], references: [id], onDelete: SetNull)
+  translations  ProductTranslation[]
+  options       ProductOption[]
+  variants      ProductVariant[]
+  media         ProductMedia[]
+  storeProducts StoreProduct[]
+  wishlistedBy  WishlistItem[]
+
+  @@index([categoryId, status])
+  @@index([brandId, status])
+  @@index([status, createdAt])
+  @@index([deletedAt, status])
+}
+
+model ProductTranslation {
+  id                  BigInt  @id @default(autoincrement())
+  productId           BigInt
+  lang                String  @db.VarChar(10)
+  title               String  @default("") @db.VarChar(255)
+  shortDescription    String? @db.VarChar(500)
+  description         String? @db.Text
+  keyFeatures         Json? // [{ name, value }]
+  ingredients         String? @db.Text
+  storageInstructions String? @db.VarChar(500)
+  manufacturerAddress String? @db.VarChar(500)
+  allergens           Json? // string[]
+  attributes          Json? // [{ name, value }]
+  nutrition           Json? // { columns: [{label, children?}], rows: [{label, values[], children?}] }
+  keywords            Json? // string[]
+  seoTitle            String? @db.VarChar(255)
+  seoDescription      String? @db.VarChar(500)
+  searchText          String  @default("") @db.Text
+
+  product Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([productId, lang])
+  @@index([lang, title])
+}
+
+model OptionGroup {
+  id           BigInt          @id @default(autoincrement())
+  code         String          @unique @db.VarChar(50)
+  name         Json
+  valueType    OptionValueType @default(TEXT)
+  position     Int             @default(0)
+  isFilterable Boolean         @default(true)
+
+  values   OptionValue[]
+  products ProductOption[]
+}
+
+model OptionValue {
+  id            BigInt  @id @default(autoincrement())
+  optionGroupId BigInt
+  code          String  @db.VarChar(50)
+  label         Json
+  swatch        String? @db.VarChar(20)
+  imageId       BigInt?
+  position      Int     @default(0)
+
+  optionGroup OptionGroup          @relation(fields: [optionGroupId], references: [id], onDelete: Restrict)
+  image       MediaFile?           @relation("OptionValueImage", fields: [imageId], references: [id], onDelete: SetNull)
+  variants    VariantOptionValue[]
+
+  @@unique([optionGroupId, code])
+}
+
+model ProductOption {
+  id            BigInt @id @default(autoincrement())
+  productId     BigInt
+  optionGroupId BigInt
+  position      Int    @default(0)
+
+  product     Product     @relation(fields: [productId], references: [id], onDelete: Cascade)
+  optionGroup OptionGroup @relation(fields: [optionGroupId], references: [id], onDelete: Restrict)
+
+  @@unique([productId, optionGroupId])
+}
+
+model ProductVariant {
+  id                        BigInt     @id @default(autoincrement())
+  productId                 BigInt
+  sku                       String     @unique @db.VarChar(64)
+  optionHash                String     @default("default") @db.VarChar(100)
+  mrp                       Decimal    @db.Decimal(10, 2)
+  unit                      UnitType?
+  unitValue                 Decimal?   @db.Decimal(10, 3)
+  weightGrams               Int?
+  position                  Int        @default(0)
+  isActive                  Boolean    @default(true)
+  createdAt                 DateTime   @default(now())
+  updatedAt                 DateTime   @updatedAt
+  deletedAt                 DateTime?
+  deletedWithProduct        Boolean    @default(false)
+  deletedPreviousSku        String?    @db.VarChar(64)
+  deletedPreviousOptionHash String?    @db.VarChar(100)
+  deletedPreviousIsActive   Boolean?
+  audioMediaId              BigInt?
+  audioMedia                MediaFile? @relation("VariantAudio", fields: [audioMediaId], references: [id], onDelete: SetNull)
+
+  product       Product              @relation(fields: [productId], references: [id], onDelete: Cascade)
+  optionValues  VariantOptionValue[]
+  barcodes      ProductBarcode[]
+  media         ProductMedia[]
+  storeProducts StoreProduct[]
+  bundleItems   BundleItem[]
+  cartItems     CartItem[]
+  orderItems    OrderItem[]
+
+  @@unique([productId, optionHash])
+  @@index([productId, isActive])
+}
+
+model VariantOptionValue {
+  variantId     BigInt
+  optionGroupId BigInt
+  optionValueId BigInt
+  imageId       BigInt?
+  image         MediaFile? @relation("VariantOptionImage", fields: [imageId], references: [id], onDelete: SetNull)
+
+  variant     ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  optionValue OptionValue    @relation(fields: [optionValueId], references: [id], onDelete: Restrict)
+
+  @@id([variantId, optionGroupId])
+  @@index([optionValueId])
+}
+
+model ProductBarcode {
+  id        BigInt      @id @default(autoincrement())
+  variantId BigInt
+  code      String      @unique @db.VarChar(64)
+  type      BarcodeType @default(EAN13)
+  isPrimary Boolean     @default(false)
+  createdAt DateTime    @default(now())
+
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Cascade)
+
+  @@index([variantId])
+}
+
+model ProductMedia {
+  id        BigInt  @id @default(autoincrement())
+  productId BigInt
+  variantId BigInt?
+  mediaId   BigInt
+  position  Int     @default(0)
+
+  product Product         @relation(fields: [productId], references: [id], onDelete: Cascade)
+  variant ProductVariant? @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  media   MediaFile       @relation(fields: [mediaId], references: [id], onDelete: Restrict)
+
+  @@index([productId, position])
+  @@index([variantId])
+  @@index([mediaId])
+}
+
+// ============================ STORE LISTING & BATCH INVENTORY ============================
+// Sellable now = availableQty - reservedQty. reserve at checkout (store level),
+// deduct batch (FEFO) at packing.
+model StoreProduct {
+  id                      BigInt             @id @default(autoincrement())
+  storeId                 BigInt
+  variantId               BigInt
+  productId               BigInt
+  categoryId              BigInt
+  sellingPrice            Decimal            @db.Decimal(10, 2)
+  currentMrp              Decimal?           @db.Decimal(10, 2)
+  availableQty            Int                @default(0)
+  reservedQty             Int                @default(0)
+  lowStockThreshold       Int                @default(5)
+  minOrderQty             Int                @default(1)
+  maxOrderQty             Int?
+  trackBatches            Boolean            @default(true)
+  minSellableDays         Int                @default(0)
+  shelfLocation           String?            @db.VarChar(50)
+  /// Store lifecycle (DRAFT / SCHEDULED / ACTIVE / INACTIVE)
+  status                  StoreListingStatus @default(ACTIVE)
+  /// SCHEDULED only: when the listing goes ACTIVE
+  publishAt               DateTime?
+  /// Derived "live" flag read by storefront / cart / checkout:
+  /// status = ACTIVE and the catalogue product is PUBLISHED with an active variant.
+  isActive                Boolean            @default(true)
+  deletedPreviousIsActive Boolean?
+  /// CUSTOM = manager price; MRP_RESET = discarded because the admin MRP dropped below it (needs review)
+  priceStatus             StorePriceStatus   @default(CUSTOM)
+  priceResetAt            DateTime?
+  /// Flash sale (one at a time per listing; no extra table). Live when now in [flashStartsAt, flashEndsAt)
+  /// and flashSoldQty < flashQtyLimit (null limit = unlimited). Price <= sellingPrice.
+  flashPrice              Decimal?           @db.Decimal(10, 2)
+  flashStartsAt           DateTime?
+  flashEndsAt             DateTime?
+  flashQtyLimit           Int?
+  flashSoldQty            Int                @default(0)
+  flashMaxPerOrder        Int?
+  /// Store-side copy of the catalogue data at listing / last re-sync time. The global Product is never
+  /// modified by stores. Shape: see StoreProductSnapshot in inventory.service.ts
+  snapshot                Json               @default("{}")
+  snapshotAt              DateTime           @default(now())
+  listedById              BigInt?
+  createdAt               DateTime           @default(now())
+  updatedAt               DateTime           @updatedAt
+
+  store   Store            @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  variant ProductVariant   @relation(fields: [variantId], references: [id], onDelete: Restrict)
+  product Product          @relation(fields: [productId], references: [id], onDelete: Restrict)
+  batches InventoryBatch[]
+
+  @@unique([storeId, variantId])
+  @@index([storeId, categoryId, isActive])
+  @@index([storeId, productId])
+  @@index([storeId, priceStatus])
+  @@index([storeId, status])
+  @@index([status, publishAt])
+  @@index([storeId, flashEndsAt])
+  @@index([variantId])
+}
+
+model InventoryBatch {
+  id             BigInt      @id @default(autoincrement())
+  storeProductId BigInt
+  storeId        BigInt
+  variantId      BigInt
+  batchNumber    String      @db.VarChar(60)
+  manufacturedAt DateTime?   @db.Date
+  expiryDate     DateTime?   @db.Date
+  shelfLifeDays  Int?
+  mrp            Decimal     @db.Decimal(10, 2)
+  costPrice      Decimal?    @db.Decimal(10, 2)
+  clearancePrice Decimal?    @db.Decimal(10, 2)
+  receivedQty    Int
+  availableQty   Int
+  status         BatchStatus @default(ACTIVE)
+  receivedAt     DateTime    @default(now())
+  supplierName   String?     @db.VarChar(150)
+  note           String?     @db.VarChar(255)
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+
+  storeProduct StoreProduct     @relation(fields: [storeProductId], references: [id], onDelete: Cascade)
+  orderBatches OrderItemBatch[]
+
+  @@unique([storeProductId, batchNumber])
+  @@index([storeProductId, status, expiryDate])
+  @@index([storeId, status, expiryDate])
+  @@index([variantId, batchNumber])
+}
+
+model OrderItemBatch {
+  id             BigInt    @id @default(autoincrement())
+  orderItemId    BigInt
+  batchId        BigInt
+  batchNumber    String    @db.VarChar(60)
+  mrp            Decimal   @db.Decimal(10, 2)
+  unitPrice      Decimal   @db.Decimal(10, 2)
+  manufacturedAt DateTime? @db.Date
+  expiryDate     DateTime? @db.Date
+  quantity       Int
+  createdAt      DateTime  @default(now())
+
+  orderItem OrderItem      @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
+  batch     InventoryBatch @relation(fields: [batchId], references: [id], onDelete: Restrict)
+
+  @@index([orderItemId])
+  @@index([batchId])
+}
+
+// Append-only ledger (no FKs).
+model StockMovement {
+  id                BigInt            @id @default(autoincrement())
+  storeId           BigInt
+  storeProductId    BigInt
+  batchId           BigInt?
+  type              StockMovementType
+  quantity          Int
+  balanceAfter      Int
+  batchBalanceAfter Int?
+  unitCost          Decimal?          @db.Decimal(10, 2)
+  orderItemId       BigInt?
+  refType           String?           @db.VarChar(20)
+  refId             BigInt?
+  idempotencyKey    String?           @unique @db.VarChar(64)
+  actorId           BigInt?
+  note              String?           @db.VarChar(255)
+  createdAt         DateTime          @default(now())
+
+  @@index([storeProductId, createdAt])
+  @@index([storeId, type, createdAt])
+  @@index([orderItemId])
+  @@index([batchId])
+  @@index([refType, refId])
+}
+
+model StorePriceHistory {
+  id             BigInt   @id @default(autoincrement())
+  storeProductId BigInt
+  oldPrice       Decimal  @db.Decimal(10, 2)
+  newPrice       Decimal  @db.Decimal(10, 2)
+  oldMrp         Decimal? @db.Decimal(10, 2)
+  newMrp         Decimal? @db.Decimal(10, 2)
+  reason         String?  @db.VarChar(30)
+  changedById    BigInt?
+  createdAt      DateTime @default(now())
+
+  @@index([storeProductId, createdAt])
+}
+
+// Goods receipt: supplier inline (no Supplier table).
+model GoodsReceipt {
+  id                  BigInt             @id @default(autoincrement())
+  grnNumber           String             @unique @db.VarChar(30)
+  storeId             BigInt
+  supplierName        String             @db.VarChar(150)
+  supplierPhone       String?            @db.VarChar(20)
+  supplierInvoiceNo   String?            @db.VarChar(60)
+  supplierInvoiceDate DateTime?          @db.Date
+  receivedById        BigInt?
+  receivedAt          DateTime           @default(now())
+  note                String?            @db.VarChar(255)
+  /// Supplier invoice files (MediaFile ids, purpose INVOICE). Mandatory for new receipts.
+  invoiceMediaIds     Json               @default("[]")
+  status              GoodsReceiptStatus @default(POSTED)
+  /// Approved edits so far
+  editCount           Int                @default(0)
+  updatedAt           DateTime           @default(now()) @updatedAt
+
+  items GoodsReceiptItem[]
+
+  @@index([storeId, receivedAt])
+  @@index([storeId, supplierInvoiceNo])
+}
+
+model GoodsReceiptItem {
+  id             BigInt    @id @default(autoincrement())
+  goodsReceiptId BigInt
+  storeProductId BigInt
+  variantId      BigInt
+  batchNumber    String    @db.VarChar(60)
+  manufacturedAt DateTime? @db.Date
+  expiryDate     DateTime? @db.Date
+  shelfLifeDays  Int?
+  receivedQty    Int
+  rejectedQty    Int       @default(0)
+  rejectReason   String?   @db.VarChar(255)
+  costPrice      Decimal?  @db.Decimal(10, 2)
+  mrp            Decimal   @db.Decimal(10, 2)
+  batchId        BigInt?
+
+  goodsReceipt GoodsReceipt @relation(fields: [goodsReceiptId], references: [id], onDelete: Cascade)
+
+  @@index([goodsReceiptId])
+  @@index([storeProductId])
+}
+
+// ============================ BUNDLES / CART / COUPON ============================
+model Bundle {
+  id             BigInt            @id @default(autoincrement())
+  storeId        BigInt?
+  slug           String            @unique @db.VarChar(191)
+  title          Json
+  description    Json?
+  thumbnailId    BigInt?
+  pricingType    BundlePricingType
+  fixedPrice     Decimal?          @db.Decimal(10, 2)
+  discountValue  Decimal?          @db.Decimal(10, 2)
+  maxQtyPerOrder Int               @default(5)
+  startsAt       DateTime?
+  endsAt         DateTime?
+  isActive       Boolean           @default(true)
+  createdById    BigInt?
+  createdAt      DateTime          @default(now())
+  updatedAt      DateTime          @updatedAt
+
+  store      Store?       @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  thumbnail  MediaFile?   @relation("BundleThumbnail", fields: [thumbnailId], references: [id], onDelete: SetNull)
+  items      BundleItem[]
+  cartItems  CartItem[]
+  orderItems OrderItem[]
+
+  @@index([storeId, isActive])
+}
+
+model BundleItem {
+  id        BigInt @id @default(autoincrement())
+  bundleId  BigInt
+  variantId BigInt
+  quantity  Int    @default(1)
+
+  bundle  Bundle         @relation(fields: [bundleId], references: [id], onDelete: Cascade)
+  variant ProductVariant @relation(fields: [variantId], references: [id], onDelete: Restrict)
+
+  @@unique([bundleId, variantId])
+  @@index([variantId])
+}
+
+// Cart row only on FIRST add. Guest identified by guestToken. expiresAt + cron cleanup.
+model Cart {
+  id         BigInt   @id @default(autoincrement())
+  userId     BigInt?  @unique
+  guestToken String?  @unique @db.VarChar(64)
+  storeId    BigInt?
+  couponCode String?  @db.VarChar(40)
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  user  User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  store Store?     @relation(fields: [storeId], references: [id], onDelete: SetNull)
+  items CartItem[]
+
+  @@index([expiresAt])
+}
+
+model CartItem {
+  id        BigInt   @id @default(autoincrement())
+  cartId    BigInt
+  variantId BigInt?
+  bundleId  BigInt?
+  quantity  Int
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  cart    Cart            @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  variant ProductVariant? @relation(fields: [variantId], references: [id], onDelete: Cascade)
+  bundle  Bundle?         @relation(fields: [bundleId], references: [id], onDelete: Cascade)
+
+  @@unique([cartId, variantId])
+  @@unique([cartId, bundleId])
+  @@index([variantId])
+  @@index([bundleId])
+}
+
+model Coupon {
+  id             BigInt       @id @default(autoincrement())
+  code           String       @unique @db.VarChar(40)
+  description    Json?
+  discountType   DiscountType
+  discountValue  Decimal      @default(0) @db.Decimal(10, 2)
+  maxDiscount    Decimal?     @db.Decimal(10, 2)
+  minOrderValue  Decimal?     @db.Decimal(10, 2)
+  usageLimit     Int?
+  perUserLimit   Int          @default(1)
+  usedCount      Int          @default(0)
+  firstOrderOnly Boolean      @default(false)
+  storeId        BigInt?
+  startsAt       DateTime?
+  endsAt         DateTime?
+  isActive       Boolean      @default(true)
+  createdAt      DateTime     @default(now())
+
+  orders Order[]
+
+  @@index([isActive, startsAt, endsAt])
+}
+
+// ============================ ORDERS / DELIVERY ============================
+model Order {
+  id                BigInt        @id @default(autoincrement())
+  orderNumber       String        @unique @db.VarChar(30)
+  userId            BigInt
+  storeId           BigInt
+  source            OrderSource   @default(APP)
+  status            OrderStatus   @default(PLACED)
+  paymentStatus     PaymentStatus @default(PENDING)
+  paymentMethod     PaymentMethod
+  customerName      String?       @db.VarChar(120)
+  customerPhone     String?       @db.VarChar(20)
+  addressId         BigInt?
+  deliveryAddress   Json?
+  deliveryLat       Decimal?      @db.Decimal(10, 7)
+  deliveryLng       Decimal?      @db.Decimal(10, 7)
+  instructions      String?       @db.VarChar(500)
+  subtotal          Decimal       @db.Decimal(12, 2)
+  discountTotal     Decimal       @default(0) @db.Decimal(12, 2)
+  deliveryFee       Decimal       @default(0) @db.Decimal(12, 2)
+  handlingFee       Decimal       @default(0) @db.Decimal(12, 2)
+  taxTotal          Decimal       @default(0) @db.Decimal(12, 2)
+  tip               Decimal       @default(0) @db.Decimal(12, 2)
+  roundOff          Decimal       @default(0) @db.Decimal(6, 2)
+  total             Decimal       @db.Decimal(12, 2)
+  walletAmountUsed  Decimal       @default(0) @db.Decimal(12, 2)
+  couponId          BigInt?
+  couponCode        String?       @db.VarChar(40)
+  deliveryPartnerId BigInt?
+  pickerId          BigInt?
+  packedById        BigInt?
+  packingStartedAt  DateTime?
+  paymentExpiresAt  DateTime?
+  estimatedAt       DateTime?
+  placedAt          DateTime      @default(now())
+  acceptedAt        DateTime?
+  packedAt          DateTime?
+  deliveredAt       DateTime?
+  cancelledAt       DateTime?
+  cancelledByRole   UserRole?
+  cancelReason      String?       @db.VarChar(255)
+  rating            Int?
+  deliveryRating    Int?
+  ratingNote        String?       @db.VarChar(500)
+  idempotencyKey    String?       @unique @db.VarChar(64)
+  createdAt         DateTime      @default(now())
+  updatedAt         DateTime      @updatedAt
+
+  user         User          @relation("CustomerOrders", fields: [userId], references: [id], onDelete: Restrict)
+  store        Store         @relation(fields: [storeId], references: [id], onDelete: Restrict)
+  coupon       Coupon?       @relation(fields: [couponId], references: [id], onDelete: SetNull)
+  items        OrderItem[]
+  events       OrderEvent[]
+  deliveries   Delivery[]
+  transactions Transaction[]
+
+  @@index([userId, createdAt])
+  @@index([storeId, status, createdAt])
+  @@index([storeId, placedAt])
+  @@index([deliveryPartnerId, status])
+  @@index([userId, couponId])
+  @@index([status, paymentExpiresAt])
+}
+
+model OrderItem {
+  id             BigInt      @id @default(autoincrement())
+  orderId        BigInt
+  parentId       BigInt?
+  variantId      BigInt?
+  bundleId       BigInt?
+  productId      BigInt?
+  storeProductId BigInt?
+  title          Json
+  variantLabel   String?     @db.VarChar(150)
+  sku            String?     @db.VarChar(64)
+  hsnCode        String?     @db.VarChar(10)
+  imageKey       String?     @db.VarChar(191)
+  mrp            Decimal     @db.Decimal(10, 2)
+  unitPrice      Decimal     @db.Decimal(10, 2)
+  quantity       Int
+  discountAmount Decimal     @default(0) @db.Decimal(10, 2)
+  taxRate        Decimal     @default(0) @db.Decimal(5, 2)
+  taxAmount      Decimal     @default(0) @db.Decimal(10, 2)
+  lineTotal      Decimal     @db.Decimal(12, 2)
+  pickedQty      Int         @default(0)
+  pickStatus     PickStatus  @default(PENDING)
+  pickMethod     PickMethod?
+  pickedById     BigInt?
+  pickedAt       DateTime?
+  /// Units returned / exchanged through approved requests (guards double returns)
+  returnedQty    Int         @default(0)
+  createdAt      DateTime    @default(now())
+
+  order    Order            @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  parent   OrderItem?       @relation("BundleChildren", fields: [parentId], references: [id], onDelete: NoAction, onUpdate: NoAction)
+  children OrderItem[]      @relation("BundleChildren")
+  variant  ProductVariant?  @relation(fields: [variantId], references: [id], onDelete: Restrict)
+  bundle   Bundle?          @relation(fields: [bundleId], references: [id], onDelete: Restrict)
+  batches  OrderItemBatch[]
+
+  @@index([orderId])
+  @@index([parentId])
+  @@index([variantId])
+  @@index([bundleId])
+}
+
+model OrderEvent {
+  id        BigInt      @id @default(autoincrement())
+  orderId   BigInt
+  status    OrderStatus
+  title     String?     @db.VarChar(120)
+  note      String?     @db.VarChar(255)
+  actorId   BigInt?
+  actorRole UserRole?
+  createdAt DateTime    @default(now())
+
+  order Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId, createdAt])
+}
+
+model Delivery {
+  id                BigInt         @id @default(autoincrement())
+  orderId           BigInt
+  partnerId         BigInt
+  status            DeliveryStatus @default(ASSIGNED)
+  assignedAt        DateTime       @default(now())
+  acceptedAt        DateTime?
+  reachedStoreAt    DateTime?
+  pickedUpAt        DateTime?
+  reachedCustomerAt DateTime?
+  deliveredAt       DateTime?
+  cancelledAt       DateTime?
+  cancelReason      String?        @db.VarChar(255)
+  handoverCodeHash  String?        @db.VarChar(64)
+  proofMediaId      BigInt?
+  distanceMeters    Int?
+  partnerEarning    Decimal        @default(0) @db.Decimal(10, 2)
+  cashToCollect     Decimal?       @db.Decimal(10, 2)
+  cashCollected     Decimal?       @db.Decimal(10, 2)
+  createdAt         DateTime       @default(now())
+  updatedAt         DateTime       @updatedAt
+
+  order   Order @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  partner User  @relation(fields: [partnerId], references: [id], onDelete: Restrict)
+
+  @@index([orderId])
+  @@index([partnerId, status])
+}
+
+// ============================ PAYMENTS & WALLET ============================
+model Transaction {
+  id               BigInt            @id @default(autoincrement())
+  txnNumber        String            @unique @db.VarChar(40)
+  orderId          BigInt?
+  userId           BigInt?
+  parentId         BigInt?
+  type             TransactionType
+  method           PaymentMethod?
+  gateway          String?           @db.VarChar(30)
+  gatewayOrderId   String?           @db.VarChar(100)
+  gatewayPaymentId String?           @db.VarChar(100)
+  gatewayRefundId  String?           @db.VarChar(100)
+  amount           Decimal           @db.Decimal(12, 2)
+  currency         String            @default("INR") @db.VarChar(3)
+  status           TransactionStatus @default(PENDING)
+  failureCode      String?           @db.VarChar(60)
+  failureReason    String?           @db.VarChar(255)
+  gatewayResponse  Json?
+  idempotencyKey   String?           @unique @db.VarChar(64)
+  completedAt      DateTime?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+
+  order Order? @relation(fields: [orderId], references: [id], onDelete: SetNull)
+
+  @@unique([gateway, gatewayPaymentId])
+  @@index([orderId])
+  @@index([userId, createdAt])
+  @@index([gatewayOrderId])
+  @@index([status, createdAt])
+}
+
+model WebhookEvent {
+  id           BigInt        @id @default(autoincrement())
+  gateway      String        @db.VarChar(30)
+  eventId      String        @db.VarChar(100)
+  eventType    String        @db.VarChar(80)
+  payload      Json
+  signatureOk  Boolean       @default(false)
+  status       WebhookStatus @default(RECEIVED)
+  attempts     Int           @default(0)
+  errorMessage String?       @db.VarChar(500)
+  receivedAt   DateTime      @default(now())
+  processedAt  DateTime?
+
+  @@unique([gateway, eventId])
+  @@index([status, receivedAt])
+}
+
+model WalletTransaction {
+  id             BigInt          @id @default(autoincrement())
+  userId         BigInt
+  type           WalletTxnType
+  reason         WalletTxnReason
+  amount         Decimal         @db.Decimal(12, 2)
+  balanceAfter   Decimal         @db.Decimal(12, 2)
+  orderId        BigInt?
+  note           String?         @db.VarChar(255)
+  actorId        BigInt?
+  idempotencyKey String?         @unique @db.VarChar(64)
+  createdAt      DateTime        @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Restrict)
+
+  @@index([userId, createdAt])
+  @@index([orderId])
+}
+
+// ============================ SUPPORT & NOTIFICATIONS ============================
+model SupportTicket {
+  id              BigInt         @id @default(autoincrement())
+  ticketNumber    String         @unique @db.VarChar(30)
+  userId          BigInt
+  orderId         BigInt?
+  storeId         BigInt?
+  category        TicketCategory
+  subject         String         @db.VarChar(255)
+  status          TicketStatus   @default(OPEN)
+  priority        TicketPriority @default(MEDIUM)
+  assignedToId    BigInt?
+  lastMessageAt   DateTime       @default(now())
+  /// First staff reply that the customer can see (for response-time stats)
+  firstResponseAt DateTime?
+  /// Closing note shown to the customer when resolved
+  resolution      String?        @db.VarChar(1000)
+  resolvedAt      DateTime?
+  /// Store escalated the ticket to the admin team
+  escalatedAt     DateTime?
+  escalatedById   BigInt?
+  escalationNote  String?        @db.VarChar(1000)
+  createdAt       DateTime       @default(now())
+  updatedAt       DateTime       @updatedAt
+
+  user     User             @relation("TicketRequester", fields: [userId], references: [id], onDelete: Restrict)
+  assignee User?            @relation("TicketAssignee", fields: [assignedToId], references: [id], onDelete: SetNull)
+  messages SupportMessage[]
+
+  @@index([userId, createdAt])
+  @@index([status, priority, createdAt])
+  @@index([assignedToId, status])
+  @@index([storeId, status])
+  @@index([storeId, createdAt])
+  @@index([escalatedAt, status])
+}
+
+model SupportMessage {
+  id            BigInt   @id @default(autoincrement())
+  ticketId      BigInt
+  senderId      BigInt
+  senderRole    UserRole
+  body          String   @db.Text
+  attachmentIds Json?
+  isInternal    Boolean  @default(false)
+  createdAt     DateTime @default(now())
+
+  ticket SupportTicket @relation(fields: [ticketId], references: [id], onDelete: Cascade)
+
+  @@index([ticketId, createdAt])
+}
+
+model Notification {
+  id        BigInt    @id @default(autoincrement())
+  userId    BigInt
+  type      String    @db.VarChar(50)
+  title     String    @db.VarChar(191)
+  body      String    @db.VarChar(500)
+  data      Json?
+  readAt    DateTime?
+  createdAt DateTime  @default(now())
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId, createdAt])
+}
+
+// ============================ APPROVALS ============================
+/// One table for every decision that needs a higher authority (admin or store manager).
+/// `payload` = what is proposed, `snapshot` = state when requested, `result` = what applying did.
+/// At most one PENDING request per (type, targetType, targetId) — enforced in code.
+model ApprovalRequest {
+  id              BigInt                @id @default(autoincrement())
+  type            ApprovalType
+  level           ApprovalLevel
+  status          ApprovalRequestStatus @default(PENDING)
+  storeId         BigInt?
+  /// "User" | "KycDocument" | "StoreProduct" | "GoodsReceipt" | "Order"
+  targetType      String                @db.VarChar(30)
+  targetId        BigInt
+  requestedById   BigInt
+  requestedByRole UserRole
+  /// Requester's note (why)
+  note            String?               @db.VarChar(1000)
+  payload         Json                  @default("{}")
+  snapshot        Json?
+  result          Json?
+  reviewedById    BigInt?
+  reviewedByRole  UserRole?
+  reviewNote      String?               @db.VarChar(1000)
+  reviewedAt      DateTime?
+  createdAt       DateTime              @default(now())
+  updatedAt       DateTime              @updatedAt
+
+  @@index([level, status, createdAt])
+  @@index([storeId, status, createdAt])
+  @@index([targetType, targetId, status])
+  @@index([requestedById, createdAt])
+  @@index([type, status])
+}
+
+// ============================ LOGS & ACCESS ============================
+model AuditLog {
+  id         BigInt    @id @default(autoincrement())
+  actorId    BigInt?
+  actorRole  UserRole?
+  storeId    BigInt?
+  action     String    @db.VarChar(80)
+  entityType String    @db.VarChar(50)
+  entityId   String?   @db.VarChar(64)
+  before     Json?
+  after      Json?
+  ipAddress  String?   @db.VarChar(45)
+  createdAt  DateTime  @default(now())
+
+  @@index([entityType, entityId])
+  @@index([actorId, createdAt])
+  @@index([storeId, createdAt])
+  @@index([createdAt])
+}
+
+model AuthLog {
+  id        BigInt    @id @default(autoincrement())
+  phone     String    @db.VarChar(20)
+  role      UserRole?
+  userId    BigInt?
+  event     AuthEvent
+  success   Boolean
+  reason    String?   @db.VarChar(120)
+  ipAddress String?   @db.VarChar(45)
+  deviceId  String?   @db.VarChar(100)
+  userAgent String?   @db.VarChar(255)
+  createdAt DateTime  @default(now())
+
+  @@index([phone, createdAt])
+  @@index([userId, createdAt])
+  @@index([ipAddress, createdAt])
+}
+
+// permissions = JSON array of codes (see src/common/permissions.ts). SUPER_ADMIN bypasses.
+model AccessRole {
+  id          BigInt   @id @default(autoincrement())
+  code        String   @unique @db.VarChar(50)
+  name        String   @db.VarChar(100)
+  permissions Json
+  isActive    Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  users User[]
+}
+
+// ============================ SERVER-DRIVEN UI (SDUI) ============================
+// 4 tables:
+//   SduiScreen         every screen the app can open: tabs, campaign pages, landing
+//                      templates (custom group / category / brand), app shell
+//   SduiScreenVersion  immutable published copies (history, rollback, A/B variants)
+//   SduiSection        reusable sections ("Bestsellers rail", "Top banner")
+//   SduiGroup          custom groups ("Fresh items", "Late night sale", "Newly added")
+//
+// Every user-facing text is a language map: {"en": "Fresh items", "bn": "তাজা পণ্য"}.
+
+enum SduiScreenKind {
+  SCREEN
+  PAGE
+  TEMPLATE
+  SHELL
+}
+
+enum SduiVersionStatus {
+  SCHEDULED
+  PUBLISHED
+  CANCELLED
+}
+
+enum SduiGroupKind {
+  MANUAL
+  RULE
+}
+
+model SduiScreen {
+  id               BigInt         @id @default(autoincrement())
+  key              String         @unique @db.VarChar(80)
+  kind             SduiScreenKind
+  title            Json
+  description      Json?
+  isSystem         Boolean        @default(false)
+  isActive         Boolean        @default(true)
+  draftLayout      Json           @default("{\"schemaVersion\":1,\"sections\":[]}")
+  draftRevision    Int            @default(0)
+  draftUpdatedById BigInt?
+  draftUpdatedAt   DateTime?
+  liveVersionId    BigInt?        @unique
+  rules            Json           @default("[]")
+
+  createdById BigInt?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+
+  liveVersion SduiScreenVersion?  @relation("SduiLiveVersion", fields: [liveVersionId], references: [id], onDelete: SetNull)
+  versions    SduiScreenVersion[] @relation("SduiScreenVersions")
+  groups      SduiGroup[]
+
+  @@index([kind, deletedAt])
+}
+
+model SduiScreenVersion {
+  id            BigInt            @id @default(autoincrement())
+  screenId      BigInt
+  version       Int
+  status        SduiVersionStatus @default(PUBLISHED)
+  layout        Json
+  schemaVersion Int
+  minAppVersion String?           @db.VarChar(20)
+  checksum      String            @db.VarChar(64)
+  sectionKeys   String[]          @default([])
+  groupKeys     String[]          @default([])
+  note          String?           @db.VarChar(500)
+  publishAt     DateTime?
+  publishedAt   DateTime?
+  publishedById BigInt?
+  createdAt     DateTime          @default(now())
+
+  screen SduiScreen  @relation("SduiScreenVersions", fields: [screenId], references: [id], onDelete: Cascade)
+  liveOf SduiScreen? @relation("SduiLiveVersion")
+
+  @@unique([screenId, version])
+  @@index([status, publishAt])
+  @@index([sectionKeys], type: Gin)
+  @@index([groupKeys], type: Gin)
+}
+
+model SduiSection {
+  id          BigInt    @id @default(autoincrement())
+  key         String    @unique @db.VarChar(80)
+  name        Json
+  type        String    @db.VarChar(40)
+  node        Json
+  isActive    Boolean   @default(true)
+  revision    Int       @default(0)
+  updatedById BigInt?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
+
+  @@index([type, deletedAt])
+}
+
+model SduiGroup {
+  id              BigInt        @id @default(autoincrement())
+  key             String        @unique @db.VarChar(80)
+  title           Json
+  subtitle        Json?
+  media           Json?
+  kind            SduiGroupKind
+  items           Json          @default("[]")
+  rule            Json?
+  schedule        Json?
+  landingScreenId BigInt?
+  landing         Json?
+  isActive        Boolean       @default(true)
+  updatedById     BigInt?
+  createdAt       DateTime      @default(now())
+  updatedAt       DateTime      @updatedAt
+  deletedAt       DateTime?
+
+  landingScreen SduiScreen? @relation(fields: [landingScreenId], references: [id], onDelete: SetNull)
+
+  @@index([kind, isActive])
+}

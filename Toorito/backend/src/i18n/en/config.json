@@ -1,0 +1,5 @@
+{
+    "errors": {
+        "nonNumericValue": "{value} contains a non-numeric value."
+    }
+}

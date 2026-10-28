@@ -1,0 +1,34 @@
+{
+    "errors": {
+        "kycDocsRequired": "Upload documents with purpose=KYC first",
+        "notFound": "Not found",
+        "reasonRequired": "A reason is required",
+        "verificationPending": "Verification pending",
+        "badCoordinates": "Invalid coordinates",
+        "orderNotFound": "Order not found",
+        "orderNotReady": "Order is not ready for pickup",
+        "partnerNotEligible": "Partner not eligible (KYC / approval / store)",
+        "cannotAccept": "Cannot accept this delivery",
+        "cannotReject": "Cannot reject this delivery now",
+        "invalidTransition": "Cannot go from {from} to {to}",
+        "stateChanged": "State changed, please retry",
+        "orderNotReadyYet": "Order is not ready yet",
+        "notOutForDelivery": "Not out for delivery",
+        "tooManyWrongCodes": "Too many wrong codes. Contact support.",
+        "wrongHandoverCode": "Wrong handover code",
+        "cashRequired": "Collect {amount} cash",
+        "alreadyCompleted": "Already completed"
+    },
+    "notification": {
+        "docVerified": "Document verified",
+        "docRejected": "Document rejected",
+        "newDelivery": {
+            "title": "New delivery",
+            "body": "Tap to accept"
+        },
+        "delivered": {
+            "title": "Delivered",
+            "body": "Order {orderNumber} delivered"
+        }
+    }
+}

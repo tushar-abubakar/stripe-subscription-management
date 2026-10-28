@@ -1,0 +1,10 @@
+{
+    "errors": {
+        "notFound": "Bundle not found",
+        "noStore": "A store is required for this bundle",
+        "duplicateVariants": "A variant is listed more than once in the bundle",
+        "fixedPriceRequired": "fixedPrice is required for fixed-price bundles",
+        "discountValueRequired": "discountValue is required for this pricing type",
+        "variantNotFound": "Variant {id} was not found"
+    }
+}

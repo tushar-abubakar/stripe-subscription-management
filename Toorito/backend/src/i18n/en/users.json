@@ -1,0 +1,27 @@
+{
+    "errors": {
+        "storeNotFound": "Store not found",
+        "userNotFound": "User not found",
+        "forbidden": "You are not allowed to perform this action",
+        "cannotManageSelf": "You can't change your own account here. Use your profile instead.",
+        "notYourStore": "This user does not belong to your store",
+        "userTypeDoesNotNeedApproval": "This user type does not require approval",
+        "kycRequired": "Identity verification (KYC) must be verified before approving a delivery partner",
+        "phoneTaken": "{phone} is already registered as {role}.",
+        "storeNotAllowed": "{role} users can't be assigned to a store.",
+        "accessRoleNotFound": "Access role not found",
+        "accessRoleInactive": "This access role is disabled.",
+        "accessRoleNotAllowed": "Only ADMIN users have an access role.",
+        "passwordNotAllowed": "{role} users sign in with OTP and have no password.",
+        "walletNotEmpty": "Wallet still holds {balance}. Debit it before deleting the user.",
+        "insufficientBalance": "The wallet balance is too low for this debit.",
+        "phoneUnchanged": "The new number is the same as the current one.",
+        "phoneChangeNotRequested": "Request a phone change first, or the request has expired.",
+        "productNotFound": "Product not found",
+        "wishlistFull": "Your wishlist is full ({max} items).",
+        "addressLimitReached": "You can save up to {max} addresses.",
+        "addressNotFound": "Address not found",
+        "heldByAdmin": "This account was put on hold by an admin. Only an admin can change it.",
+        "dutiesStaffOnly": "Duties apply to store staff only"
+    }
+}

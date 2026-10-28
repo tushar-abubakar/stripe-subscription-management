@@ -1,0 +1,13 @@
+{
+    "errors": {
+        "unsupportedCountry": "Country {country} is not supported. Allowed: {allowed}.",
+        "invalidRegion": "Select a valid {label}.",
+        "regionRequired": "{label} is required.",
+        "invalidSubRegion": "Select a valid {label} in {parent}.",
+        "postcodeRequired": "{label} is required.",
+        "invalidPostcode": "Enter a valid {label} (e.g. {example}).",
+        "timezoneNotAllowed": "Timezone {timezone} is not allowed for this country. Allowed: {allowed}.",
+        "geocodeUnavailable": "Address lookup is not configured.",
+        "geocodeFailed": "Address lookup failed. Please try again."
+    }
+}

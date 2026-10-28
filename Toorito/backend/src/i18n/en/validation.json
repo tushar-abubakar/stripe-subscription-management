@@ -1,0 +1,45 @@
+{
+    "localeMap": {
+        "object": "{field} must be a valid language translation object.",
+        "defaultRequired": "{field}.{language} is required and must contain a non-empty string.",
+        "unsupportedLanguage": "{field}.{language} is not a supported language.",
+        "string": "{field}.{language} must be a string.",
+        "invalid": "{field} contains invalid translations."
+    },
+    "language": {
+        "unsupported": "{property}: language \"{language}\" is not supported (allowed: {languages})"
+    },
+    "errors": {
+        "invalidPhone": "{property} must be a valid international number (E.164, e.g. +919876543210) from: {countries}",
+        "NOT_EMPTY": "{property} is required",
+        "DEFINED": "{property} is required",
+        "STRING": "{property} must be text",
+        "NUMBER": "{property} must be a number",
+        "INT": "{property} must be a whole number",
+        "BOOLEAN": "{property} must be true or false",
+        "ARRAY": "{property} must be a list",
+        "OBJECT": "{property} must be a valid object",
+        "EMAIL": "Enter a valid {property}",
+        "URL": "Enter a valid {property}",
+        "UUID": "{property} has an invalid format",
+        "DATE_STRING": "{property} must be a valid ISO date",
+        "ENUM": "{property} has an invalid value",
+        "IN": "{property} must be one of the allowed values",
+        "MATCHES": "{property} format is invalid",
+        "MIN_LENGTH": "{property} must be at least {constraints.0} characters",
+        "MAX_LENGTH": "{property} must be at most {constraints.0} characters",
+        "LENGTH": "{property} must be between {constraints.0} and {constraints.1} characters",
+        "MIN": "{property} must not be less than {constraints.0}",
+        "MAX": "{property} must not be greater than {constraints.0}",
+        "POSITIVE": "{property} must be positive",
+        "ARRAY_NOT_EMPTY": "{property} cannot be empty",
+        "ARRAY_MIN_SIZE": "{property} must contain at least {constraints.0} items",
+        "ARRAY_MAX_SIZE": "{property} has too many items",
+        "ARRAY_UNIQUE": "{property} contains duplicate values",
+        "LATITUDE": "{property} must be a valid latitude",
+        "LONGITUDE": "{property} must be a valid longitude",
+        "WHITELIST_VALIDATION": "{property} is not an allowed field",
+        "NOT_EQUALS": "{property} is invalid",
+        "IS_NOT_EMPTY": "{property} is required"
+    }
+}

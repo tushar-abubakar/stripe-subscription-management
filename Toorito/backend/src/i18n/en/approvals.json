@@ -1,0 +1,23 @@
+{
+    "errors": {
+        "notFound": "Approval request not found",
+        "cannotDecide": "This request is decided by another authority",
+        "alreadyDecided": "This request is already {status}",
+        "alreadyPending": "A request for this item is already waiting for a decision",
+        "alreadyOpen": "A return / exchange for this order is already waiting for the store",
+        "noteRequired": "A note is required when rejecting",
+        "orderNotFound": "Order not found",
+        "notDelivered": "Only delivered orders can be returned or exchanged",
+        "windowClosed": "Returns are accepted within {hours} hours of delivery",
+        "duplicateItem": "The same item is listed twice",
+        "itemNotReturnable": "Item {id} can't be returned",
+        "qtyExceeded": "More units than were bought (or already returned) for {sku}",
+        "mediaInvalid": "Photos must be your own uploads with purpose SUPPORT",
+        "noStock": "Not enough stock of {sku} for a replacement"
+    },
+    "notification": {
+        "approved": "Your request was approved",
+        "rejected": "Your request was rejected",
+        "newReturn": "New return / exchange request"
+    }
+}

@@ -1,0 +1,7 @@
+{
+    "errors": {
+        "fromAfterTo": "The start date must be on or before the end date",
+        "rangeTooLong": "The date range can be at most {max} days",
+        "tooManyBuckets": "Hourly reports are limited to 31 days. Use groupBy=day or a shorter range."
+    }
+}

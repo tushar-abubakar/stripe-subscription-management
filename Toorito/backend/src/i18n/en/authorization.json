@@ -1,0 +1,8 @@
+{
+    "errors": {
+        "storeIdRequired": "storeId is required",
+        "noStoreAssigned": "No store is assigned to your account",
+        "outsideStore": "You cannot access another store",
+        "restricted": "Your account is on hold for: {restriction}"
+    }
+}

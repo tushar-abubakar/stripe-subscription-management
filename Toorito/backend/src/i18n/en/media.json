@@ -1,0 +1,24 @@
+{
+    "file": {
+        "required": "A file is required",
+        "tooLarge": "File too large (max {maxMb} MB)",
+        "unsupported": "Unsupported or corrupted file"
+    },
+    "purpose": {
+        "invalid": "Invalid media purpose"
+    },
+    "upload": {
+        "forbidden": "You are not allowed to upload this kind of media"
+    },
+    "video": {
+        "notAllowed": "Video uploads are not allowed"
+    },
+    "pdf": {
+        "privateOnly": "PDF is only allowed for private documents"
+    },
+    "access": {
+        "forbidden": "You do not have access to this file"
+    },
+    "notFound": "Media not found",
+    "inUse": "This file is still in use and can't be deleted"
+}

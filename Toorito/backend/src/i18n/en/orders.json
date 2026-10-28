@@ -1,0 +1,56 @@
+{
+    "errors": {
+        "cartEmpty": "Cart is empty",
+        "addressNotFound": "Address not found",
+        "storeClosed": "Store is not accepting orders right now",
+        "notServiceable": "Store does not deliver to this address",
+        "cartInvalid": "Some items are unavailable",
+        "minOrder": "Minimum order is {amount}",
+        "codLimit": "Cash on delivery is not available above {amount}",
+        "walletLow": "Insufficient wallet balance",
+        "outOfStock": "An item just went out of stock",
+        "notFound": "Order not found",
+        "invalidTransition": "Cannot move order from {from} to {to}",
+        "reasonRequired": "A reason is required",
+        "packingIncomplete": "All items must be packed (or marked out of stock)",
+        "cancelNotAllowed": "Order can no longer be cancelled",
+        "alreadyClosed": "Order already closed",
+        "cannotRate": "Order cannot be rated",
+        "barcodeOrItemRequired": "barcode or orderItemId is required",
+        "cannotPack": "Order is {status}; cannot pack",
+        "unknownBarcode": "Unknown barcode",
+        "itemNotPending": "This product is not pending in the order (wrong item scanned?)",
+        "overPick": "Only {remaining} left to pick",
+        "stockMismatch": "Stock mismatch; ask manager to recount",
+        "batchStockChanged": "Batch stock changed; retry",
+        "notBeingPacked": "Order is not being packed",
+        "bundleComponentMissing": "A bundle component is missing: cancel the order or contact the customer",
+        "nothingToRemove": "Nothing left to remove"
+    },
+    "notification": {
+        "title": {
+            "PLACED": "Order placed",
+            "ACCEPTED": "Store accepted your order",
+            "PACKING": "Packing your items",
+            "READY_FOR_PICKUP": "Ready for pickup",
+            "OUT_FOR_DELIVERY": "Out for delivery",
+            "DELIVERED": "Delivered",
+            "CANCELLED": "Order cancelled",
+            "REJECTED": "Order rejected by store"
+        },
+        "newOrder": {
+            "title": "New order",
+            "body": "A new order is waiting"
+        },
+        "delivered": {
+            "title": "Order delivered",
+            "body": "Your order {orderNumber} was delivered"
+        },
+        "orderRef": "Order {orderNumber}"
+    },
+    "reasons": {
+        "cancelledByCustomer": "Cancelled by customer",
+        "orderCancelled": "Order cancelled",
+        "paymentWindowExpired": "Payment window expired"
+    }
+}
